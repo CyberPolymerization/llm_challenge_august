@@ -1,0 +1,1124 @@
+{
+    "0":
+    {
+        "question": "What is the differential input resistance of the LTC6416 module when the input voltage is ±1.2V?",
+        "answer": "The differential input resistance of the LTC6416 module when the input voltage is ±1.2V is 9121.5 Ω (minimum).",
+        "datasheet": "parsed/6416f.txt"
+    },
+    "1":
+    {
+        "question": "What is the function of the feedforward capacitor, CFF, in setting the output voltage of the LTC7804 module?",
+        "answer": "The feedforward capacitor, CFF, is used to improve the frequency response in setting the output voltage of the LTC7804 module.",
+        "datasheet": "parsed/ltc7804.txt"
+    },
+    "2":
+    {
+        "question": "What is the maximum safe power dissipation for the AD8273 and what is the associated rise in junction temperature on the die?",
+        "answer": "The maximum safe power dissipation for the AD8273 is limited by the associated rise in junction temperature (T J) on the die. The maximum power dissipation values are provided in a table and depend on the ambient temperature. At approximately 150°C, which is the glass transition temperature, the plastic changes its properties. Even temporarily exceeding this temperature limit may change the stresses that the package exerts on the die, permanently shifting the parametric performance of the amplifiers. Exceeding a temperature of 150°C for an extended period can result in a loss of functionality.",
+        "datasheet": "parsed/AD8273.txt"
+    },
+    "3":
+    {
+        "question": "What is the recommended temperature range for applying the DS9096P Adhesive Pads to attach iButtons to a surface?",
+        "answer": "The ideal application temperature range for applying the DS9096P Adhesive Pads to attach iButtons to a surface is 21°C to 38°C, with a minimum application temperature of 10°C and a maximum long-term temperature of 71°C.",
+        "datasheet": "parsed/DS9096P.txt"
+    },
+    "4":
+    {
+        "question": "What is the recommended method for transmitting data between the Blackfin ADSP-BF527 and the ADF4152HV module, and what is the required word length and memory locations for each 32-bit latch?",
+        "answer": "The recommended method for transmitting data between the Blackfin ADSP-BF527 and the ADF4152HV module is to use the autobuffered transmit mode of operation with alternate framing. The required word length is eight bits and four memory locations should be used for each 32-bit word.",
+        "datasheet": "parsed/ADF4152HV.txt"
+    },
+    "5":
+    {
+        "question": "What should designers do before using the AD V7611W model in automotive applications?",
+        "answer": "Designers should review the Specifications section of the data sheet carefully before using the AD V7611W model in automotive applications.",
+        "datasheet": "parsed/ADV7611.txt"
+    },
+    "6":
+    {
+        "question": "What is the formula for calculating the PFD frequency in the ADF4152HV module?",
+        "answer": "The formula for calculating the PFD frequency in the ADF4152HV module is given by Equation 4: fPFD = REF IN × ((1 + D)/(R × (1 + T )))",
+        "datasheet": "parsed/ADF4152HV.txt"
+    },
+    "7":
+    {
+        "question": "What is the principle of operation for the ADXRS620 module and what is the voltage requirement for its electrostatic resonator?",
+        "answer": "The principle of operation for the ADXRS620 module is based on a resonator gyro with two polysilicon sensing structures containing a dither frame that is electrostatically driven to resonance, producing the necessary velocity element to produce a Coriolis force during angular rate. The resulting signal is fed to a series of gain and demodulation stages that produce the electrical rate signal output. The electrostatic resonator requires 18 V to 20 V for operation, but only 5 V are typically available in most applications.",
+        "datasheet": "parsed/ADXRS620.txt"
+    },
+    "8":
+    {
+        "question": "What is the maximum junction temperature (TJ MAX) for the ADV7611 module and what equation can be used to calculate the junction temperature using the measured package surface temperature?",
+        "answer": "The maximum junction temperature (TJ MAX) for the ADV7611 module is 125°C. The equation that can be used to calculate the junction temperature using the measured package surface temperature is provided in the text but is not included in the given excerpt.",
+        "datasheet": "parsed/ADV7611.txt"
+    },
+    "9":
+    {
+        "question": "What is the default divide ratio for the CLK OUT circuit in the ADF7010 module?",
+        "answer": "The default divide ratio for the CLK OUT circuit in the ADF7010 module is divide by 16.",
+        "datasheet": "parsed/ADF7010.txt"
+    },
+    "10":
+    {
+        "question": "What is the purpose of the LIU in the DS26503 T1/E1/J1 BITS Element?",
+        "answer": "The LIU in the DS26503 T1/E1/J1 BITS Element is used for line interface unit operation, including receiver and transmitter functions, as well as control registers and recommended circuits.",
+        "datasheet": "parsed/DS26503.txt"
+    },
+    "11":
+    {
+        "question": "What is the maximum spurious-free dynamic range (SFDR) of the MAX5877 DAC at an output frequency of 16MHz?",
+        "answer": "The maximum spurious-free dynamic range (SFDR) of the MAX5877 DAC at an output frequency of 16MHz is 75dBc.",
+        "datasheet": "parsed/MAX5877.txt"
+    },
+    "12":
+    {
+        "question": "What is the input voltage and output voltage used to determine the IOUTPK output current limit for the LTM4601 module with a 200µF ceramic COUT?",
+        "answer": "The input voltage is given as VIN = 12V and VIN = 5V, and the output voltage is given as VOUT = 1.5V for both cases.",
+        "datasheet": "parsed/4601fe.txt"
+    },
+    "13":
+    {
+        "question": "What is the maximum output current for LDO2 when VL2IN is greater than +1.8V?",
+        "answer": "The maximum output current for LDO2 when VL2IN is greater than +1.8V is 100mA.",
+        "datasheet": "parsed/MAX20303.txt"
+    },
+    "14":
+    {
+        "question": "What is the recommended frequency range for an external clock used for data transfer during conversion with the LTC1417 module?",
+        "answer": "The recommended frequency range for an external clock used for data transfer during conversion with the LTC1417 module is between 50kHz and 9MHz.",
+        "datasheet": "parsed/1417fas.txt"
+    },
+    "15":
+    {
+        "question": "What is the maximum voltage that all pins can be exposed to without causing permanent damage to the DS28E04-100 module?",
+        "answer": "The maximum voltage that all pins can be exposed to without causing permanent damage to the DS28E04-100 module is +6V.",
+        "datasheet": "parsed/DS28E04-100.txt"
+    },
+    "16":
+    {
+        "question": "What is the recommended value for the boost output-filter capacitor for stable operation of MAX25520 Automotive 2-Channel TFT-LCD Power Supply at 420kHz and 2.1MHz?",
+        "answer": "The boost output-filter capacitor should have a value of 22μF or greater at 420kHz and 10μF at 2.1MHz for stable operation.",
+        "datasheet": "parsed/MAX25520.txt"
+    },
+    "17":
+    {
+        "question": "What is the recommended solution for achieving output to output isolation in the HMC276LP4 switch matrix?",
+        "answer": "It is recommended to use external amplifiers at each output, as the amplifier's reverse isolation will provide output to output isolation if necessary.",
+        "datasheet": "parsed/hmc276lp4.txt"
+    },
+    "18":
+    {
+        "question": "What is the purpose of the ITH pin in the LTC7804 module and how can it be used to optimize the control loop behavior?",
+        "answer": "The purpose of the ITH pin in the LTC7804 module is to allow optimization of control loop behavior. It provides a DC coupled and AC filtered closed-loop response test point. The ITH external components shown in the first page circuit will provide an adequate starting point for most applications. The ITH series RC-CC filter sets the dominant pole-zero loop compensation. Assuming a predominantly second order system, phase margin and/or damping factor can be estimated using the percentage of overshoot seen at this pin. The bandwidth can also be estimated by examining the rise time at the pin. The values can be modified slightly to optimize transient response once the final PC layout is done and the particular output capacitor type and value have been determined.",
+        "datasheet": "parsed/ltc7804.txt"
+    },
+    "19":
+    {
+        "question": "What is the formula for calculating the effective number of bits (ENOBs) of the LTC1414 ADC and how is it related to the signal-to-(noise + distortion) ratio (S/(N + D))?",
+        "answer": "The formula for calculating the effective number of bits (ENOBs) of the LTC1414 ADC is ENOB S = [S/(N + D) – 1.76]/6.02, where S/(N + D) is expressed in dB. ENOBs is directly related to the signal-to-(noise + distortion) ratio (S/(N + D)).",
+        "datasheet": "parsed/1414fs.txt"
+    },
+    "20":
+    {
+        "question": "What is the range of operating supply voltage for the LTC6993 module?",
+        "answer": "The range of operating supply voltage for the LTC6993 module is 2.25V to 5.5V.",
+        "datasheet": "parsed/LTC6993-6993-1-6993-2-6993-3-6993-4.txt"
+    },
+    "21":
+    {
+        "question": "What is the purpose of the overvoltage lockout (OVL) feature in the MAX20303 module?",
+        "answer": "The purpose of the overvoltage lockout (OVL) feature in the MAX20303 module is to protect the device and downstream circuitry from high-voltage stress up to +28V and down to -5.5V if CHGIN is above the overvoltage threshold. During positive OVL, the internal circuit remains powered and an interrupt is sent to the host.",
+        "datasheet": "parsed/MAX20303.txt"
+    },
+    "22":
+    {
+        "question": "What factors influence the junction-to-ambient thermal resistance of the LT1210X and how can it be minimized?",
+        "answer": "The junction-to-ambient thermal resistance of the LT1210X is influenced by the number of PCB thermal vias below the exposed pad, the size of the thermal plane connected to these thermal vias, PCB thickness, air-flow, and proximity of other sources of heat. To minimize the amount of temperature rise within the package, the exposed pad must be soldered down to the PCB with multiple thermal vias tied to a thermal plane. Large amounts of thermal plane area should be used, and power supply voltages should be reduced as much as possible (down to a minimum of ±5V), the value of Rload should be increased as much as possible, and ISUPPLY of the LT1210X should be reduced as much as possible by using the CURRENT SET feature of the LT1210X.",
+        "datasheet": "parsed/1210Xfa.txt"
+    },
+    "23":
+    {
+        "question": "What is the function of the TCSS0 pin in the DS26503 T1/E1/J1 BITS Element?",
+        "answer": "The function of the TCSS0 pin in the DS26503 T1/E1/J1 BITS Element is to select the transmit clock source.",
+        "datasheet": "parsed/DS26503.txt"
+    },
+    "24":
+    {
+        "question": "What is the temperature resolution of the ADC in the AD7414/AD7415 module and what is the corresponding temperature span it can theoretically measure?",
+        "answer": "The temperature resolution of the ADC is 0.25°C and it can theoretically measure a temperature span of 255°C.",
+        "datasheet": "parsed/AD7414_7415.txt"
+    },
+    "25":
+    {
+        "question": "What is the maximum input-referred noise at AIN0-AIN7 for the MAXQ7670A microcontroller with PGA gain of 1V/V?",
+        "answer": "The maximum input-referred noise at AIN0-AIN7 for the MAXQ7670A microcontroller with PGA gain of 1V/V is 400 µVRMS.",
+        "datasheet": "parsed/MAXQ7670A.txt"
+    },
+    "26":
+    {
+        "question": "What is the startup procedure for image-sensing applications when CDS is set to high for the MAX9278/MAX9282 GMSL deserializers?",
+        "answer": "The startup procedure for image-sensing applications when CDS is set to high for the MAX9278/MAX9282 GMSL deserializers involves powering up, establishing video link when valid TXCLK available, writing deserializer configuration bits, waking up the serializer by sending a dummy packet and then writing SLEEP = 0 within 8ms, writing serializer configuration bits, setting SEREN = 1 if not already enabled and waiting for serial link to be established (~3ms), and beginning to send video data to input.",
+        "datasheet": "parsed/MAX9278-MAX9282.txt"
+    },
+    "27":
+    {
+        "question": "What is the purpose of pin 6 on the ADP1882/ADP18830 module and what other function does it serve?",
+        "answer": "Pin 6 on the ADP1882/ADP18830 module is the Drive Output for the External Lower-Side N-Channel MOSFET. It also serves as the current-sense gain setting pin.",
+        "datasheet": "parsed/ADP1882_1883.txt"
+    },
+    "28":
+    {
+        "question": "What is the maximum speed supported by the TWI interface pins in the ADSP-BF54x Blackfin processors?",
+        "answer": "The TWI interface pins in the ADSP-BF54x Blackfin processors support the protocol at speeds up to 400K bits/sec.",
+        "datasheet": "parsed/ADSP-BF542_BF544_BF547_BF548_BF549.txt"
+    },
+    "29":
+    {
+        "question": "What is the maximum bus capacitance allowed for the AD5123/AD5143 module?",
+        "answer": "The maximum bus capacitance allowed for the AD5123/AD5143 module is limited to 400 pF.",
+        "datasheet": "parsed/ad5123_5143.txt"
+    },
+    "30":
+    {
+        "question": "What is the recommended power-up sequence for the ADV7611 module and what should be done while the supplies are being established?",
+        "answer": "The recommended power-up sequence for the ADV7611 is to power up the 3.3 V supplies first, followed by the 1.8 V supplies. Reset should be held low while the supplies are powered up. Care must be taken while the supplies are being established to ensure that a lower rated supply does not go above a higher rated supply level.",
+        "datasheet": "parsed/ADV7611.txt"
+    },
+    "31":
+    {
+        "question": "What is the minimum PFD usable for the ADF7010 in the U.S. 902 MHz-928 MHz band?",
+        "answer": "The minimum PFD usable for the ADF7010 in the U.S. 902 MHz-928 MHz band is 3.625 MHz.",
+        "datasheet": "parsed/ADF7010.txt"
+    },
+    "32":
+    {
+        "question": "What is the minimum off time for the ADP1882ARMZ-0.6/ADP1883ARMZ-0.6 module with a 65% duty cycle?",
+        "answer": "The minimum off time for the ADP1882ARMZ-0.6/ADP1883ARMZ-0.6 module with a 65% duty cycle is 340-400 ns.",
+        "datasheet": "parsed/ADP1882_1883.txt"
+    },
+    "33":
+    {
+        "question": "What is the recommended diameter for the pure gold wire used in wire bonding for the 8HMC7447 power detector chip?",
+        "answer": "The recommended diameter for the pure gold wire used in wire bonding for the 8HMC7447 power detector chip is 0.025mm (1 mil).",
+        "datasheet": "parsed/hmc7447.txt"
+    },
+    "34":
+    {
+        "question": "What is the purpose of the Transmit PLL Control Register in the DS26503 module and what are the different bits used for?",
+        "answer": "The Transmit PLL Control Register in the DS26503 module is used to control the output of the TX PLL Clock Mux function. The different bits used in the register are TPLLOFS1, TPLLOFS0, PLLOS, TPLLIFS1, TPLLIFS0, TPLLSS, TCSS1, and TCSS0. These bits are used to select the source of the transmit clock, select the reference signal for the TX PLL, indicate the reference frequency being input to the TX PLL, select the source for the PLL_OUT pin, and select the TX PLL output frequency.",
+        "datasheet": "parsed/DS26503.txt"
+    },
+    "35":
+    {
+        "question": "What is the function of the SHDN pin on the LTC2234 module and how does it affect the output?",
+        "answer": "The SHDN pin on the LTC2234 module is a shutdown mode selection pin. Connecting SHDN to GND and OE to GND results in normal operation with the outputs enabled. Connecting SHDN to GND and OE to VDD results in normal operation with the outputs at high impedance. Connecting SHDN to VDD and OE to GND results in nap mode with the outputs at high impedance. Connecting SHDN to VDD and OE to VDD results in sleep mode with the outputs at high impedance.",
+        "datasheet": "parsed/2234fa.txt"
+    },
+    "36":
+    {
+        "question": "What is the purpose of the delay before enabling the power path to SYS in the MAX20303 PMIC?",
+        "answer": "The delay allows the fuel gauge to take an open cell measurement before the battery is loaded.",
+        "datasheet": "parsed/MAX20303.txt"
+    },
+    "37":
+    {
+        "question": "What is the peak supply current required for 29 μs out of every 800 μs for the AD7414/AD7415 module?",
+        "answer": "The peak supply current required for 29 μs out of every 800 μs for the AD7414/AD7415 module is not specified.",
+        "datasheet": "parsed/AD7414_7415.txt"
+    },
+    "38":
+    {
+        "question": "What is the purpose of the transmit short-circuit limiter in the DS26503 module?",
+        "answer": "The purpose of the transmit short-circuit limiter in the DS26503 module is to limit the source current to approximately 50mA (rms) on the network side of the transformer in E1 modes of operations and 70mA (rms) on the network side of the transformer in T1 modes of operation to prevent short-circuit conditions.",
+        "datasheet": "parsed/DS26503.txt"
+    },
+    "39":
+    {
+        "question": "What command is used to enable linear gain setting mode in the AD5123/AD5143 module?",
+        "answer": "Command 16 (see Table 11) is used to enable linear gain setting mode in the AD5123/AD5143 module.",
+        "datasheet": "parsed/ad5123_5143.txt"
+    },
+    "40":
+    {
+        "question": "What is the operating range for the differential input voltage V IN in the LTC248018 module?",
+        "answer": "As long as the voltage on the IN+ and IN– pins is maintained within the –0.3V to (VCC + 0.3V) absolute maximum operating range, a conversion result is generated for any differential input voltage V IN from –FS = –0.5 VREF/GAIN to +FS = 0.5 VREF/GAIN. For differential input voltages greater than +FS, the conversion result is clamped to the value corresponding to the +FS + 1LSB. For differential input voltages below –FS, the conversion result is clamped to the value corresponding to –FS – 1LSB.",
+        "datasheet": "parsed/2480fe.txt"
+    },
+    "41":
+    {
+        "question": "What is the function of pin 26 on the ADF4152HV module?",
+        "answer": "Pin 26 on the ADF4152HV module is the Lock Detect Output, which indicates a phase-locked loop (PLL) lock when it outputs a logic high and indicates loss of PLL lock when it outputs a logic low.",
+        "datasheet": "parsed/ADF4152HV.txt"
+    },
+    "42":
+    {
+        "question": "What is the typical value of the quiescent current for the MAX14575A/MAX14575AL/MAX14575B/MAX14575C when VIN is 3.3V and IQIOUT is 0A?",
+        "answer": "The typical value of the quiescent current for the MAX14575A/MAX14575AL/MAX14575B/MAX14575C when VIN is 3.3V and IQIOUT is 0A is 130-275 μA.",
+        "datasheet": "parsed/MAX14575A-MAX14575C.txt"
+    },
+    "43":
+    {
+        "question": "What is the voltage range for VDVDDIO and GNDIO in the MAXQ7670A microcontroller's low speed, PMM1 mode without CAN?",
+        "answer": "The voltage range for VDVDDIO and GNDIO in the MAXQ7670A microcontroller's low speed, PMM1 mode without CAN is not specified.",
+        "datasheet": "parsed/MAXQ7670A.txt"
+    },
+    "44":
+    {
+        "question": "What is the purpose of enabling burst mode in the AD5123/AD5143 module and how is it activated?",
+        "answer": "Enabling burst mode allows for multiple data bytes to be sent consecutively to the device as data bytes for a command. It is activated by setting Bit D3 of the control register.",
+        "datasheet": "parsed/ad5123_5143.txt"
+    },
+    "45":
+    {
+        "question": "What is the temperature range that the HMC1132 evaluation board and populated components are designed to operate over?",
+        "answer": "The HMC1132 evaluation board and populated components are designed to operate over the ambient temperature range of −40°C to +85°C.",
+        "datasheet": "parsed/HMC1132.txt"
+    },
+    "46":
+    {
+        "question": "What are the three independent computational units in the ADSP-217x processor and what operations do they perform?",
+        "answer": "The three independent computational units in the ADSP-217x processor are the ALU, the multiplier/accumulator (MAC), and the shifter. The ALU performs a standard set of arithmetic and logic operations, the MAC performs single-cycle multiply, multiply/add, and multiply/subtract operations with 40 bits of accumulation, and the shifter performs logical and arithmetic shifts, normalization, denormalization, and derive exponent operations.",
+        "datasheet": "parsed/ADSP-2171_2173.txt"
+    },
+    "47":
+    {
+        "question": "What is the purpose of the Conditional Search ROM command in the DS28E04-100 module?",
+        "answer": "The purpose of the Conditional Search ROM command in the DS28E04-100 module is to allow the bus master to identify devices on a multidrop system that fulfill certain conditions (CSR = 1) and have to signal an important event. Only those devices that fulfill the conditions will participate in the search. After each pass of the conditional search that successfully determined the 64-bit ROM code for a specific device on the multidrop bus, that particular device can be individually accessed as if a Match ROM had been issued, since all other devices will have dropped out of the search process and will be waiting for a reset pulse.",
+        "datasheet": "parsed/DS28E04-100.txt"
+    },
+    "48":
+    {
+        "question": "What is the equation used to calculate the output ripple voltage in the LTM4601 module, and what parameters are needed for the calculation?",
+        "answer": "The equation used to calculate the output ripple voltage in the LTM4601 module is ΔVOUT(P-P) ≈ (ΔIL/(8fmCOUT) + ESRΔIL), where f is frequency and m is the number of parallel phases. The parameters needed for the calculation are effective output ripple current, frequency, number of parallel phases, bulk capacitance, and effective series resistance (ESR) of the output bulk capacitance.",
+        "datasheet": "parsed/4601fe.txt"
+    },
+    "49":
+    {
+        "question": "What happens when there is a falling edge on JTCLK while in the Update-DR state?",
+        "answer": "The data from the shift register path of the test registers is latched into the data output latches to prevent changes at the parallel output due to changes in the shift register.",
+        "datasheet": "parsed/DS26503.txt"
+    },
+    "50":
+    {
+        "question": "What is the recommended range for the value of C1 in the LTC7804 module and why is it chosen in that range?",
+        "answer": "The recommended range for the value of C1 in the LTC7804 module is 0.1μF to 0.47μF. It is chosen in that range to force R1 || R2 to around 2k, reducing error that might have been caused by the SENSE− pin’s ±1μA current.",
+        "datasheet": "parsed/ltc7804.txt"
+    },
+    "51":
+    {
+        "question": "What is the polynomial function used to generate the 16-bit CRC in the ISO/IEC 14443 standard for error detection?",
+        "answer": "The polynomial function used to generate the 16-bit CRC in the ISO/IEC 14443 standard for error detection is X16+ X12+ X5+ 1.",
+        "datasheet": "parsed/MAX66020.txt"
+    },
+    "52":
+    {
+        "question": "What is the minimum power consumption in Nap Mode for the LTC2234 module?",
+        "answer": "The minimum power consumption in Nap Mode for the LTC2234 module is 35 mW.",
+        "datasheet": "parsed/2234fa.txt"
+    },
+    "53":
+    {
+        "question": "What is the maximum number of LTM4601-1 devices that can be used in parallel with an LTM4601, and why is there a limit?",
+        "answer": "The maximum number of LTM4601-1 devices that can be used in parallel with an LTM4601 is five, for a total of six modules in parallel. The reason for the limit is not provided.",
+        "datasheet": "parsed/4601fe.txt"
+    },
+    "54":
+    {
+        "question": "What is the typical voltage regulation of the FB pin in the LT3755/LT3755-1/LT3755-2 module?",
+        "answer": "The typical voltage regulation of the FB pin in the LT3755/LT3755-1/LT3755-2 module is 1.25V (nominal).",
+        "datasheet": "parsed/LT3755-3755-1-3755-2.txt"
+    },
+    "55":
+    {
+        "question": "What is the LSb value for the Power Measurement's AvgPower Register in the MAX77658 Ultra-Low Power PMIC?",
+        "answer": "The LSb value for the Power Measurement's AvgPower Register in the MAX77658 Ultra-Low Power PMIC is 0.171mW.",
+        "datasheet": "parsed/max77658.txt"
+    },
+    "56":
+    {
+        "question": "What is the purpose of connecting an external capacitor to the OSC pin of the MAX1044/ICL7660 module?",
+        "answer": "The purpose of connecting an external capacitor to the OSC pin of the MAX1044/ICL7660 module is to lower the oscillator frequency, which improves efficiency at low load currents by reducing the IC's quiescent supply current. However, it also increases output ripple and output impedance, which can be offset by using larger values for C1 and C2.",
+        "datasheet": "parsed/ICL7660-MAX1044.txt"
+    },
+    "57":
+    {
+        "question": "What is the minimum operating voltage for the LT3755EUD-2#PBF module?",
+        "answer": "The minimum operating voltage for the LT3755EUD-2#PBF module is not explicitly stated in the provided text.",
+        "datasheet": "parsed/LT3755-3755-1-3755-2.txt"
+    },
+    "58":
+    {
+        "question": "What is the maximum input current that can be applied to the ADA4000-1/ADA4000-2/ADA4000-4 operational amplifier if the supply voltages cannot be established simultaneously with the input signals?",
+        "answer": "The input current must be limited to 10 mA.",
+        "datasheet": "parsed/ADA4000-1_4000-2_4000-4.txt"
+    },
+    "59":
+    {
+        "question": "What happens if the Write Scratchpad command is attempted to a write-protected location?",
+        "answer": "If the Write Scratchpad command is attempted to a write-protected location, the scratchpad is loaded with the data already in memory, rather than the data transmitted.",
+        "datasheet": "parsed/DS28E04-100.txt"
+    },
+    "60":
+    {
+        "question": "What is the output range of the output buffer amplifier in the AD5680 DAC module?",
+        "answer": "The output range of the output buffer amplifier in the AD5680 DAC module is 0 V to VDD.",
+        "datasheet": "parsed/AD5680.txt"
+    },
+    "61":
+    {
+        "question": "What is the purpose of the Bst bit in the MAX77658 Ultra-Low Power PMIC module?",
+        "answer": "The purpose of the Bst bit in the MAX77658 Ultra-Low Power PMIC module is to indicate the battery status. It is set to 0 when a battery is present in the system and set to 1 when the battery is absent.",
+        "datasheet": "parsed/max77658.txt"
+    },
+    "62":
+    {
+        "question": "What is the format for writing to the registers of MAX9278/MAX9282 deserializers using I2C protocol?",
+        "answer": "Writes to the deserializers comprise the transmission of the slave address with the R/W bit set to zero, followed by at least one byte of information. The first byte of information is the register address or command byte. If a STOP (P) condition is detected after the register address is received, the device takes no further action beyond storing the register address. Any bytes received after the register address are data bytes. The first data byte goes into the register selected by the register address, and subsequent data bytes go into subsequent registers. If multiple data bytes are transmitted before a STOP condition, these bytes are stored in subsequent registers because the register addresses auto-increment.",
+        "datasheet": "parsed/MAX9278-MAX9282.txt"
+    },
+    "63":
+    {
+        "question": "What is the function of the SSEN input in the MAX9278/MAX9282 GMSL deserializers?",
+        "answer": "The SSEN input is used to enable or disable spread spectrum on the LVDS and control outputs. Set SSEN = high for 2% spread spectrum and set SSEN = low to use the LVDS and control outputs without spread spectrum.",
+        "datasheet": "parsed/MAX9278-MAX9282.txt"
+    },
+    "64":
+    {
+        "question": "What is the function of pin A3 on the MAX77658 Ultra-Low Power PMIC?",
+        "answer": "A3 is the Battery Connection to the Charger. It can be connected to SYS FG pin if fuel gauge is intended to be used. Otherwise, it should be connected to the positive battery terminal and bypassed to GND with a 4.7μF ceramic capacitor.",
+        "datasheet": "parsed/max77658.txt"
+    },
+    "65":
+    {
+        "question": "What is the programmable range for the fast-charge safety timer in the MAX77658 Ultra-Low Power PMIC?",
+        "answer": "The programmable range for the fast-charge safety timer in the MAX77658 Ultra-Low Power PMIC is from 3 hours to 7 hours in 2 hour increments, as programmable with CNFG_CHG_E.T_FAST_CHG[1:0].",
+        "datasheet": "parsed/max77658.txt"
+    },
+    "66":
+    {
+        "question": "What is the purpose of setting CFGBLOCK in the MAX9278/MAX9282 deserializers?",
+        "answer": "The purpose of setting CFGBLOCK in the MAX9278/MAX9282 deserializers is to make registers 0x00 to registers 0x1F as read only, blocking changes to them.",
+        "datasheet": "parsed/MAX9278-MAX9282.txt"
+    },
+    "67":
+    {
+        "question": "What is the recommended sequence for applying the analog and digital supplies to the ADATE320 module?",
+        "answer": "It is recommended to apply the two analog supplies first, with the smaller valued supply (VEE) applied before the larger valued supply (VCC). Then, bring up the digital VDD supply while the RST pin is asserted. After VDD is stable and the RST pin is subsequently released, a fully clocked reset sequence must follow. The power supplies must be removed in the reverse order.",
+        "datasheet": "parsed/adate320.txt"
+    },
+    "68":
+    {
+        "question": "What is the purpose of the CS8427 S/PDIF transceiver in the MAX98089 Evaluation Kit?",
+        "answer": "The CS8427 S/PDIF transceiver serves as a format converter between I2S and S/PDIF, and is used to send and receive digital audio over the optical connectors. When receiving S/PDIF data, it outputs a recovered master clock that can be used to clock the IC. When transmitting S/PDIF data, it requires a master-clock input and generates a master clock based on the LRCLK signal being output by the IC. Its purpose is to facilitate digital audio communication between the MAX98089 and other devices.",
+        "datasheet": "parsed/MAX98089EVKIT_WLP.txt"
+    },
+    "69":
+    {
+        "question": "What is the range of input voltage that the LTC3388-1/LTC3388-3 can operate with?",
+        "answer": "The LTC3388-1/LTC3388-3 can operate with VIN up to 20V.",
+        "datasheet": "parsed/338813fa.txt"
+    },
+    "70":
+    {
+        "question": "What is the status of the nEN input when STAT_EN is 0b1?",
+        "answer": "The nEN input is active (logic-low).",
+        "datasheet": "parsed/max77658.txt"
+    },
+    "71":
+    {
+        "question": "What is the input voltage range for the ACOK signal in the MAX1535A battery charger module?",
+        "answer": "The input voltage range for the ACOK signal in the MAX1535A battery charger module is 0 to 28V.",
+        "datasheet": "parsed/MAX1535A.txt"
+    },
+    "72":
+    {
+        "question": "What is the valid input range for the non-inverting input of the LT1210X amplifier on ±15V supplies?",
+        "answer": "The valid input range for the non-inverting input of the LT1210X amplifier on ±15V supplies is ±12V.",
+        "datasheet": "parsed/1210Xfa.txt"
+    },
+    "73":
+    {
+        "question": "What is the purpose of the TCPC_CONTROL[0] settings in the MAX25432 module?",
+        "answer": "I do not know.",
+        "datasheet": "parsed/MAX25432.txt"
+    },
+    "74":
+    {
+        "question": "What are the three different modes of operation that can be selected for the LTC7804 and how is each mode selected?",
+        "answer": "The three different modes of operation for the LTC7804 are Burst Mode operation, constant frequency pulse-skipping mode, and forced continuous conduction mode. Burst Mode operation is selected by tying the MODE pin to GND, forced continuous operation is selected by tying the MODE pin to INTV CC, and pulse-skipping mode is selected by tying the MODE pin to a DC voltage greater than 1.2V and less than INTV CC – 1.3V.",
+        "datasheet": "parsed/ltc7804.txt"
+    },
+    "75":
+    {
+        "question": "What is the default voltage of the CLHI pin on a 3.3V supply for the LTC6416 module?",
+        "answer": "The default voltage of the CLHI pin on a 3.3V supply for the LTC6416 module is 2.23V.",
+        "datasheet": "parsed/6416f.txt"
+    },
+    "76":
+    {
+        "question": "What is the modulation index range used for amplitude modulation in the communication path from master to slave in the MAX66020 ISO/IEC 14443 Type B-compliant 1Kb Memory Fob?",
+        "answer": "The modulation index range used for amplitude modulation in the communication path from master to slave is between 8% and 14%.",
+        "datasheet": "parsed/MAX66020.txt"
+    },
+    "77":
+    {
+        "question": "What is the maximum duty factor for the TG overvoltage and BG when VFREQ is 0V in the LTC7804 module?",
+        "answer": "The maximum duty factor for TG overvoltage is not provided in the given text. The maximum duty factor for BG when VFREQ is 0V is 93%.",
+        "datasheet": "parsed/ltc7804.txt"
+    },
+    "78":
+    {
+        "question": "What is the phone number to contact Analog Devices for application support and to place orders for the HMC-C025 attenuator module?",
+        "answer": "The phone number to contact Analog Devices for application support and to place orders for the HMC-C025 attenuator module is 1-800-ANALOG-D.",
+        "datasheet": "parsed/hmc-c025.txt"
+    },
+    "79":
+    {
+        "question": "What is the purpose of the BUSY pin in the ADATE320 module and how is it used to ensure proper operation during SPI instruction scenarios?",
+        "answer": "The purpose of the BUSY pin is to notify the supervisory ASIC or FGPA that it is safe to stop the SCLK signal. It is used to ensure proper operation during SPI instruction scenarios by providing a minimum required length of the BUSY period (tBUSW) which is variable depending on the particular preceding SPI instruction. The length of tBUSW is deterministic and can be predicted in advance, making it possible to operate the device without monitoring the BUSY pin. The minimum number of required rising edge SCLK cycles, as defined by tBUSW, must be honored following the release of CS for each of the SPI instruction scenarios listed in Table 23.",
+        "datasheet": "parsed/adate320.txt"
+    },
+    "80":
+    {
+        "question": "What is the maximum junction temperature for the MAX4250AAUK module?",
+        "answer": "The maximum junction temperature for the MAX4250AAUK module is +150°C.",
+        "datasheet": "parsed/MAX4249-MAX4257.txt"
+    },
+    "81":
+    {
+        "question": "What is the maximum current that the internal NPN of the LT4363 module is capable of sinking?",
+        "answer": "The internal NPN of the LT4363 module is capable of sinking up to 2mA of current.",
+        "datasheet": "parsed/4363fb.txt"
+    },
+    "82":
+    {
+        "question": "What is the frequency range covered by the HMC345LP3 / 345LP3E GaAs MMIC SP4T NON-REFLECTIVE POSITIVE CONTROL SWITCH?",
+        "answer": "The HMC345LP3 / 345LP3E GaAs MMIC SP4T NON-REFLECTIVE POSITIVE CONTROL SWITCH covers a frequency range of DC to 8 GHz.",
+        "datasheet": "parsed/hmc345.txt"
+    },
+    "83":
+    {
+        "question": "What is the recommended value for the decoupling capacitor to be used on the IC power-supply pin in the Typical Operating Circuit of the DS3881 Single-Channel Automotive CCFL Controller?",
+        "answer": "The recommended values for the decoupling capacitor are 0.01µF or 0.1µF.",
+        "datasheet": "parsed/DS3881.txt"
+    },
+    "84":
+    {
+        "question": "What is the range of VIN (operating voltage) for the LTC3215 charge pump DC/DC converter?",
+        "answer": "The range of VIN (operating voltage) for the LTC3215 charge pump DC/DC converter is 2.9V to 4.4V.",
+        "datasheet": "parsed/3215fc.txt"
+    },
+    "85":
+    {
+        "question": "What is the purpose of connecting an external resistor from CB to GND in the MAX15090/MAX15090A module?",
+        "answer": "The purpose of connecting an external resistor from CB to GND in the MAX15090/MAX15090A module is to set the circuit-breaker threshold.",
+        "datasheet": "parsed/MAX15090-MAX15090A.txt"
+    },
+    "86":
+    {
+        "question": "What is the default value of the Transmit F-Bit Pass-Through (TFPT) bit in the T1 Transmit Control Register 2 for the DS26503 T1/E1/J1 BITS Element?",
+        "answer": "The default value of the Transmit F-Bit Pass-Through (TFPT) bit in the T1 Transmit Control Register 2 for the DS26503 T1/E1/J1 BITS Element is 0.",
+        "datasheet": "parsed/DS26503.txt"
+    },
+    "87":
+    {
+        "question": "What is the purpose of the MSK_VSAF field in the EXTENDED_STATUS_MASK register of MAX25432B?",
+        "answer": "The purpose of the MSK_VSAF field in the EXTENDED_STATUS_MASK register of MAX25432B is not provided in the given text.",
+        "datasheet": "parsed/MAX25432.txt"
+    },
+    "88":
+    {
+        "question": "What is the settling time to 0.1% of final value for FV in Range A with a 200 pF load and PPMU enabled, according to the data sheet of ADATE320?",
+        "answer": "The settling time to 0.1% of final value for FV in Range A with a 200 pF load and PPMU enabled is 20 µs, according to the data sheet of ADATE320.",
+        "datasheet": "parsed/adate320.txt"
+    },
+    "89":
+    {
+        "question": "What is the maximum capacitance load that can be used on the OUT pin of the MAX14575A/B/C?",
+        "answer": "The maximum capacitive load on the OUT pin of the MAX14575A/B/C depends on the values of LIM, BLANK, I, t, and V, and can be calculated using the formula provided in the text.",
+        "datasheet": "parsed/MAX14575A-MAX14575C.txt"
+    },
+    "90":
+    {
+        "question": "What is the function of the MAX9568 IC in the MAX9568 Evaluation Kit, and what types of video signals can it extract sync timing information from?",
+        "answer": "The MAX9568 IC in the MAX9568 Evaluation Kit is a video sync separator that extracts sync timing information from standard-definition (SDTV), extended-definition (EDTV), and high-definition (HDTV) component video signals.",
+        "datasheet": "parsed/MAX9568EVKIT.txt"
+    },
+    "91":
+    {
+        "question": "What is the minimum input voltage range for the MAX25432 Automotive, 100W, USB PD, PPS, Buck-Boost Port Controller and Protector?",
+        "answer": "The minimum input voltage range for the MAX25432 Automotive, 100W, USB PD, PPS, Buck-Boost Port Controller and Protector is 4.5V.",
+        "datasheet": "parsed/MAX25432.txt"
+    },
+    "92":
+    {
+        "question": "What is the efficiency of the ADP1882/ADP18830 at 1.0 MHz with VOUT = 1.8 V and a load current of 10 mA when VDD = 5.5V and VIN = 16.5V?",
+        "answer": "The efficiency of the ADP1882/ADP18830 at 1.0 MHz with VOUT = 1.8 V and a load current of 10 mA when VDD = 5.5V and VIN = 16.5V is not provided in the given text.",
+        "datasheet": "parsed/ADP1882_1883.txt"
+    },
+    "93":
+    {
+        "question": "What is the recommended mode for reducing power consumption in applications with less than C/4-rate maximum loading for the MAX20303 PMIC?",
+        "answer": "The recommended mode for reducing power consumption in applications with less than C/4-rate maximum loading for the MAX20303 PMIC is hibernate mode.",
+        "datasheet": "parsed/MAX20303.txt"
+    },
+    "94":
+    {
+        "question": "What are the two electromagnetic interference suppression features of the DS3881 automotive CCFL controller and how are they enabled?",
+        "answer": "The two electromagnetic interference suppression features of the DS3881 automotive CCFL controller are spread-spectrum modulation and lamp oscillator frequency stepping. Spread-spectrum modulation is enabled by setting either SS0 and/or SS1 in EMIC register, while lamp oscillator frequency stepping is enabled by using the STEPE bit and/or STEP pin (SS0/1 must be 0).",
+        "datasheet": "parsed/DS3881.txt"
+    },
+    "95":
+    {
+        "question": "What should be verified if the AD9288 evaluation board is not working correctly?",
+        "answer": "Verify power at the IC pins, check that all jumpers are in the correct position for the desired mode of operation, verify that VREF is at 1.23V, and try running Encode clock and analog inputs at low speeds (20 MSPS/1 MHz) and monitor LCX821 outputs, DAC outputs, and ADC outputs for toggling.",
+        "datasheet": "parsed/AD9288.txt"
+    },
+    "96":
+    {
+        "question": "What is the input voltage range supported by the LTM4601/LTM4601-11 µModule Regulators?",
+        "answer": "The input voltage range supported by the LTM4601/LTM4601-11 µModule Regulators is 4.5V to 20V.",
+        "datasheet": "parsed/4601fe.txt"
+    },
+    "97":
+    {
+        "question": "What is the interpolation frequency at which the AD5680 updates in closed-loop low bandwidth applications?",
+        "answer": "The AD5680 updates at the interpolation frequency of 10 kHz in closed-loop low bandwidth applications.",
+        "datasheet": "parsed/AD5680.txt"
+    },
+    "98":
+    {
+        "question": "What is the maximum warpage allowed for the WHHD-128 module according to JEDEC T1655-1?",
+        "answer": "The maximum warpage allowed for the WHHD-128 module according to JEDEC T1655-1 is not provided in the given text.",
+        "datasheet": "parsed/MAX1535A.txt"
+    },
+    "99":
+    {
+        "question": "What determines the frequency divider setting and polarity of the OUT pin on the LTC6993, and how is it programmed?",
+        "answer": "The frequency divider setting and polarity of the OUT pin on the LTC6993 is determined by the DIVCODE value, which is set by a resistor divider attached to the DIV pin. The DIV pin connects to an internal, V+ referenced 4-bit A/D converter that determines the DIVCODE value. DIVCODE programs two settings on the LTC6993: 1) DIVCODE determines the frequency divider setting, NDIV, and 2) DIVCODE determines the polarity of OUT pin, via the POL bit. Table 1 provides recommended resistor values for accurate voltage division and corresponding NDIV and POL values for the recommended resistor pairs.",
+        "datasheet": "parsed/LTC6993-6993-1-6993-2-6993-3-6993-4.txt"
+    },
+    "100":
+    {
+        "question": "What is the default setting for HS/VS/DE tracking in the MAX9278/MAX9282 deserializer when in 3-channel or 4-channel mode?",
+        "answer": "The default setting for HS/VS/DE tracking in the MAX9278/MAX9282 deserializer when in 3-channel or 4-channel mode is off (BWS = low or high).",
+        "datasheet": "parsed/MAX9278-MAX9282.txt"
+    },
+    "101":
+    {
+        "question": "What is the maximum data rate that the ADM3232E can operate at?",
+        "answer": "The ADM3232E can operate at a maximum data rate of 460 kbps.",
+        "datasheet": "parsed/ADM3232E.txt"
+    },
+    "102":
+    {
+        "question": "What is the frequency range of the internal oscillator in the MAX9278/MAX9282 GMSL deserializers?",
+        "answer": "The internal oscillator frequency ranges from 100MHz to 150MHz over all process corners and operating conditions.",
+        "datasheet": "parsed/MAX9278-MAX9282.txt"
+    },
+    "103":
+    {
+        "question": "What is the unit of measurement for the glitch impulse specified in the MAX5877 datasheet?",
+        "answer": "The unit of measurement for the glitch impulse is pV s (picovolts per second).",
+        "datasheet": "parsed/MAX5877.txt"
+    },
+    "104":
+    {
+        "question": "What is the recommended value for resistor R3 when connecting a resistor-divider from V18 to NAVDD for a MAX25520 module?",
+        "answer": "Use a value greater than 4.7kΩ for R3.",
+        "datasheet": "parsed/MAX25520.txt"
+    },
+    "105":
+    {
+        "question": "What is the function of the FLAG pin in MAX14575A/MAX14575AL/MAX14575B/MAX14575C?",
+        "answer": "The FLAG pin is an open-drain overcurrent indicator output that goes low when the overload fault duration exceeds the blanking time, reverse current is detected, thermal shutdown mode is active, or SETI is connected to ground.",
+        "datasheet": "parsed/MAX14575A-MAX14575C.txt"
+    },
+    "106":
+    {
+        "question": "What is the purpose of connecting RDC_SENSE to the RD plane in the MAX11054/MAX11055/MAX11056 ADCs?",
+        "answer": "The purpose of connecting RDC_SENSE to the RD plane is not specified in the provided text.",
+        "datasheet": "parsed/MAX11044-MAX11056.txt"
+    },
+    "107":
+    {
+        "question": "What is the function of the PWDN pin on the MAX9278/MAX9282 3.12Gbps GMSL Deserializers?",
+        "answer": "The PWDN pin is an active-low, power-down input with internal pulldown to EP. Setting PWDN low enters power-down mode to reduce power consumption.",
+        "datasheet": "parsed/MAX9278-MAX9282.txt"
+    },
+    "108":
+    {
+        "question": "What is the typical operating frequency for the FFT plot in the MAX11044 datasheet?",
+        "answer": "The typical operating frequency for the FFT plot in the MAX11044 datasheet is 10kHz.",
+        "datasheet": "parsed/MAX11044-MAX11056.txt"
+    },
+    "109":
+    {
+        "question": "What is the purpose of the LTC4317 in an I2C bus system and how does it allow multiple devices with the same address to be connected without interference?",
+        "answer": "The LTC4317 is an I2C/SMBus address translator that bridges two segments of an I2C bus, reading incoming addresses on the master side and retransmitting them to the slave side with the 7-bit I2C addresses translated in real time. This allows multiple I2C devices with the same address to be connected to the same bus without interference. The translated addresses are configured with external resistors, and no extra software is required. The LTC4317 also allows hot swapping isolated bus segments together.",
+        "datasheet": "parsed/4317fa.txt"
+    },
+    "110":
+    {
+        "question": "What is the recommended component to supply high frequency transient currents to the MOSFET gate drivers in the LTC7804 module?",
+        "answer": "A ceramic capacitor placed directly adjacent to the INT VCC and GND pins is highly recommended to supply the high frequency transient currents required by the MOSFET gate drivers.",
+        "datasheet": "parsed/ltc7804.txt"
+    },
+    "111":
+    {
+        "question": "What is the range of internal current limiting adjustment for the MAX14575A/MAX14575AL/MAX14575B/MAX14575C programmable current-limit switches?",
+        "answer": "The range of internal current limiting adjustment for the MAX14575A/MAX14575AL/MAX14575B/MAX14575C programmable current-limit switches is from 250mA to 2.5A.",
+        "datasheet": "parsed/MAX14575A-MAX14575C.txt"
+    },
+    "112":
+    {
+        "question": "What is the recommended decoupling capacitor and its value for the DS3900 module?",
+        "answer": "The recommended decoupling capacitor for the DS3900 module is a 47µF tantalum capacitor.",
+        "datasheet": "parsed/DS3900.txt"
+    },
+    "113":
+    {
+        "question": "What is the high level output voltage of the LTC1400 module when VCC is 4.75V and IO is -10μA?",
+        "answer": "The high level output voltage of the LTC1400 module when VCC is 4.75V and IO is -10μA is 4.0V.",
+        "datasheet": "parsed/1400fa.txt"
+    },
+    "114":
+    {
+        "question": "What should be done with the LV pin for supply voltages below 3.5V in the MAX1044/ICL7660 module?",
+        "answer": "The LV pin should be connected to ground for supply voltages below 3.5V in the MAX1044/ICL7660 module.",
+        "datasheet": "parsed/ICL7660-MAX1044.txt"
+    },
+    "115":
+    {
+        "question": "What is the purpose of the LT4363 surge stopper and how does it protect loads during overvoltage events?",
+        "answer": "The purpose of the LT4363 surge stopper is to protect loads from high voltage transients. It regulates the output during an overvoltage event, such as load dump in vehicles, by controlling the gate of an external N-channel MOSFET. The output is limited to a safe value allowing the loads to continue functioning. It also monitors the voltage drop between the SNS and OUT pins to protect against overcurrent faults.",
+        "datasheet": "parsed/4363fb.txt"
+    },
+    "116":
+    {
+        "question": "What is the purpose of the CALIBRATION_ENABLE bit in the MAX1535A charger module?",
+        "answer": "The purpose of the CALIBRATION_ENABLE bit in the MAX1535A charger module is to set the behavior of the PDS and PDL pins based on the values of DCIN, BATT, and THM.",
+        "datasheet": "parsed/MAX1535A.txt"
+    },
+    "117":
+    {
+        "question": "What is the maximum acquisition time guaranteed for the LTC1414?",
+        "answer": "The guaranteed maximum acquisition time for the LTC1414 is 100ns.",
+        "datasheet": "parsed/1414fs.txt"
+    },
+    "118":
+    {
+        "question": "What is the temperature range for the MAX4255 EUK+T module?",
+        "answer": "The temperature range for the MAX4255 EUK+T module is -40°C to +85°C.",
+        "datasheet": "parsed/MAX4249-MAX4257.txt"
+    },
+    "119":
+    {
+        "question": "What is the worst case power dissipation for the ADL5500 and how is it calculated?",
+        "answer": "The worst case power dissipation for the ADL5500 is 58 mW and it is calculated by multiplying the supply voltage (5.5 V) with the current consumption (10.5 mA) as shown in Figure 6.",
+        "datasheet": "parsed/ADL5500.txt"
+    },
+    "120":
+    {
+        "question": "What is the typical GPI-to-GPO delay for the MAX9282 GMSL deserializer?",
+        "answer": "The typical GPI-to-GPO delay for the MAX9282 GMSL deserializer is 50 µs (as per the provided text in the first line).",
+        "datasheet": "parsed/MAX9278-MAX9282.txt"
+    },
+    "121":
+    {
+        "question": "What is the recommended method for proper power dissipation when using the MAX7450/MAX7451/MAX7452 video-signal conditioners?",
+        "answer": "Placing the IC onto a copper area the size of the pad is recommended for proper power dissipation.",
+        "datasheet": "parsed/MAX7450-MAX7452.txt"
+    },
+    "122":
+    {
+        "question": "What are the three types of blocks defined in the ISO/IEC 14443 standard for the MAX66020 module, and what are the bit assignments for the I-block?",
+        "answer": "The three types of blocks defined in the ISO/IEC 14443 standard for the MAX66020 module are I-block, R-block, and S-block. The bit assignments for the I-block are: bit 2 must be 1, bit 6, bit 7, and bit 8 must be 0, bit 5 (CH) is used to indicate chaining and must always be 0, bit 4 (CID) is used by the master to indicate whether the prologue field contains a CID byte, and the MAX66020 processes blocks with and without CID as defined in the standard. The master must include the CID byte if bit 4 is 1. Bit 3 (NAD) is used to indicate whether the prologue field contains an NAD byte, a feature not supported by the MAX66020, and must always be 0. Bit 1 (#) is a reserved bit.",
+        "datasheet": "parsed/MAX66020.txt"
+    },
+    "123":
+    {
+        "question": "What is the purpose of the ADAPTLIM logic output in the MAX17435 Evaluation Kit?",
+        "answer": "The purpose of the ADAPTLIM logic output in the MAX17435 Evaluation Kit is to monitor the adapter current limit set by the voltage at the ITHR pin and compare it with the voltage at the IINP pin. If the voltage at the IINP pin exceeds the voltage at the ITHR pin, ADAPTLIM is pulled low. ADAPTLIM is pulled high to 5.4V otherwise.",
+        "datasheet": "parsed/MAX17435EVKIT.txt"
+    },
+    "124":
+    {
+        "question": "What is the maximum output short-circuit current for the MAX9278/MAX9282 GMSL Deserializers when VIOVDD is between 3.0V to 3.6V?",
+        "answer": "The maximum output short-circuit current for the MAX9278/MAX9282 GMSL Deserializers when VIOVDD is between 3.0V to 3.6V is 15-39 mA.",
+        "datasheet": "parsed/MAX9278-MAX9282.txt"
+    },
+    "125":
+    {
+        "question": "What is the maximum number of devices that can attach to the I2C bus?",
+        "answer": "The maximum number of devices that can attach to the I2C bus is only limited by bus capacitance.",
+        "datasheet": "parsed/max77658.txt"
+    },
+    "126":
+    {
+        "question": "What is the frequency and load impedance required for the 6312kHz clock signal at the output port of the DS26503 module?",
+        "answer": "The frequency required for the 6312kHz clock signal at the output port of the DS26503 module is 6312kHz and the load impedance required is 75Ω resistive.",
+        "datasheet": "parsed/DS26503.txt"
+    },
+    "127":
+    {
+        "question": "What is the linear transfer function for SIMO Buck-Boost Channel 1 Target Output Voltage in the MAX77658 Ultra-Low Power PMIC?",
+        "answer": "The linear transfer function for SIMO Buck-Boost Channel 1 Target Output Voltage in the MAX77658 Ultra-Low Power PMIC starts at 0.5V, ends at 5.5V, with 25mV increments. The 8-bit configuration is as follows: 0x00 = 0.500V, 0x01 = 0.525V, 0x02 = 0.550V, 0x03 = 0.575V, 0x04 = 0.600V, 0x05 = 0.625V, 0x06 = 0.650V, 0x07 = 0.675V, 0x08 = 0.700V, 0xC5 = 5.425V, 0xC6 = 5.450V, 0xC7 = 5.475V, 0xC8 to 0xFF = 5.500V.",
+        "datasheet": "parsed/max77658.txt"
+    },
+    "128":
+    {
+        "question": "What is the output enable time (tENA) and how is it measured for the ADSP-BF54x Blackfin processors?",
+        "answer": "The output enable time (tENA) is the interval from the point when a reference signal reaches a high or low voltage level to the point when the output starts driving. It is measured at the measurement point VMEAS, which is VDDEXT/2 or VDDD/2, depending on the pin under test, as shown in Figure 72.",
+        "datasheet": "parsed/ADSP-BF542_BF544_BF547_BF548_BF549.txt"
+    },
+    "129":
+    {
+        "question": "What is the recommended placement for the input capacitor and input current-sense resistor in the Buck-Boost PCB layout for the Analog Devices module?",
+        "answer": "The input capacitor and input current-sense resistor should be placed close to the input MOSFETs (Q t1 and Q b1) to make a small input current AC loop.",
+        "datasheet": "parsed/MAX25432.txt"
+    },
+    "130":
+    {
+        "question": "What is the primary function of the AD8195 module and what does the HDMI or DVI link consist of?",
+        "answer": "The primary function of the AD8195 module is to buffer a single (HDMI or DVI) link. The HDMI or DVI link consists of four differential, high speed channels and three auxiliary single-ended, low speed control signals. The high speed channels include a data-word clock and three transition minimized differential signaling (TMDS) data channels running at 10× the data-word clock frequency for data rates up to 2.25 Gbps. The three low speed control signals consist of the display data channel (DDC) bus (SDA and SCL) and the consumer electronics control (CEC) line.",
+        "datasheet": "parsed/AD8195.txt"
+    },
+    "131":
+    {
+        "question": "What is the maximum duty cycle for input transient voltage for pins PB1-0, PE15-14, PG15-11, and PH7-6 in the ADSP-BF542/ADSP-BF544/ADSP-BF547/ADSP-BF548/ADSP-BF549 module?",
+        "answer": "The maximum duty cycle for input transient voltage for pins PB1-0, PE15-14, PG15-11, and PH7-6 is not specified in the provided text.",
+        "datasheet": "parsed/ADSP-BF542_BF544_BF547_BF548_BF549.txt"
+    },
+    "132":
+    {
+        "question": "What is the chosen inductor for the MAX77658 Ultra-Low Power PMIC and what is its DCR value?",
+        "answer": "The chosen inductor for the MAX77658 Ultra-Low Power PMIC is the DFE201610E-1R5M inductor from Murata, and its DCR value is 91mΩ.",
+        "datasheet": "parsed/max77658.txt"
+    },
+    "133":
+    {
+        "question": "What is the suggested layout for the Boost Converter of the LT3755/LT3755-1/LT3755-2?",
+        "answer": "The suggested layout for the Boost Converter of the LT3755/LT3755-1/LT3755-2 can be found in Figure 5 of the datasheet.",
+        "datasheet": "parsed/LT3755-3755-1-3755-2.txt"
+    },
+    "134":
+    {
+        "question": "What is the discharge time to 0.5V for VBUS at 15V with a total output capacitance of 215μF for the MAX25432 Automotive module?",
+        "answer": "The discharge time to 0.5V for VBUS at 15V with a total output capacitance of 215μF for the MAX25432 Automotive module is 141ms.",
+        "datasheet": "parsed/MAX25432.txt"
+    },
+    "135":
+    {
+        "question": "What is the maximum data rate supported by the MAX9278/MAX9282 GMSL deserializers?",
+        "answer": "The maximum data rate supported by the MAX9278/MAX9282 GMSL deserializers is 3.12Gbps.",
+        "datasheet": "parsed/MAX9278-MAX9282.txt"
+    },
+    "136":
+    {
+        "question": "What is included in the DS28E40 evaluation system (EV system) and what operating systems is the evaluation software compatible with?",
+        "answer": "The DS28E40 evaluation system (EV system) includes five DS28E40ATB/VY+ devices in a 10-pin TDFN package, a DS9121ATB+ evaluation TDFN socket board, and a DS9481P-300# USB-to-I 2C/1-Wire ® adapter. The evaluation software runs under Windows ® 10, Windows 8, and Windows 7 operating systems, both the 64-bit and 32-bit versions.",
+        "datasheet": "parsed/DS28E40EVKIT.txt"
+    },
+    "137":
+    {
+        "question": "What is the typical application circuit for the HMC525A CHIPS and what external component is needed to select the appropriate sideband?",
+        "answer": "The typical application circuit for the HMC525A CHIPS is shown in Figure 100. To select the appropriate sideband, an external 90° hybrid is needed.",
+        "datasheet": "parsed/hmc525achips-1.txt"
+    },
+    "138":
+    {
+        "question": "What is the maximum output voltage that can be generated by the AVDD boost converter in the MAX25520 module?",
+        "answer": "The maximum output voltage that can be generated by the AVDD boost converter in the MAX25520 module is up to 10.5V (or 12V for MAX25520ATEC).",
+        "datasheet": "parsed/MAX25520.txt"
+    },
+    "139":
+    {
+        "question": "What is the equation for determining the inductor value in the ADP1882/ADP1883 module?",
+        "answer": "The equation for the inductor value is given by IN = (VSW × VOUT) / (IL × ΔIL).",
+        "datasheet": "parsed/ADP1882_1883.txt"
+    },
+    "140":
+    {
+        "question": "What is the recommended procedure for changing the clock frequency when using the MAX9278/MAX9282 GMSL deserializers?",
+        "answer": "It is recommended to enable the serial link after the video clock and control-channel clock are stable. When changing the clock frequency, stop the video clock for 5µs, apply the clock at the new frequency, then restart the serial link or toggle SEREN. On-the-fly changes in clock frequency are possible if the new frequency is immediately stable and without glitches. The reverse control channel remains unavailable for 500µs after serial link start or stop. When using the UART interface, limit on-the-fly changes in fUART to factors of less than 3.5 at a time to ensure that the device recognizes the UART sync pattern. For example, when lowering the UART frequency from 1Mbps to 100kbps, first send data at 333kbps then at 100kbps for reduction ratios of 3 and 3.333, respectively.",
+        "datasheet": "parsed/MAX9278-MAX9282.txt"
+    },
+    "141":
+    {
+        "question": "What are the names of the output pins for the oscillator module?",
+        "answer": "The names of the output pins for the oscillator module are H0, N.CH1, L1, N.CL0VCC, P9, P6VCCVCCVCCOUT0OUT1.",
+        "datasheet": "parsed/DS3900.txt"
+    },
+    "142":
+    {
+        "question": "What is the operating temperature range for the LT1210X amplifier?",
+        "answer": "The operating temperature range for the LT1210X amplifier is -40°C to 175°C.",
+        "datasheet": "parsed/1210Xfa.txt"
+    },
+    "143":
+    {
+        "question": "What is the maximum working voltage recommended by Analog Devices for the ADM2582E/ADM2587E when subjected to bipolar ac voltage waveform?",
+        "answer": "The maximum working voltage recommended by Analog Devices for the ADM2582E/ADM2587E when subjected to bipolar ac voltage waveform is not provided in the text.",
+        "datasheet": "parsed/adm2582e_2587e.txt"
+    },
+    "144":
+    {
+        "question": "What is the typical supply current for MAX5381 at a supply voltage of 5.0V and with no load?",
+        "answer": "The typical supply current for MAX5381 at a supply voltage of 5.0V and with no load is 145 µA.",
+        "datasheet": "parsed/MAX5380-MAX5382.txt"
+    },
+    "145":
+    {
+        "question": "What is the purpose of the Auto-Discharge Disconnect function in the MAX25432B module and what conditions must be met before enabling it?",
+        "answer": "The purpose of the Auto-Discharge Disconnect function in the MAX25432B module is to automatically disable sourcing V BUS and discharge V BUS when a disconnect is detected. The conditions that must be met before enabling it are that PLUG_ORNT must be set to the correct value and a disconnect is defined as HVCC1_STATE or HVCC2_STATE register value being equal to 00b (\"Open\"), with PLUG_ORNT set to 0b or 1b, respectively.",
+        "datasheet": "parsed/MAX25432.txt"
+    },
+    "146":
+    {
+        "question": "What is the maximum differential gain and differential phase for the LT1210X module at a supply voltage of ±15V and a feedback resistance of 10/uni03A9?",
+        "answer": "The maximum differential gain is 0.6% and the maximum differential phase is 5 degrees.",
+        "datasheet": "parsed/1210Xfa.txt"
+    },
+    "147":
+    {
+        "question": "What is the range of DUTx pin source and sink current for Range A?",
+        "answer": "The range of DUTx pin source and sink current for Range A is 25 mA or less.",
+        "datasheet": "parsed/adate320.txt"
+    },
+    "148":
+    {
+        "question": "What is the recommended value for the feedback resistor R B when setting up the feedback resistor network for the ADP1882/ADP1883 module?",
+        "answer": "The recommended value for the feedback resistor R B is 15 kΩ.",
+        "datasheet": "parsed/ADP1882_1883.txt"
+    },
+    "149":
+    {
+        "question": "What are the six network function commands defined by the ISO/IEC 14443 Type B standard for transitioning slave devices between states in the MAX66020 module?",
+        "answer": "The six network function commands defined by the ISO/IEC 14443 Type B standard for transitioning slave devices between states in the MAX66020 module are REQB, WUPB, SLOT-MARKER, HLTB, ATTRIB, and DESELECT.",
+        "datasheet": "parsed/MAX66020.txt"
+    },
+    "150":
+    {
+        "question": "What is the function of bit 0 in the RFDL register of the DS265 03 T1/E1/J1 BITS Element?",
+        "answer": "The function of bit 0 in the RFDL register is to detect a Receive BOC Detector Change-of-State Event (RBOC). It is set whenever the BOC detector sees a change of state to a valid BOC and prompts the user to read the RFDL register.",
+        "datasheet": "parsed/DS26503.txt"
+    },
+    "151":
+    {
+        "question": "What is the function of the ALERT pin in the MAX25432 module and what is required for proper operation?",
+        "answer": "The ALERT pin is an active-low, open-drain output that asserts to notify the I2C master of an interrupt. A pullup to VDD_IO is required for proper operation.",
+        "datasheet": "parsed/MAX25432.txt"
+    },
+    "152":
+    {
+        "question": "What is the maximum RF input power for the HMC499 power amplifier at a Vdd of +5Vdc?",
+        "answer": "The maximum RF input power for the HMC499 power amplifier at a Vdd of +5Vdc is +20 dBm.",
+        "datasheet": "parsed/hmc499chips.txt"
+    },
+    "153":
+    {
+        "question": "What should be done to minimize capacitive loading on the digital outputs of the AD1328010 module?",
+        "answer": "The capacitive loading on the digital outputs should be minimized by keeping circuit traces for the digital outputs short and connecting them directly to the receiving gate.",
+        "datasheet": "parsed/AD13280.txt"
+    },
+    "154":
+    {
+        "question": "What is the recommended way to drive the analog inputs for optimal AC performance in the LTC2298/LTC2297/LTC2296 module?",
+        "answer": "The analog inputs should be driven differentially for optimal AC performance.",
+        "datasheet": "parsed/229876fa.txt"
+    },
+    "155":
+    {
+        "question": "What is the differential input impedance of the L TC6416 and what value impedance may it need to be terminated to for an impedance match?",
+        "answer": "The differential input impedance of the L TC6416 is 12kΩ. It may need to be terminated to a lower value impedance, e.g. 50Ω, in order to provide an impedance match for the source.",
+        "datasheet": "parsed/6416f.txt"
+    },
+    "156":
+    {
+        "question": "What is the guaranteed sample rate of the AD13280 module?",
+        "answer": "The guaranteed sample rate of the AD13280 module is 80 MSPS.",
+        "datasheet": "parsed/AD13280.txt"
+    },
+    "157":
+    {
+        "question": "What is the purpose of the watchdog timer function in the MAX77658 Ultra-Low Power PMIC?",
+        "answer": "The watchdog timer function in the MAX77658 Ultra-Low Power PMIC is for operational safety. If the timer expires without being cleared, the on/off controller causes the IC to enter the shutdown state and resets configuration registers. The timer can be enabled or disabled through I2C writes and can be factory-programmed to be enabled by default, disabled by default, or locked from accidental disable. The purpose of the watchdog timer is to prevent shutdown and ensure operational safety.",
+        "datasheet": "parsed/max77658.txt"
+    },
+    "158":
+    {
+        "question": "What is the purpose of the maximum junction temperature regulation loop in the MAX77658 Ultra-Low Power PMIC?",
+        "answer": "The purpose of the maximum junction temperature regulation loop is to regulate the junction temperature to less than T J-REG.",
+        "datasheet": "parsed/max77658.txt"
+    },
+    "159":
+    {
+        "question": "What is the command code for retrieving the security status of a memory block in the MAX66020 1Kb Memory Fob?",
+        "answer": "I do not know.",
+        "datasheet": "parsed/MAX66020.txt"
+    },
+    "160":
+    {
+        "question": "What is the equation used to quantify the time in which charge enters and exits the capacitive regions during SW node transitions in the ADP1882/ADP1883 module?",
+        "answer": "tSW-TRANS = RGATE × CTOTAL",
+        "datasheet": "parsed/ADP1882_1883.txt"
+    },
+    "161":
+    {
+        "question": "What is the definition of \"Analog Bandwidth\" in the datasheet for the AD13280 module?",
+        "answer": "The analog bandwidth is defined as the analog input frequency at which the spectral power of the fundamental frequency (as determined by the FFT analysis) is reduced by 3 dB.",
+        "datasheet": "parsed/AD13280.txt"
+    },
+    "162":
+    {
+        "question": "What is the input offset voltage drift of the ADA4638-1 precision amplifier?",
+        "answer": "The input offset voltage drift of the ADA4638-1 precision amplifier is 0.05 μV/°C maximum.",
+        "datasheet": "parsed/ADA4638-1.txt"
+    },
+    "163":
+    {
+        "question": "What is the purpose of the vSafe0V comparator in the MAX25432 module?",
+        "answer": "The purpose of the vSafe0V comparator in the MAX25432 module is to indicate when V BUS (sensed on the OUT pin) is below the vSafe0V threshold, which is fixed to 0.75V falling with a 50mV hysteresis (typ). It is used to comply with the Type-C specification.",
+        "datasheet": "parsed/MAX25432.txt"
+    },
+    "164":
+    {
+        "question": "What is the recommended value for the feed-forward capacitor (CZ) in the decompensated MAX4249/MAX4255/MAX4256/MAX4257 for a gain of 10V/V?",
+        "answer": "The recommended value for the feed-forward capacitor (CZ) in the decompensated MAX4249/MAX4255/MAX4256/MAX4257 for a gain of 10V/V is not provided in the given text.",
+        "datasheet": "parsed/MAX4249-MAX4257.txt"
+    },
+    "165":
+    {
+        "question": "What type of capacitors are recommended for use with the LTC3215 to reduce noise and ripple, and why are tantalum and aluminum capacitors not recommended?",
+        "answer": "Low equivalent series resistance (ESR) ceramic capacitors are recommended for use with the LTC3215 to reduce noise and ripple. Tantalum and aluminum capacitors are not recommended because of their high ESR.",
+        "datasheet": "parsed/3215fc.txt"
+    },
+    "166":
+    {
+        "question": "What is the maximum data rate for the ADM3232E module and what are the conditions for achieving it?",
+        "answer": "The maximum data rate for the ADM3232E module is 460 kbps. The conditions for achieving it are VCC = 3.3 V, R L = 3 kΩ to 7 kΩ, C L = 50 pF to 1000 pF, and one Tx switching.",
+        "datasheet": "parsed/ADM3232E.txt"
+    },
+    "167":
+    {
+        "question": "What is the method called that identifies all slaves in the field relying solely on the random number R and the REQB/WUPB command, and where can more information about it be found?",
+        "answer": "The method is called the \"probabilistic approach\" and more information about it can be found in the Anticollision Examples section.",
+        "datasheet": "parsed/MAX66020.txt"
+    },
+    "168":
+    {
+        "question": "What is the function of pin PJ9 on the ADSP-BF542/ADSP-BF544/ADSP-BF547/ADSP-BF548/ADSP-BF549 module?",
+        "answer": "The function of pin PJ9 is Interrupt Request from the Device.",
+        "datasheet": "parsed/ADSP-BF542_BF544_BF547_BF548_BF549.txt"
+    },
+    "169":
+    {
+        "question": "What is the equation for calculating the output resistance when paralleling multiple MAX1044/ICL7660 devices?",
+        "answer": "The equation for calculating the output resistance when paralleling multiple MAX1044/ICL7660 devices is: R(out) = R(of MAX1044 or ICL7660) / n (number of devices).",
+        "datasheet": "parsed/ICL7660-MAX1044.txt"
+    },
+    "170":
+    {
+        "question": "What is the operating temperature range for the ADXRS620 module?",
+        "answer": "The specified performance temperature range for the ADXRS620 module is -40°C to +105°C. The absolute maximum operating temperature range is -55°C to +125°C.",
+        "datasheet": "parsed/ADXRS620.txt"
+    },
+    "171":
+    {
+        "question": "What is the purpose of the Overdrive Match ROM command in the DS28E04-100 module and how does it affect the communication with other devices on the bus?",
+        "answer": "The purpose of the Overdrive Match ROM command in the DS28E04-100 module is to address a specific device on a multidrop bus and simultaneously set it in Overdrive mode. Only the device that exactly matches the 64-bit ROM sequence responds to the subsequent Memory/Control Function command. Slaves already in Overdrive mode from a previous Overdrive Skip or successful Overdrive Match command remain in Overdrive mode. If more than one slave supporting Overdrive is present on the bus and the Overdrive Skip ROM command is followed by a Read command, data collision occurs on the bus as multiple slaves transmit simultaneously.",
+        "datasheet": "parsed/DS28E04-100.txt"
+    },
+    "172":
+    {
+        "question": "What is the frequency range of the HMC7447 power detector and what is its input power range?",
+        "answer": "The frequency range of the HMC7447 power detector is 71-86 GHz and its input power range is -0.5 to +23.5 dBm.",
+        "datasheet": "parsed/hmc7447.txt"
+    },
+    "173":
+    {
+        "question": "What is the purpose of the AlertResponse() address in the MAX1535A module and how does the modified Receive-Byte protocol work in responding to interrupts?",
+        "answer": "The purpose of the AlertResponse() address in the MAX1535A module is to respond to interrupts. The modified Receive-Byte protocol works by having devices with interrupts transmit their addresses, and the device with the highest priority or most leading zeros is recognized and cleared. This process is repeated until all devices requesting interrupts are addressed and cleared. The MAX1535A responds to the AlertResponse() address with its address and a trailing 1.",
+        "datasheet": "parsed/MAX1535A.txt"
+    },
+    "174":
+    {
+        "question": "What is the default value for the Receive Yellow Alarm Clear Event (RYELC) bit in the Interrupt Mask Register 2 for the DS26503 T1/E1/J1 BITS Element?",
+        "answer": "The default value for the Receive Yellow Alarm Clear Event (RYELC) bit in the Interrupt Mask Register 2 for the DS26503 T1/E1/J1 BITS Element is 0.",
+        "datasheet": "parsed/DS26503.txt"
+    },
+    "175":
+    {
+        "question": "What is the advantage of using the reference doubler setup over the direct 13 MHz reference signal setup in the ADF4152HV module?",
+        "answer": "The advantage of using the reference doubler setup over the direct 13 MHz reference signal setup in the ADF4152HV module is that it offers superior phase noise performance.",
+        "datasheet": "parsed/ADF4152HV.txt"
+    },
+    "176":
+    {
+        "question": "What is the function of the Lamp Current Overdrive Control Register (LCOC) in the DS3881 Single-Channel Automotive CCFL Controller?",
+        "answer": "The function of the Lamp Current Overdrive Control Register (LCOC) is to select the lamp current overdrive level and enable lamp current overdrive. It also allows for automatic lamp current overdrive timeout selection.",
+        "datasheet": "parsed/DS3881.txt"
+    },
+    "177":
+    {
+        "question": "What is the maximum supply voltage for the DS26503 T1/E1/J1 BITS Element?",
+        "answer": "I do not know.",
+        "datasheet": "parsed/DS26503.txt"
+    },
+    "178":
+    {
+        "question": "What is the maximum output gain of the MAX9726 amplifier when BassMax is disabled, and how can it be configured?",
+        "answer": "The maximum output gain of the MAX9726 amplifier when BassMax is disabled is 0dB. It can be configured by adjusting resistors R7 and R8 (left channel) and R9 and R10 (right channel).",
+        "datasheet": "parsed/MAX9726EVKIT-MAX9726EVSYS.txt"
+    },
+    "179":
+    {
+        "question": "What is the maximum charge current that can be programmed through the SMBus-compatible serial interface for the MAX17435 battery charger controller?",
+        "answer": "The maximum charge current that can be programmed through the SMBus-compatible serial interface for the MAX17435 battery charger controller is not explicitly stated in the provided text.",
+        "datasheet": "parsed/MAX17435EVKIT.txt"
+    },
+    "180":
+    {
+        "question": "What is the recommended value and type of capacitor to bypass VDD_USB to GND in the MAX25432 module?",
+        "answer": "The recommended value and type of capacitor to bypass VDD_USB to GND in the MAX25432 module is 1μF ceramic capacitor.",
+        "datasheet": "parsed/MAX25432.txt"
+    },
+    "181":
+    {
+        "question": "What is the maximum frequency of the Blackfin processor in the ADSP-BF542/ADSP-BF544/ADSP-BF547/ADSP-BF548/ADSP-BF549 module?",
+        "answer": "Up to 600 MHz.",
+        "datasheet": "parsed/ADSP-BF542_BF544_BF547_BF548_BF549.txt"
+    },
+    "182":
+    {
+        "question": "What is the command code for the ChargerMode() command in the MAX1535A module?",
+        "answer": "The command code for ChargerMode() is 0x12 (0b00010010).",
+        "datasheet": "parsed/MAX1535A.txt"
+    },
+    "183":
+    {
+        "question": "What should be connected to the quiet ground island in the MAX1535A PC board layout example?",
+        "answer": "Quiet connections to REF, VMAX, IMAX, CCV, CCI, CCS, ACIN, and DCIN should be returned to a separate ground (GND) island.",
+        "datasheet": "parsed/MAX1535A.txt"
+    },
+    "184":
+    {
+        "question": "What is the maximum undervoltage-lockout threshold for the MAX1564Triple 1.2A USB Switch?",
+        "answer": "The maximum undervoltage-lockout threshold for the MAX1564Triple 1.2A USB Switch is 2.7V.",
+        "datasheet": "parsed/MAX1564.txt"
+    },
+    "185":
+    {
+        "question": "What is the default position for the PFN2 jumper on the MAX20335 Evaluation System?",
+        "answer": "The default position for the PFN2 jumper on the MAX20335 Evaluation System is not provided in the given text.",
+        "datasheet": "parsed/MAX20335EVSYS.txt"
+    },
+    "186":
+    {
+        "question": "What is the maximum number of nodes that can be used in a full duplex RS-485 network with the ADM2582E/ADM2587E module?",
+        "answer": "The maximum number of nodes that can be used in a full duplex RS-485 network with the ADM2582E/ADM2587E module is 256.",
+        "datasheet": "parsed/adm2582e_2587e.txt"
+    }
+}

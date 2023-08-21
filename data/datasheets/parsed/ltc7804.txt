@@ -1,0 +1,2869 @@
+LTC7804
+1Document FeedbackTYPICAL APPLICATION  FEATURES DESCRIPTIONLow I Q Synchronous Boost Controller 
+with Spread Spectrum
+The LTC® 7804 is a high performance synchronous boost 
+DC/DC switching regulator controller that drives an all 
+N-channel power MOSFET stageSynchronous rectifica-
+tion increases efficiency, reduces power losses and eases 
+thermal requirementsA constant frequency current mode 
+architecture allows a phase-lockable switching frequency 
+of up to 3MHzThe LTC7804 operates from a wide 4.5V 
+to 40V input supply rangeWhen biased from the boost 
+converter output , the LTC7804 can operate from an input 
+supply as low as 1V after startupThe very low no-load quiescent current extends operating 
+runtime in battery powered systemsOPTI-LOOP com -
+pensation allows the transient response to be optimized over a wide range of output capacitance and ESR values
+The MODE pin selects among Burst Mode operation, pulse-skipping mode, or continuous inductor current 
+mode at light loadsThe LTC7804 additionally features spread spectrum oper -
+ation which significantly reduces the peak radiated and 
+conducted noise on both the input and output supplies, making it easier to comply with electromagnetic interfer -
+ence (EMI) standards.APPLICATIONS nSynchronous Operation for Highest Efficiency and Reduced Heat Dissipation
+ nWide V IN Range: 4.5V to 40V and Operates Down to 
+1V After Start-Up
+ nOutput Voltage Up to 40V
+ nLow Operating I Q: 14μA
+ nSpread Spectrum Operation
+ nPass-Thru™/100% Duty Cycle Capability for Synchronous MOSFET
+ nRSENSE  or Inductor DCR Current Sensing
+ nProgrammable Fixed Frequency (100kHz to 3MHz)
+ nPhase-Lockable Frequency (100kHz to 3MHz)
+ nSelectable Continuous, Pulse-Skipping, or Low Ripple Burst Mode
+® Operation at Light Loads
+ nLow Shutdown I Q: 1.2μA
+ nThermally Enhanced 16-Pin 3mm × 3mm QFN and MSOP Packages
+ nAEC-Q100 Qualified for Automotive Applications
+ nAutomotive and T ransportation
+ nIndustrial 
+ nMilitary/Avionics
+ nTelecommunicationsAll registered trademarks and trademarks are the property of their respective ownersProtected 
+by U.Spatents, including 5481178, 5705919,5929620, 6144194, 6177787, 6580258Efficiency and Power Loss  
+vs Output Current High Efficiency Wide Input Range 375kHz 24V/6A Boost Converter
+10µF
+×2
+0.1µF
+2µH
+2m/uni03A9
+150µF
+604k
+31.6k
+4.7µF
+0.1µF
+10µF
+V
+OUT
+24V
+6A
+L TC7804
+VBIAS
+RUN
+ITH
+SS
+SW
+BG
+TG
+BOOST
+SENSE+
+V
+FB
+SENSE–
+V
+IN
+4.5V TO 38V 
+EXTV
+CC
+FREQ
+INTV
+CC
+GND
+MODE
+PLLIN/SPREAD
+V
+OUT
+ FOLLOWS V
+IN
+ FOR V IN > 24V
+7804 TA01a
+220pF
+22nF
+8.06k
+BURST EFFICIENCY
+BURST LOSS
+V
+IN
+ = 12V
+V
+OUT
+ = 24V
+FIGURE 9 CIRCUIT
+Burst Mode OPERATION
+OUTPUT CURRENT (A)
+0.00001
+0.0001
+0.001
+0.01
+0.1
+1
+10
+0
+10
+20
+30
+40
+50
+60
+70
+80
+90
+100
+0.1
+1
+10
+100
+1k
+10k
+EFFICIENCY (%)
+POWER LOSS (mW)
+7804 TA01b
+LTC7804
+2
+RevB For more information www.analog.comTABLE OF CONTENTS 
+Features  1
+Applications  1
+T
+ypical Application  1
+Description
+1
+Absolute Maximum Ratings  3
+Pin Configuration  3
+Order Information  4
+Electrical Characteristics  5
+T
+ypical Performance Characteristics  7
+Pin Functions  10
+Block Diagram  11
+Operation
+12
+Main Control Loop  12
+IN
+TVCC/EXTV CC Power  12
+S
+hutdown and Start-Up (RUN, SS Pins)  12
+L
+ight Load Current Operation : Burst Mode Operation, 
+Pulse-Skipping or Forced Continuous  
+Mode (MODE Pin)  12
+Fr
+equency Selection, Spread Spectrum and Phase-
+Locked-Loop (FREQ and PLLIN/SPREAD Pins)  .13
+O
+peration  When V IN > V OUT 14
+Operation  at Low Input Voltage  14
+BOOS
+T Supply Refresh and Internal Charge Pump  .14Applications Information  15
+SE
+NSE+ and SENSE– Pins  15
+L
+ow Value Resistor Current Sensing  16
+I
+nductor DCR Sensing  16
+I
+nductor Value Calculation  17
+I
+nductor Core Selection  17
+P
+ower MOSFET Selection  18
+CIN and C OUT Selection  18
+S
+etting Output Voltage19
+RUN Pin  19
+So
+ft-Start (SS Pin)  20
+IN
+TVCC Regulators  20
+T
+opside MOSFET Driver Supply (C B, DB) 21
+Ph
+ase-Locked Loop and Frequency  
+Synchronization  21
+Se
+tting the Operating Frequency22
+Selecting the Light-Load Operating Mode  23
+Mi
+nimum On-Time Considerations 24
+Fault Conditions : Overtemperature Protection  24
+E
+fficiency Considerations  24
+C
+hecking Transient Response  25
+D
+esign Example  25
+P
+C Board Layout Checklist  26
+PC B
+oard Layout Debugging  27
+T
+ypical Applications  28
+Package Description  32
+Revision History  33
+T
+ypical Application  34
+Related Parts  34
+LTC7804
+3
+RevB For more information www.analog.comABSOLUTE MAXIMUM RATINGS
+Bias Input Supply Voltage (V BIAS) −0.3 V to 40V
+BOOST  −03V to 46V
+SW  −5V to 
+40V
+RUN −03V to 40V
+SENSE+, SENSE−  −0.3 V to 40V
+EXTV CC Voltage  −03V to 30V
+INTV CC, (BOOST-SW)  −0.3 V to 6V(Note 1)ITH −03V to 2V
+SS, FREQ  −03V to 6V
+PLLIN/SPREAD, MODE, V FB −0.3 V to 6V
+BG, TG  (
+Note 8)
+Operating Junction Temperature Range (Notes 2, 7)
+ LTC78
+04E, LT C7804 I −40°
+C to 125 °C
+ LTC78
+04H  −40°C to
+ 150°C
+Storage Temperature Range  −65°
+C to 150 °C
+PIN CONFIGURATION
+1
+2345678SS
+SENSE
+–
+SENSE+
+VFB
+ITH
+RUN
+FREQ
+PLLIN/SPREAD161514131211109SWTGBOOSTBGV
+BIAS
+EXTV CC
+INTV CC
+MODETOP VIEW
+17
+GND
+MSE PACKAGE
+16-LEAD PLASTIC MSOP
+TJMAX  = 125°C, θ JA = 40°C/W , θ JC = 10°C/W
+EXPOSED PAD (PIN 17) IS GND, MUST BE SOLDERED TO PCB16151413
+5678TOP VIEW
+17
+GND
+UD PACKAGE
+16-LEAD (3mm × 3mm) PLASTIC QFN
+TJMAX  = 125°C, θ JA = 68°C/W, θ JC = 4.2°C/W
+EXPOSED PAD (PIN 17) IS GND, MUST BE SOLDERED TO PCB9101112
+4321 TG
+SW
+SS
+SENSE–INTV CC
+MODE
+PLLIN/SPREADFREQBOOSTBGV
+BIAS
+EXTV CCSENSE+
+VFB
+ITH
+RUN
+LTC7804
+4
+RevB For more information www.analog.comORDER INFORMATION
+LEAD FREE FINISH TAPE AND REEL PART MARKING* PACKAGE DESCRIPTION TEMPERATURE RANGE
+LTC7804EMSE#PBF LTC7804EMSE#TRPBF 7804 16-Lead Plastic MSOP –40°C to 125°C
+LTC7804IMSE#PBF LTC7804IMSE#TRPBF 7804 16-Lead Plastic MSOP –40°C to 125°C
+LTC7804HMSE#PBF LTC7804HMSE#TRPBF 7804 16-Lead Plastic MSOP –40°C to 150°C
+LTC7804EUD#PBF LTC7804EUD#TRPBF LHHM 16-Lead (3mm × 3mm) Plastic QFN –40°C to 125°C
+LTC7804IUD#PBF LTC7804IUD#TRPBF LHHM 16-Lead (3mm × 3mm) Plastic QFN –40°C to 125°C
+LTC7804HUD#PBF LTC7804HUD#TRPBF LHHM 16-Lead (3mm × 3mm) Plastic QFN –40°C to 150°C
+AUTOMOTIVE PRODUCTS**
+LTC7804EMSE#WPBF LTC7804EMSE#WTRPBF 7804 16-Lead Plastic MSOP –40°C to 125°C
+LTC7804IMSE#WPBF LTC7804IMSE#WTRPBF 7804 16-Lead Plastic MSOP –40°C to 125°C
+LTC7804HMSE#WPBF LTC7804HMSE#WTRPBF 7804 16-Lead Plastic MSOP –40°C to 150°C
+LTC7804EUD#WPBF LTC7804EUD#WTRPBF LHHM 16-Lead (3mm × 3mm) Plastic QFN –40°C to 125°C
+LTC7804IUD#WPBF LTC7804IUD#WTRPBF LHHM 16-Lead (3mm × 3mm) Plastic QFN –40°C to 125°C
+LTC7804HUD#WPBF LTC7804HUD#WTRPBF LHHM 16-Lead (3mm × 3mm) Plastic QFN –40°C to 150°C
+Contact the factory for parts specified with wider operating temperature ranges*The temperature grade is identified by a label on the shipping container .Tape and reel specificationsSome packages are available in 500 unit reels through designated sales channels with #TRMPBF suffix.**Versions of this part are available with controlled manufacturing to support the quality and reliability requirements of automotive applicationsThese 
+models are designated with a #W suffixOnly the automotive grade products shown are available for use in automotive applicationsContact your 
+local Analog Devices account representative for specific product ordering information and to obtain the specific Automotive Reliability reports for these models.
+LTC7804
+5
+RevB For more information www.analog.comELECTRICAL CHARACTERISTICS The l denotes the specifications which apply over the specified operating 
+junction temperature range, otherwise specifications are for T A = 25°C, V BIAS = 12V, RUN = 12V, EXTV CC = 0V, unless otherwise noted
+(Note 2)
+SYMBOL PARAMETER CONDITIONS MIN TYP MAX UNITS
+Input Supply
+VBIAS Bias Input Supply Operating Range 4.5 40 V
+VIN Boost Converter Input Supply Operating Range VBIAS ≥ 4.5V 1 40 V
+VOUT Output Voltage Operating Range 40 V
+Controller OperationV
+FB Regulated Feedback Voltage (Note 3) V BIAS = 4.5V to 40V, 
+ITH Voltage = 0.6V to 1.2V 
+l 
+1.188 
+1.2 
+1.212 
+V
+Feedback Current (Note 3) ±5
+±50 nA
+Feedback Overvoltage Protection Threshold Measured at V FB Relative to Regulated V FB 7 10 13 %
+gm T ransconductance Amplifier g m (Note 3) ITH = 1.2V, Sink/Source = 5μA 2 mmho
+VSENSE(MAX) Maximum Current Sense Threshold V FB = 1.1V, V SENSE + = 12V l 45 50 55 mV
+ISENSE + I SENSE + Pin Current VSENSE + < 2.9V 
+3.2 ≤ V SENSE + ≤ INTV CC −0.5V 
+VSENSE + > INTV CC + 0.5V2 
+30 
+650μA 
+μA μA
+I
+SENSE − SENSE− Pin Current VSENSE − = 12V ±1 μA
+Soft-Start Charge Current VSS = 0V 10 12.5 15 µA
+RUN Pin ON Threshold VRUN Rising l 1.15 1.2 1.25 V
+RUN Pin Hysteresis 100 mV
+DC Supply Current (Note 4)
+IQ VBIAS Shutdown Current RUN = 0V 1.2 μA
+VBIAS Sleep Mode Current VSENSE + < 2.9V, EXTV CC = 0V 14 28 μA 
+VSENSE + ≥ 3.2V 
+VBIAS Current, EXTV CC = 0V 
+VBIAS Current, EXTV CC ≥ 4.8V 
+EXTV CC Current, EXTV CC ≥ 4.8V 
+SENSE+ Current 
+5 
+1 4 9 
+μA μA μA μA
+Pulse-Skipping or Forced Continuous Mode 
+V
+BIAS or EXTV CC CurrentVFB = 1.25V 2 mA
+Gate Drivers
+TG or BG On-Resistance Pull-Up 
+Pull-Down3.0 1.5Ω Ω
+TG or BG T ransition T
+ime 
+Rise Time Fall Time(Note 5) C
+LOAD = 3300pF 
+CLOAD = 3300pF 
+25 15 
+ns ns
+TG Off to BG On Delay Bottom Switch-On Delay TimeC
+LOAD = 3300pF Each Driver  
+15 
+ns
+BG Off to TG On Delay Synchronous Switch-On Delay TimeC
+LOAD = 3300pF Each Driver  
+15 
+ns
+tON(MIN) BG Minimum On-Time (Note 6) 80 ns
+Maximum Duty Factor for TG Overvoltage 100 %
+Maximum Duty Factor for BG VFREQ = 0V 93 %
+LTC7804
+6
+RevB For more information www.analog.comSYMBOL PARAMETER CONDITIONS MIN TYP MAX UNITS
+BOOST Charge Pump Available Output Current VBOOST  = 16V, V SW = 12V, FREQ = 0V, 
+Forced Continuous Mode30 65 µA
+INTVCC Low Dropout (LDO) Linear Regulator
+INTV CC Regulation Point 4.95 5.15 5.35 V
+INTV CC Load Regulation ICC = 0mA to 50mA, V BIAS ≥ 6V 
+ICC = 0mA to 50mA, VEXTV CC ≥ 6V1 
+12 2% %
+EXTV
+CC LDO Switchover Voltage EXTV CC Rising 4.6 4.7 4.8 V
+EXTV CC Switchover Hysteresis 250 mV
+UVLO Undervoltage Lockout INTV CC Rising l 4.15 4.25 4.35 V
+INTV CC Falling l 3.80 3.90 4.00 V
+Spread Spectrum Oscillator and Phase-Locked Loop
+fOSC Low Fixed Frequency VFREQ = 0V, PLLIN/SPREAD = 0V 340 375 410 kHz
+High Fixed Frequency VFREQ = INTV CC, PLLIN/SPREAD = 0V l 2.0 2.25 2.5 MHz
+Programmable Frequency RFREQ = 374kΩ, PLLIN/SPREAD = 0V 
+RFREQ = 75kΩ, PLLIN/SPREAD = 0V 
+RFREQ = 12.4kΩ, PLLIN/SPREAD = 0V 
+450100 
+500 
+3 
+550kHz kHz 
+MHz
+Synchronizable Frequency Range PLLIN/SPREAD = External Clock
+l 0.1 3 MHz
+PLLIN Input High Level 
+PLLIN Input Low Levell 
+l2.2  
+0.5V V
+Spread Spectrum Frequency Range (Relative to f
+OSC)PLLIN/SPREAD = INTV CC 
+Minimum Frequency Maximum Frequency 
+0 
+20 
+% %ELECTRICAL CHARACTERISTICS The l denotes the specifications which apply over the specified operating 
+junction temperature range, otherwise specifications are for T A = 25°C, V BIAS = 12V, RUN = 12V, EXTV CC = 0V, unless otherwise noted
+(Note 2)
+Note 1: Stresses beyond those listed under Absolute Maximum Ratings 
+may cause permanent damage to the deviceExposure to any Absolute Maximum Rating condition for extended periods may affect device reliability and lifetimeNote 2: The LTC7804 is tested under pulsed load conditions such 
+that T
+J ≈ TAThe LTC7804E is guaranteed to meet specifications from 
+0°C to 85°C junction temperatureSpecifications over the –40°C to 125°C operating junction temperature range are assured by design, characterization and correlation with statistical process controlsThe LTC7804I is guaranteed over the –40°C to 125°C operating junction temperature range and the LTC7804H is guaranteed over the –40°C to 150°C operating junction temperature range and is tested at 150°CHigh junction temperatures degrade operating lifetimes; operating lifetime is derated for junction temperatures greater than 125°C Note that the maximum ambient temperature consistent with these specifications is determined by specific operating conditions in conjunction with board layout, the rated package thermal impedance and other environmental factorsThe junction temperature (T
+J, in °C) is calculated from the ambient 
+temperature (T A, in °C) and power dissipation (P D, in Watts) according 
+to the formula: T J = TA + (P D  JA), where θ JA (in °C/W) is the package 
+thermal impedance.Note 3: The LTC7804 is tested in a feedback loop that servos V ITH to a 
+specified voltage and measures the resultant V FB
+Note 4: Dynamic supply current is higher due to the gate charge being delivered at the switching frequencySee Applications informationNote 5: Rise and fall times are measured using 10% and 90% levelsDelay 
+times are measured using 50% levelsNote 6 :
+ The minimum on-time condition is specified for an inductor 
+peak-to-peak ripple current >40% of I L(MAX)  (See Minimum On-Time 
+Considerations in the Applications Information section).Note 7: This IC includes overtemperature protection that is intended to 
+protect the device during momentary overload conditionsThe maximum rated junction temperature will be exceeded when this protection is activeContinuous operation above the specified absolute maximum operating junction temperature may impair device reliability or permanently damage the deviceNote 8: Do not apply a voltage or current source to these pinsThey must 
+be connected to capacitive loads only, otherwise permanent damage may occur .
+LTC7804
+7
+RevB For more information www.analog.comTYPICAL PERFORMANCE CHARACTERISTICS
+Efficiency and Power Loss  
+vs Output CurrentEfficiency and Power Loss  vs Output Current Efficiency vs Input Voltage
+Load Step Burst Mode Operation Load Step Pulse-Skipping ModeLoad Step Forced Continuous Mode
+Inductor Current at Light Load Soft Start-UpRegulated Feedback Voltage  vs Temperature
+EFFICIENCY
+BURST EFFICIENCY
+PULSE–SKIPPING
+FCM EFFICIENCY
+BURST
+LOSS
+FCM LOSS
+LOSS
+PULSE–
+SKIPPING
+V
+IN
+ = 12V
+V
+OUT
+ = 24V
+FIGURE 9 CIRCUIT
+OUTPUT CURRENT (A)
+0.001
+0.01
+0.1
+1
+10
+0
+10
+20
+30
+40
+50
+60
+70
+80
+90
+100
+1
+10
+100
+1k
+10k
+100k
+EFFICIENCY (%)
+POWER LOSS (mW)
+7804 G01
+BURST EFFICIENCY
+BURST LOSS
+V
+IN
+ = 12V
+FIGURE 9 CIRCUIT
+Burst Mode OPERATION
+OUTPUT CURRENT (A)
+0.00001
+0.0001
+0.001
+0.01
+0.1
+1
+10
+0
+10
+20
+30
+40
+50
+60
+70
+80
+90
+100
+0.1
+1
+10
+100
+1k
+10k
+EFFICIENCY (%)
+POWER LOSS (mW)
+vs Output Current
+7804 G02
+V
+OUT
+ = 24V
+I
+LOAD
+ = 3A
+FIGURE 9 CIRCUIT
+V
+OUT
+ = 24V
+INPUT VOL TAGE (V)
+0
+5
+10
+15
+20
+25
+93
+94
+95
+96
+97
+98
+99
+100
+EFFICIENCY (%)
+7804 G03
+V
+IN
+ = 12V
+V
+OUT
+ = 24V
+LOAD STEP FROM 200mA TO 2.5A
+FIGURE 9 CIRCUIT
+200µs/DIV
+V
+OUT
+500mV/DIV
+INDUCTOR
+CURRENT
+5A/DIV
+LOAD STEP
+2A/DIV
+7804 G04
+V
+IN
+ = 12V
+V
+OUT
+ = 24V
+LOAD STEP FROM 200mA TO 2.5A
+FIGURE 9 CIRCUIT
+200µs/DIV
+V
+OUT
+500mV/DIV
+INDUCTOR
+CURRENT
+5A/DIV
+LOAD STEP
+2A/DIV
+7804 G05
+V
+IN
+ = 12V
+V
+OUT
+ = 24V
+LOAD STEP FROM 200mA TO 2.5A
+FIGURE 9 CIRCUIT
+200µs/DIV
+V
+OUT
+500mV/DIV
+INDUCTOR
+CURRENT
+5A/DIV
+LOAD STEP
+2A/DIV
+Forced Continuous Mode
+7804 G06
+5A/DIV
+V
+IN
+ = 12V
+V
+OUT
+ = 24V
+I
+LOAD
+ = 200/uni03BCA
+FIGURE 9 CIRCUIT
+5µs/DIV
+PULSE–
+SKIPPING
+MODE
+Burst Mode
+OPERATION
+FORCED
+CONTINUOUS
+MODE
+7804 G07
+V
+OUT
+5V/DIV
+0V
+V
+IN
+ = 12V
+V
+OUT
+ = 24V
+FIGURE 9 CIRCUIT
+2ms/DIV
+7804 G08
+TEMPERATURE (°C)
+–55
+25
+5
+35
+65
+95
+125
+155
+1.188
+1.191
+1.194
+1.197
+1.200
+1.203
+1.206
+1.209
+1.212
+REGULATED FEFEDBACK VOL TAGE (V)
+vs Temperature
+7804 G09
+LTC7804
+8
+RevB For more information www.analog.comTYPICAL PERFORMANCE CHARACTERISTICS
+SS Pin Pull-Up Current  
+vs Temperature Shutdown Current vs TemperatureShutdown Current  vs Input Voltage
+Quiescent Current vs TemperatureRUN Pin Thresholds  vs TemperatureUndervoltage Lockout Thresholds vs Temperature
+INTV
+CC Line Regulation INTV CC Line RegulationINTV CC and EXTV CC  
+vs Load Curent
+TEMPERATURE (°C)
+–55
+–25
+5
+35
+65
+95
+125
+155
+10.0
+10.5
+11.0
+11.5
+12.0
+12.5
+13.0
+13.5
+14.0
+14.5
+15.0
+SOFT–START CURRENT (µA)
+vs Temperature
+7804 G10
+TEMPERATURE (°C)
+–55
+–25
+5
+35
+65
+95
+125
+155
+0
+1
+2
+3
+4
+5
+6
+7
+8
+9
+10
+SHUTDOWN CURRENT (µA)
+Shutdown Current vs Temperature
+7804 G11
+V
+IN
+ = V
+BIAS
+INPUT VOL TAGE (V)
+0
+5
+10
+15
+20
+25
+30
+35
+40
+0
+0.5
+1.0
+1.5
+2.0
+2.5
+3.0
+SHUTDOWN CURRENT (µA)
+vs Input Voltage
+7804 G12
+TEMPERATURE (°C)
+–55
+–25
+5
+35
+65
+95
+125
+155
+0
+5
+10
+15
+20
+25
+30
+35
+40
+45
+50
+QUIESCENT CURRENT (µA)
+7804 G13
+RUN FALLING
+RUN RISING
+TEMPERATURE (°C)
+–55
+–25
+5
+35
+65
+95
+125
+155
+1.00
+1.05
+1.10
+1.15
+1.20
+1.25
+1.30
+RUN PIN VOL TAGE (v)
+vs Temperature
+7804 G14
+INTV
+CC
+ RISING
+INTV
+CC
+ FALLING
+TEMPERATURE (°C)
+–55
+25
+5
+35
+65
+95
+125
+155
+3.0
+3.2
+3.4
+3.6
+3.8
+4.0
+4.2
+4.4
+4.6
+4.8
+5.0
+INTV
+CC
+ VOL TAGE (V)
+vs Temperature
+7804 G15
+NO LOAD
+INPUT VOL TAGE (V)
+0
+5
+10
+15
+20
+25
+30
+35
+40
+4.5
+4.6
+4.7
+4.8
+4.9
+5.0
+5.1
+5.2
+5.3
+INTV
+CC
+ VOL TAGE (V)
+CC
+7804 G16
+NO LOAD
+INPUT VOL TAGE (V)
+4.50
+4.75
+5
+5.25
+5.50
+5.75
+6
+4.5
+4.6
+4.7
+4.8
+4.9
+5.0
+5.1
+5.2
+5.3
+INTV
+CC
+ VOL TAGE (V)
+CC
+7804 G17
+EXTV
+CC
+ = 0V
+EXTV
+CC
+ = 8.5V
+EXTV
+CC
+ = 5V
+V
+BIAS
+ = 12V
+LOAD CURRENT (mA)
+0
+10
+20
+30
+40
+50
+60
+70
+80
+4.0
+4.1
+4.2
+4.3
+4.4
+4.5
+4.6
+4.7
+4.8
+4.9
+5.0
+5.1
+5.2
+5.3
+INTV
+CC
+ VOL TAGE (V)
+vs Load Current
+7804 G18
+LTC7804
+9
+RevB For more information www.analog.comTYPICAL PERFORMANCE CHARACTERISTICS
+EXTV CC Switchover and INTV CC 
+Voltage vs TemperatureMaximum Current Sense 
+Threshold vs ITH VoltageSENSE Pin Input Current  vs V
+SENSE  Voltage
+SENSE Pin Input Current  vs TemperatureSENSE Pin Input Current vs I
+TH 
+VoltageOscillator Frequency  vs Temperature
+Charge Pump Charging Current  vs Operating FrequencyCharge Pump Charging Current  vs Switch Voltage Output Voltage Noise Spectrum
+INTV
+CC
+EXTV
+CC
+ RISING
+EXTV
+CC
+ FALLING
+TEMPERATURE (°C)
+–55
+25
+5
+35
+65
+95
+125
+155
+3.8
+4.0
+4.2
+4.4
+4.6
+4.8
+5.0
+5.2
+5.4
+5.6
+5.8
+INTV
+CC
+ OR EXTV CC VOL TAGE (V)
+Voltages vs Temperature
+7804 G19
+PULSE–SKIPPING MODE
+FORCED CONTINUOUS MODE
+Burst Mode
+OPERATION
+I
+TH
+ VOL TAGE (V)
+0
+0.2
+0.4
+0.6
+0.8
+1.0
+1.2
+1.4
+–30
+–20
+–10
+0
+10
+20
+30
+40
+50
+60
+MAXIMUM CURRENT SENSE VOL TAGE (mV)
+Threshold vs I
+TH
+ Voltage
+7804 G20
+SENSE
++
+ PIN
+SENSE
+–
+ PIN
+V
+SENSE
+ COMMON MODE VOL TAGE (V)
+0
+5
+10
+15
+20
+25
+30
+35
+40
+0
+50
+100
+150
+200
+250
+300
+350
+400
+450
+500
+550
+600
+650
+700
+750
+800
+SENSE CURRENT (µA)
+SENSE
+7804 G21
+SENSE
++
+ = 12V
+SENSE
+–
+ PIN
+SENSE
++
+ < 2.9V
+SENSE
++
+ = 3.2V
+TEMPERATURE (°C)
+–55
+–25
+5
+35
+65
+95
+125
+155
+0
+50
+100
+150
+200
+250
+300
+350
+400
+450
+500
+550
+600
+650
+700
+750
+800
+SENSE CURRENT (µA)
+7804 G22
+SENSE
++
+ < 2.9V
+SENSE
+–
+ PIN
+V
+SENSE
+ = 12V
+SENSE
++
+ = 3.2V
+I
+TH
+ VOL TAGE (V)
+0
+0.2
+0.4
+0.6
+0.8
+1.0
+1.2
+1.4
+0
+50
+100
+150
+200
+250
+300
+350
+400
+450
+500
+550
+600
+650
+700
+750
+800
+SENSE CURRENT (µA)
+TH
+7804 G23
+R
+FREQ
+ = 374k (100kHz)
+R
+FREQ  
+ = 75k (500kHz)
+R
+FREQ
+ = 12.5k (3MHz)
+R
+FREQ
+ = GND (375kHz)
+R
+FREQ
+ = INTV
+CC
+  (2.25MHz)
+TEMPERATURE (°C)
+–55
+–25
+5
+35
+65
+95
+125
+155
+–5
+–4
+–3
+–2
+–1
+0
+1
+2
+3
+4
+5
+6
+7
+CHANGE IN FREQUENCY (%)
+7804 G24
+T = 25°C
+V
+BOOST
+ – V
+SW
+ = 4V
+T = 155°C
+T = –55°C
+OPERATING FREQUENCY (kHz)
+0
+600
+1200
+1800
+2400
+3000
+30
+40
+50
+60
+70
+80
+90
+100
+CHARGE PUMP CHARGING CURRENT (µA)
+7804 G25
+V
+SW
+ = 12V
+V
+BOOST
+ – V
+SW
+ = 4V
+FREQ = INTV
+CC
+FREQ = GND
+SWITCH VOL TAGE (V)
+0
+5
+10
+15
+20
+25
+30
+35
+40
+0
+10
+20
+30
+40
+50
+60
+70
+80
+90
+100
+CHARGE PUMP CHARGING CURRENT (µA)
+vs Switch Voltage
+7804 G26
+FIGURE 12 CIRCUIT
+V
+IN
+ = 18V , V
+OUT
+ = 24V
+DETECTOR = PEAK–HOLD
+RBW = 5.1kHz
+PLLIN/SPREAD = GND
+PLLIN/SPREAD = INTV
+CC
+FREQUENCY (MHz)
+1
+1.5
+2
+2.5
+3
+3.5
+4
+4.5
+5
+5.5
+6
+6.5
+–100
+–90
+–80
+–70
+–60
+–50
+–40
+–30
+–20
+–10
+0
+AMPLITUDE (dBm)
+7804 G27
+LTC7804
+10
+RevB For more information www.analog.comPIN FUNCTIONS
+SS (Pin 1/Pin 3):  Output Soft-Start InputThe LTC7804  
+regulates the V FB voltage to the lesser of 1.2V or the voltage 
+on the SS pinAn internal 12.5µA pull-up current source is 
+connected to this pinA capacitor to ground at this pin sets 
+the ramp time to the final regulated output voltageThe ramp 
+time is equal to 1ms for every 10nF of capacitanceSENSE– (Pin 2/Pin 4):  The Negative (− ) Input to the 
+Differential Current Comparator The ITH pin voltage and controlled offsets between the SENSE
+– and SENSE+ pins 
+in conjunction with R SENSE  set the current trip thresholdSENSE+ (Pin 3/Pin 5):  The Positive (+) Input to the 
+Differential Current Comparator When SENSE+ is greater 
+than INTV CC, the SENSE+ pin supplies current to the cur -
+rent comparator VFB (Pin 4/Pin 6):  Error Amplifier Feedback InputConnect 
+an external resistor divider between the output voltage 
+and the V FB pin to set the regulated output voltageITH (Pin 5/Pin 7): Error Amplifier Outputs and Switching Regulator Compensation PointThe current comparator trip point increases with this control voltagePlace com -
+pensation components between the ITH pin and GNDRUN (Pin 6/Pin 8) :
+ Run Control InputForcing this pin 
+below 1.2V disables switching of the corresponding 
+controller Forcing this pin below 0.7V shuts down the 
+LTC7804, reducing quiescent current to approximately 
+1.2µAThis pin can be tied to V IN for always-on operationFREQ (Pin 7/Pin 9):  Frequency Control Pin for the 
+Internal VCOConnecting the pin to GND forces the VCO 
+to a fixed low frequency of 375kHzConnecting the pin 
+to INTV CC forces the VCO to a fixed high frequency of 
+2.25MHzFrequencies between 100kHz and 3MHz can 
+be programmed using a resistor between FREQ and GND
+Minimize the capacitance on this pinPLLIN/SPREAD (Pin 8/Pin 10):  External Synchronization 
+Input and Spread Spectrum SelectionWhen an external 
+clock is applied to this pin, the phase-locked loop will force 
+the rising BG signal to be synchronized with the rising edge 
+of the external clockWhen an external clock is present, the 
+regulators operate in pulse-skipping mode if it is selected 
+by the MODE pin, or in forced continuous mode otherwise
+When not synchronizing to an external clock, tie this input to INTV CC to enable spread spectrum dithering of the oscil -
+lator or to ground to disable spread spectrum.MODE (Pin 9/Pin 11):  Mode Select InputThis input deter -
+mines how the LTC7804 operates at light loadsPulling this 
+pin to ground selects Burst Mode operation An internal 
+100k resistor to ground also invokes Burst Mode operation 
+when the pin is floatingTying this pin to INTV CC forces con -
+tinuous inductor current operationTying this pin to INTV CC 
+through a 100k resistor selects pulse-skipping operationINTV CC (Pin 10/Pin 12): Output of the Internal 5.15V Low 
+Dropout Regulator (LDO)The driver and control circuits 
+are powered by this supplyMust be decoupled to GND with a minimum of 4.7μF ceramic or tantalum capacitor EXTV CC (Pin 11/Pin 13):  External Power Input to an Internal 
+LDO Connected to INTV CCThis LDO supplies INTV CC power , 
+bypassing the internal LDO powered from V BIAS whenever 
+EXTV CC is higher than 4.7VSee INTV CC Regulators in the 
+Applications Information sectionDo not exceed 30V on 
+this pinTie this pin to GND if the EXTV CC LDO is not usedVBIAS (Pin 12/Pin 14): Main Bias Supply PinA bypass 
+capacitor should be tied between this pin and GNDIt is normally tied to the input supply V
+IN or the output of the 
+boost converter BG (Pin 13/Pin 15): High Current Gate Drives for Bottom 
+N-Channel MOSFET Voltage swing at this pin is from GND 
+to INTV CCBOOST (Pin 14/Pin 16): Bootstrapped Supply to the Top 
+Side Floating Driver Connect a capacitor between the 
+BOOST and SW pinAlso connect a low-leakage Schottky 
+diode between the BOOST and INTV CC pins
+TG (Pin 15/Pin 1): High Current Gate Drive for the Top 
+N-Channel MOSFET This is the output of floating driver 
+with a voltage swing of INTV CC superimposed on the 
+switch node voltage SW SW (Pin 16/Pin 2):  Switch Node Connection to the Inductor 
+GND (Exposed Pad Pin 17/Exposed Pad Pin 17):  Ground
+Connects to the source of the bottom (main) N-channel 
+MOSFET and the (− ) terminal(s) of C IN and C OUTAll 
+small-signal components and compensation components 
+should also connect to this groundThe exposed pad must 
+be soldered to the PCB for rated thermal performance.(MSOP/QFN)
+LTC7804
+11
+RevB For more information www.analog.comBLOCK DIAGRAM
+SWTOPBOOSTINTV CC
+TG
+BOTBGINTV CC
+7804 FDCHARGE PUMP
+SPREAD SPECTRUM
+OSCILLATOR
+AND PLLTOP ONS
+RQQ
+SHDN
+SLEEP 0.425V
+ICMP IR
+2mV
+SLOPE COMPSENSE–
+SENSE+FREQ+–+– +
+–
++–+– +–SWITCH
+LOGIC
+VFB
+CC
+RC CC21.2V
+1.32VITH
+SS
++–
+CSS12.5µA
+SHDNPLLIN/SPREAD
+MODE
+LDO
+EN
+INTV CC5.15V100kRUN
+VBIAS
+EXTV CC
+LDO
+EN
+4.7V5.15V+–
+GNDEA
+OV1.2V+–
+VIN
+CINCB
+COUTVOUT
+RSENSELDB
+LTC7804
+12
+RevB For more information www.analog.comOPERATION
+Main Control Loop
+The LTC7804 uses a constant frequency, peak current 
+mode step-up architectureDuring normal operation, the 
+external bottom MOSFET is turned on when the clock 
+sets the RS latch, and is turned off when the main current 
+comparator , ICMP , resets the RS latchThe peak induc -
+tor current at which ICMP trips and resets the latch is 
+controlled by the voltage on the ITH pin, which is the 
+output of the error amplifier , EAThe error amplifier com -
+pares the output voltage feedback signal at the V FB pin 
+(which is generated with an external resistor divider con -
+nected across the output voltage, V OUT, to ground) to the 
+internal 1.200V reference voltageWhen the load current 
+increases, it causes a slight decrease in V FB relative to 
+the reference, which causes the EA to increase the ITH 
+voltage until the average inductor current matches the 
+new load currentAfter the bottom MOSFET is turned off each cycle, the 
+top MOSFET is turned on until either the inductor current 
+starts to reverse, as indicated by the current comparator IR, or the beginning of the next clock cycleINTV
+CC/EXTV CC Power
+Power for the top and bottom MOSFET drivers and most 
+other internal circuitry is derived from the INTV CC pin
+When the EXTV CC pin is tied to a voltage less than 4.7V, 
+the V BIAS LDO (low dropout linear regulator) supplies 
+5.15V from V BIAS to INTV CCIf EXTV CC is taken above 
+4.7V, the V BIAS LDO is turned off and an EXTV CC LDO is 
+turned onOnce enabled, the EXTV CC LDO supplies 5.15V  
+from EXTV CC to INTV CCUsing the EXTV CC pin allows the 
+INTV CC power to be derived from a high efficiency external 
+source such as a downstream switching regulator outputShutdown and Start-Up (RUN, SS Pins) 
+The LTC7804 can be shut down using the RUN pinPulling 
+this pin below 1.1V shuts down the main control loop
+Pulling the RUN pin below 0.7V disables the controller and 
+most internal circuits, including the INTV CC LDOsIn this 
+state, the LTC7804 draws only 1.2μA of quiescent current.NOTE:  Do not apply a heavy load for an extended time 
+while the chip is in shutdownThe top MOSFETs are 
+turned off during shutdown and the output load may 
+cause excessive dissipation in the body diodes 
+The RUN pin needs to be externally pulled up or driven 
+directly by logicIt can also be implemented as an under -
+voltage lockout (UVLO) by connecting it to the output of an 
+external resistor divider network off V IN (see Applications 
+Information section)The start-up of the controller’ s output voltage V OUT is 
+controlled by the voltage on the SS pinWhen the voltage on the SS pin is less than the 1.2V internal reference, the LTC7804 regulates the V
+FB voltage to the SS pin voltage 
+instead of the 1.2V referenceThis allows the SS pin to 
+be used to program a soft-start by connecting an external 
+capacitor from the SS pin to GNDAn internal 12.5μA  
+pull-up current charges this capacitor creating a voltage ramp on the SS pinAs the SS voltage rises linearly from 0V to 1.2V (and beyond), the output voltage V
+OUT rises 
+smoothly to its final value
+Light Load Current Operation:  Burst Mode Operation, 
+Pulse-Skipping or Forced Continuous Mode (MODE Pin)
+The LTC7804 can be enabled to enter high efficiency 
+Burst Mode operation, constant frequency pulse-skipping 
+mode, or forced continuous conduction mode at low load 
+currents
+To select Burst Mode operation, tie the MODE pin to 
+GNDTo select forced continuous operation, tie the 
+MODE pin to INTV CCTo select pulse-skipping mode, 
+tie the MODE pin to a DC voltage greater than 1.2V and 
+less than INTV CC – 1.3VAn internal 100k resistor to 
+GND invokes Burst Mode operation when the MODE pin 
+is floating and pulse-skipping mode when the MODE pin 
+is tied to INTV CC through an external 100k resistor When the controller is enabled for Burst Mode operation, 
+the minimum peak current in the inductor is set to approx -
+imately 25% of the maximum sense voltage even though 
+the voltage on the ITH pin indicates a lower valueIf the average inductor current is higher than the load current, or if V
+IN > V OUT, the error amplifier , EA, will decrease the 
+voltage on the ITH pinWhen the ITH voltage drops below 
+LTC7804
+13
+RevB For more information www.analog.com0.425V , the internal sleep signal goes high (enabling 
+sleep mode) and both external MOSFETs are turned off
+The ITH pin is then disconnected from the output of the EA and parked at 0.45VIn the case of V
+IN > V OUT, the 
+LTC7804 will remain in sleep mode regardless of the load 
+current through the body diode of the top MOSFET , which 
+could then overheat, as discussed in the Operation When V
+IN > V OUT sectionIn sleep mode, much of the internal circuitry is turned off, 
+reducing the quiescent current that the LTC7804 draws 
+to only 14μA
+In sleep mode, the load current is supplied by the output 
+capacitor As the output voltage decreases, the EA’s out -
+put begins to riseWhen the output voltage drops enough, 
+the ITH pin is reconnected to the output of the EA, the 
+sleep signal goes low, and the controller resumes normal operation by turning on the bottom external MOSFET on the next cycle of the internal oscillator 
+When the controller is enabled for Burst Mode operation, 
+the inductor current is not allowed to reverseThe reverse 
+current comparator , IR, turns off the top external MOSFET 
+just before the inductor current reaches zero, preventing 
+it from reversing and going negativeThus, the controller operates in discontinuous operationIn forced continuous operation or clocked by an external 
+clock source to use the phase-locked loop, the inductor current is allowed to reverse at light loads or under large transient conditionsThe peak inductor current is deter -
+mined by the voltage on the ITH pin, just as in normal 
+operationIn this mode, the efficiency at light loads is 
+lower than in Burst Mode operationHowever , continuous 
+operation has the advantage of lower output voltage ripple 
+and less interference to audio circuitryIn forced continu -
+ous mode, the inductor current ripple is independent of load currentWhen the MODE pin is connected for pulse-skipping mode, the LTC7804 operates in PWM pulse-skipping 
+mode at light loadsIn this mode, constant frequency 
+operation is maintained down to approximately 1% of 
+designed maximum output currentAt very light loads, the 
+current comparator , ICMP , may remain tripped for several cycles and force the external bottom MOSFET to stay off for the same number of cycles (i.e., skipping pulses)The 
+inductor current is not allowed to reverse (discontinuous operation)This mode, like forced continuous operation, exhibits low output ripple as well as low audio noise and 
+reduced RF interference as compared to Burst Mode 
+operationIt provides higher low current efficiency than forced continuous mode, but not nearly as high as Burst Mode operationUnlike forced continuous mode and pulse-skipping mode, 
+Burst Mode cannot be synchronized to an external clockTherefore, if Burst Mode is selected and PLLIN/SPREAD pin is clocked to use the phase-locked loop, the LTC7804 switches from Burst Mode to forced continuous modeFrequency Selection, Spread Spectrum and Phase-
+Locked-Loop (FREQ and PLLIN/SPREAD Pins)
+The selection of switching frequency is a trade-off between 
+efficiency and component sizeLow frequency opera -
+tion increases efficiency by reducing MOSFET switching 
+losses, but requires larger inductance and/or capacitance 
+to maintain low output ripple voltageThe free running switching frequency of the LTC7804 is 
+selected using the FREQ pinIf the PLLIN/SPREAD pin is not being driven by an external clock source, the FREQ pin can be tied to GND, tied to INTV
+CC or programmed 
+through an external resistor Tying FREQ to GND selects 
+375kHz while tying FREQ to INTV CC selects 2.25MHz
+Placing a resistor between FREQ and GND allows the fre -
+quency to be programmed between 100kHz and 3MHz, as shown in Figure 6Switching regulators can be particularly troublesome for applications where electromagnetic interference 
+(EMI) is a concernTo improve EMI, the LTC7804 can 
+operate in spread spectrum mode, which is enabled by tying the PLLIN/SPREAD pin to INTV
+CCThis feature var -
+ies the switching frequency with typical boundaries of 
+0% to +20% of the frequency set by the FREQ pinA phase-locked loop (PLL) is available on the LTC7804 
+to synchronize the internal oscillator to an external clock source that is connected to the PLLIN/SPREAD pinThe 
+LTC7804’ s phase detector (PFD) and low pass filter adjust 
+the voltage) of the VCO input to align the turn-on of the OPERATION
+LTC7804
+14
+RevB For more information www.analog.comcontroller’s external bottom MOSFET to the rising edge 
+of the synchronizing signalThe VCO input voltage is prebiased to the free running 
+frequency set by the FREQ pin before the external clock is appliedIf prebiased near the external clock frequency, the PLL loop only needs to make slight changes to the VCO input in order to synchronize the rising edge of the external clock to the rising edge of BGFor more rapid lock-in to the external clock, use the FREQ pin to set the internal oscillator to approximately the frequency of the external clockThe LTC7804’s PLL is guaranteed to lock to an external clock source whose frequency is between 100kHz and 3MHz
+The PLLIN/SPREAD pin is TTL compatible with thresholds 
+of 1.6V (rising) and 1.1V (falling) and is guaranteed to 
+operate with a clock signal swing of 0.5V to 2.5VOperation When V IN > V OUT
+When the input voltage V IN rises above the regulated V OUT 
+voltage, the boost controller behaves differently depend -
+ing on the mode, inductor current and V IN voltageWhen 
+VIN exceeds the regulated V OUT in forced continuous 
+mode, the loop works to keep the top MOSFET on con -
+tinuouslyAn internal charge pump delivers current to 
+the boost capacitor from the BOOST pin to maintain a 
+sufficiently high TG voltage
+If VIN is between 100% and 110% of the regulated V OUT 
+voltage and pulse-skipping mode is selected, TG turns 
+on if the inductor current rises above approximately 3% 
+of the programmed current limitIf Burst Mode opera -
+tion is selected, TG remains off regardless of the inductor 
+currentIf VOUT is above 110% of the regulated V OUT voltage 
+setpoint in forced continuous or pulse-skipping mode, 
+the controller turns on TG continuously regardless of the 
+inductor currentNote that a rising V IN must exceed the 
+110% threshold by an offset voltage equal to the body 
+diode of the high-side MOSFET In Burst Mode, the con -
+troller also attempts to turn on TG when V OUT exceeds 
+the 110% thresholdHowever , the internal charge pump is disabled if the chip is asleep due to burst mode opera -
+tionWith the charge pump off, the boost capacitor may discharge, resulting in the TG voltage being insufficient 
+to keep the top MOSFET completely onTo prevent exces -
+sive power dissipation across the body diode of the top MOSFET in this situation, the chip can be switched over to forced continuous or pulse-skipping mode to enable the charge pump, or a Schottky diode can also be placed in parallel to the top MOSFET Operation at Low Input Voltage
+The LTC7804 features a rail-to-rail current comparator 
+which functions down to zero voltsThe minimum boost 
+converter input voltage is therefore determined by the 
+practical limitations of the boost converter architecture 
+Since the input voltage could be lower than the 4.5V  VBIAS 
+limit, V BIAS can be connected to the output of the boost 
+controller , as illustrated in the typical application circuit 
+in Figure 11This allows the boost controller to handle 
+very low input voltage transients while maintaining output 
+voltage regulation
+BOOST Supply Refresh and Internal Charge Pump
+The top MOSFET driver is biased from the floating boot -
+strap capacitor , C B, which normally recharges during each 
+cycle through an external low-leakage Schottky or PN 
+Junction diode, D B, when the bottom MOSFET turns on
+There are two considerations to keep the BOOST supply 
+at the required bias levelDuring start-up, if the bottom MOSFET is not turned on within 100µs after UVLO goes low, the bottom MOSFET will be forced to turn on for a cumulative on-time of ~400nsThis forced refresh gener -
+ates enough BOOST-SW voltage to allow the top MOSFET 
+to be fully enhanced instead of waiting for the initial few 
+cycles to charge the bootstrap capacitor , C BThere is also 
+an internal charge pump that keeps the required bias on BOOST The charge pump always operates in both forced 
+continuous mode and pulse-skipping modeIn Burst 
+Mode operation, the charge pump is turned off during 
+sleep and enabled when the chip wakes upThe internal charge pump can normally supply a charging current of 65µA.OPERATION
+LTC7804
+15
+RevB For more information www.analog.comAPPLICATIONS INFORMATION
+The Typical Application on the first page is a basic 
+LTC7804 application circuitLTC7804 can be config -
+ured to use either DCR (inductor resistance) sensing or 
+low value resistor sensingThe choice between the two 
+current sensing schemes is largely a design trade-off 
+between cost, power consumption and accuracyDCR 
+sensing is becoming popular because it saves expensive 
+current sensing resistors and is more power efficient, 
+especially in high current and lower frequency applica -
+tionsHowever , current sensing resistors provide the 
+most accurate current limits for the controller Other exter -
+nal component selection is driven by the load require-
+ment, and begins with the selection of R SENSE  (if R SENSE  
+is used) and inductor valueNext, the power MOSFETs 
+and Schottky diodes are selectedFinally, input and output 
+capacitors are selectedSENSE+ and SENSE– Pins
+The SENSE+ and SENSE– pins are the inputs to the cur -
+rent comparatorsThe common mode voltage range on 
+these pins is 0V
+ to 40V (abs max), enabling the LTC7804 
+to operate from input voltages up to a maximum of 40VThe SENSE– pin is high impedance drawing less 
+than ≈±1μAThis high impedance allows the current com -
+parators to be used in inductor DCR sensingThe impedance of the SENSE+ pin changes depending on 
+the common mode voltageWhen SENSE+ is less than 
+2.9V, it is relatively high impedance, drawing about 2μA
+When SENSE+ is greater than 3.2V but is less than INTV CC 
+– 0.5V, the pin draws about 30μA to bias internal circuitry
+When SENSE+ is above INTV CC + 0.5V, a higher current 
+(~650μA) flows into the pinBetween INTV CC – 0.5V and 
+INTV CC + 0.5V, the current transitions from the smaller 
+current to the higher currentFilter components mutual to the sense lines should be 
+placed close to the LTC7804, and the sense lines should 
+run close together to a Kelvin connection underneath the current sense element (shown in Figure 1)Sensing cur -
+rent elsewhere can effectively add parasitic inductance 
+and capacitance to the current sense element, degrading 
+the information at the sense terminals and making the 
+programmed current limit unpredictableIf inductor DCR sensing is used (Figure 2b), sense resistor R1 should be placed close to the switching node, to prevent noise from coupling into sensitive small-signal nodesThe maximum current limit threshold voltage of the cur -
+rent comparator is programmed to be 50mV
+Figure 1Sense Lines Placement with Inductor or Sense ResistorVINTO SENSE FILTER,
+NEXT TO THE CONTROLLER
+INDUCTOR OR R SENSE7804 F01
+(2b) Using the Inductor DCR to Sense Current
+Figure 2Current Sensing Methods(2a) Using a Resistor to Sense CurrentVIN
+VOUT
+7804 F02aTG
+SW
+BGLTC7804
+BOOSTINTV CCSENSE+
+SENSE–VBIAS
+GNDRSENSE
+ESLSENSE RESISTOR WITH 
+PARASITIC INDUCTANCER
+F  CF = ESL/R SENSE
+POLE-ZERO CANCELLATION.CF
+RF
+PLACE R F AND C F 
+NEAR SENSE PINSTG
+SW
+BGINDUCTORDCR
+LLTC7804
+BOOSTSENSE+
+SENSE–R2 C1VBIAS VIN
+VOUT
+PLACE C1 NEAR SENSE PINSGND
+7804 F02b
+(R1||R2)  C1 = L
+DCRRSENSE(EQ)  = DCR  R2
+R1 + R2R1INTV CC
+LTC7804
+16
+RevB For more information www.analog.comAPPLICATIONS INFORMATION
+Low Value Resistor Current Sensing
+A typical sensing circuit using a discrete resistor is shown 
+in Figure 2aR SENSE  is chosen based on the required out -
+put currentThe current comparator has a maximum threshold 
+VSENSE(MAX)  of 50mVThe current comparator threshold 
+voltage sets the peak of the inductor current, yielding a 
+maximum average inductor current, I L(MAX) , equal to the 
+peak value less half the peak-to-peak ripple current, ∆I L
+To calculate the sense resistor value, use the equation:
+ RSENSE =VSENSE(MAX)
+IL(MAX) +ΔIL
+2
+The actual value of I L(MAX)  depends on the required output 
+current I OUT(MAX)  and can be calculated using:
+ IL(MAX) =IOUT(MAX) VOUT
+VIN⎛
+⎝⎜⎞
+⎠⎟
+To ensure that the application will deliver full load cur -
+rent over the full operating temperature range, choose 
+the minimum value for V SENSE(MAX)  in the Electrical 
+Characteristics table and account for tolerances in switch -
+ing frequency, inductance, and R SENSE  resistance, as well 
+as applicable voltage rangesTo avoid potential jitter or instability due to PCB noise cou-
+pling into the current sense signal, the AC current sensing 
+ripple of ∆VSENSE  = ∆IL  RSENSE  should also be checked to 
+ensure a good signal-to-noise ratioIn general, for a rea -
+sonably good PCB layout, a target V SENSE  AC ripple range 
+of 10mV to 20mV at 50% duty cycle is recommended for 
+both R SENSE  and DCR sensing applicationsThe parasitic inductance (ESL) of the sense resistor intro -
+duces significant error in the current sense signal, par -
+ticularly for lower inductor value (< 3µH ) or higher current 
+(> 5A) applicationsThis error may be compensated for 
+with an RC filter into the sense pins as shown in Figure  2a 
+Set the RC filter time constant R F  CF = ESL/R SENSE  for 
+optimal cancellation of the ESLSurface mount sense 
+resistors in low ESL wide footprint geometries are rec -
+ommended to minimize this error If not specified on the manufacturer ’ 
+s data sheet, the ESL can be approximated as 0.4nH for a resistor with a 1206 footprint and 0.2nH for a 1225 footprintInductor DCR Sensing
+For applications requiring the highest possible efficiency 
+at high load currents, the LTC7804 is capable of sensing the voltage drop across the inductor DCR, as shown in Figure 2bThe DCR of the inductor represents the small amount of DC resistance of the copper wire, which can 
+be less than 1mΩ for today’ s low value, high current 
+inductorsIn a high current application requiring such 
+an inductor , power loss through a sense resistor would 
+cost several points of efficiency compared to inductor 
+DCR sensingIf the external (R1||R2)  C1 time constant is chosen to 
+be exactly equal to the L/DCR time constant, the voltage 
+drop across the external capacitor is equal to the drop 
+across the inductor DCR multiplied by R2/(R1 + R2)R2 scales the voltage across the sense terminals for appli -
+cations where the DCR is greater than the target sense 
+resistor valueTo properly dimension the external filter 
+components, the DCR of the inductor must be knownIt can be measured using a good RLC meter , but the DCR 
+tolerance is not always the same and varies with tempera -
+ture; consult the manufacturers’ data sheets for detailed informationUsing the inductor ripple current value from the Inductor 
+Value Calculation section, the target sense resistor value is:
+ RSENSE ≤VSENSE(MAX)
+IL(MAX) +ΔIL
+2
+To ensure that the application will deliver full load cur -
+rent over the full operating temperature range, choose the 
+minimum value for the maximum current sense threshold 
+VSENSE(MAX)  in the Electrical Characteristics tableNext, determine the DCR of the inductor When provided, 
+use the manufacturer’s maximum value, usually given at 20°CIncrease this value to account for the temperature coefficient of copper resistance, which is approximately 0.4%/°CA conservative value for T
+L(MAX)  is 100°C.
+LTC7804
+17
+RevB For more information www.analog.comTo scale the maximum inductor DCR to the desired sense 
+resistor value (RD), use the divider ratio:
+ RD=RSENSE(EQUIV)
+DCRMAXat TL(MAX)
+C1 is usually selected to be in the range of 0.1μF to 
+0.47μFThis forces R1 || R2 to around 2k, reducing error 
+that might have been caused by the SENSE− pin’s ±1μA 
+currentThe target equivalent resistance R1 || R2 is calculated 
+from the nominal inductance, C1 value, and DCR:
+ R1||R2 =L
+DCR at 20°C( )  C1
+The sense resistor values are:
+ R1=R1||R2
+RD; R2=R1 RD
+1– RD
+The maximum power loss in R1 is related to duty cycle, and will occur in continuous mode at V
+IN = 1/2V OUT:
+ PLOSS_R1 =VOUT– VIN ( )  VIN
+R1
+Ensure that R1 has a power rating higher than this valueIf high efficiency is necessary at light loads, consider this power loss when deciding whether to use DCR sensing 
+or sense resistorsLight load power loss can be mod -
+estly higher with a DCR network than with a sense resis-
+tor , due to the extra switching losses incurred through 
+R1However , DCR sensing eliminates a sense resistor , 
+reduces conduction losses and provides higher efficiency 
+at heavy loadsPeak efficiency is about the same with 
+either methodInductor Value Calculation
+The operating frequency and inductor selection are inter -
+related in that higher operating frequencies allow the use 
+of smaller inductor and capacitor valuesSo why would anyone ever 
+choose to operate at lower frequencies with 
+larger components?  The answer is efficiencyA higher 
+frequency generally results in lower efficiency because of MOSFET switching and gate charge lossesIn addi -
+tion to this basic trade-off, the effect of inductor value 
+on ripple current and low current operation must also be consideredThe maximum average inductor current in continuous 
+conduction mode is equal to the maximum average out -
+put current multiplied by a factor of V OUT/VIN, or I L(MAX)  
+= IOUT(MAX) VOUT/VINBe aware that the maximum out -
+put current decreases with decreasing V INThe choice of 
+IL(MAX)  therefore depends on the maximum load current 
+for a regulated V OUT at the minimum normal operating 
+VINIf the load current limit for a given V IN is exceeded, 
+VOUT will decrease until the I L(MAX)  = IOUT(MAX) VOUT/VIN 
+equation is satisfied Additionally, when the output is in 
+overvoltage (V IN >VOUT), the top switch is on continuously 
+and the maximum load current is equal to I L(MAX) The 
+inductor ripple current ∆IL for a boost regulator is:
+ ΔIL=1
+f LVIN1–VIN
+VOUT⎛
+⎝⎜⎞
+⎠⎟
+Accepting larger values of ∆I L allows the use of low induc -
+tances, but results in higher output voltage ripple and 
+greater core lossesA reasonable starting point for set -
+ting ripple current is ∆I L = 0.3 I L(MAX) The maximum ∆I L 
+occurs at V IN = 1/2V OUTThe inductor value also has secondary effectsThe tran -
+sition to Burst Mode operation begins when the average 
+inductor current required results in a 
+peak current below 
+25% of the current limit determined by R SENSE Lower 
+inductor values (higher ∆I L) will cause this to occur at 
+lower load currents, which can cause a dip in efficiency in 
+the upper range of low current operationIn Burst Mode operation, lower inductance values will cause the burst frequency to decrease
+Inductor Core Selection
+Once the value for L is known, the type of inductor must 
+be selectedHigh efficiency converters generally cannot 
+afford the core loss found in low cost powdered iron cores, 
+forcing the use of more expensive ferrite or molypermal-
+loy coresActual core loss is independent of core size for a 
+fixed inductor value, but it is very dependent on inductance APPLICATIONS INFORMATION
+LTC7804
+18
+RevB For more information www.analog.comvalue selectedAs inductance increases, core losses go 
+downUnfortunately, increased inductance requires more 
+turns of wire and therefore copper losses will increaseFerrite designs have very low core loss and are preferred 
+for high switching frequencies, so design goals can con -
+centrate on copper loss and preventing saturationFerrite 
+core material saturates hard, which means that induc -
+tance collapses abruptly when the peak design current is exceededThis results in an abrupt increase in inductor ripple current and consequent output voltage rippleDo 
+not allow the core to saturate! The inductor saturation 
+design margin should account for the tolerance and tem-perature effects on the saturation currentPower MOSFET Selection
+T wo external power MOSFETs must be selected for the 
+LTC7804 controller: one N-channel MOSFET for the bot-
+tom (main) switch, and one N-channel MOSFET for the top (synchronous) switchThe peak-to-peak drive levels are set by the INTV CC 
+voltageThis voltage is typically 5.15V  during start-up 
+(see EXTV CC Pin Connection)Consequently, logic-level 
+threshold MOSFETs must be used in most applications
+Pay close attention to the BV DSS specification for the 
+MOSFETs as wellSelection criteria for the power MOSFETs include the 
+onresistance, R DS(ON) , Miller capacitance, C MILLER , input 
+voltage and maximum output currentMiller capacitance, 
+CMILLER , can be approximated from the gate charge curve 
+usually provided on the MOSFET manufacturers’  data 
+sheetC MILLER  is equal to the increase in gate charge 
+along the horizontal axis while the curve is approximately 
+flat divided by the specified change in V DSThis result is 
+then multiplied by the ratio of the application applied V DS 
+to the gate charge curve specified V DSWhen the IC is 
+operating in continuous mode the duty cycles for the top and bottom MOSFETs are given by:
+ Main Switch Duty Cycle = VOUT– VIN
+VOUT
+Synchronous Switch Duty Cycle = VIN
+VOUTThe MOSFET power dissipations at maximum output cur -
+rent are given by:
+PMAIN=VOUT– VIN ( ) VOUT
+VIN2 IOUT(MAX)( )2 1+δ ( )
+RDS(ON) +VOUT3
+VIN⎛
+⎝⎜⎞
+⎠⎟IOUT(MAX)
+2⎛
+⎝⎜⎞
+⎠⎟
+RDR+RG ( ) CMILLER( ) 1
+VINTVCC−VTHMIN+1
+VTHMIN⎛
+⎝⎜⎞
+⎠⎟ f
+PSYNC=VOUT
+VINIOUT(MAX)( )21+δ ( ) RDS(ON)
+where δ is the temperature dependency of R DS(ON)  
+(δ ≈ 0.005/°C), R G is the internal gate resistance of the 
+MOSFET and R DR is the effective driver resistance at the 
+MOSFET’ s Miller threshold voltage (R DR ≈ 2Ω)V THMIN  is 
+the typical MOSFET minimum threshold voltageBoth MOSFETs have I2R losses while the bottom N-channel 
+equation includes an additional term for transition losses, 
+which are highest at high output voltagesFor V OUT < 
+20V and moderate switching frequencies, the high current 
+efficiency generally improves with larger MOSFETs, while 
+for V OUT > 20V the transition losses rapidly increase to the 
+point that the use of a higher R DS(ON)  device with lower 
+CMILLER  actually provides higher efficiencyThe synchro -
+nous MOSFET losses are greatest at high output voltage 
+when the bottom switch duty factor is low or during a 
+short-circuit when the synchronous switch is on close to 
+100% of the periodCIN and C OUT Selection
+The input ripple current in a boost converter is relatively 
+low (compared to the output ripple current) because this current is continuousThe boost input capacitor C
+IN volt-
+age rating should comfortably exceed the maximum input 
+voltageAlthough ceramic capacitors can be relatively 
+tolerant of overvoltage conditions, aluminum electrolytic capacitors are notBe sure to characterize the input volt -
+age for any possible overvoltage transients that could 
+apply excess stress to the input capacitors.APPLICATIONS INFORMATION
+LTC7804
+19
+RevB For more information www.analog.comThe value of C IN is a function of the source impedance, and 
+in general, the higher the source impedance, the higher 
+the required input capacitanceThe required amount of 
+input capacitance is also greatly affected by the duty cycle
+High output current applications that also experience high 
+duty cycles can place great demands on the input supply, both in terms of DC current and ripple current
+The output current in a boost converter is discontinu -
+ous, so C OUT should be selected to meet output voltage 
+ripple requirementsThe effects of ESR (equivalent series 
+resistance) and the bulk capacitance must be considered 
+when choosing the right capacitor for a given output 
+ripple voltageThe peak-to-peak ripple due to charging 
+and discharging the bulk capacitance of C OUT is given by:
+ VRIPPLE =IOUT(MAX)  VOUT– VIN(MIN) ( )
+COUT VOUT f V
+The ripple due to the voltage drop across the ESR is 
+given by:
+ ∆VESR = IL(MAX) +1
+2∆IL⎛
+⎝⎜⎞
+⎠⎟ESR
+Multiple capacitors placed in parallel may be needed to 
+meet the ESR and RMS current handling requirementsDry tantalum, special polymer , aluminum electrolytic and 
+ceramic capacitors are all available in surface mount packagesCeramic capacitors have excellent low ESR 
+characteristics but can have a high voltage coefficient
+Capacitors are now available with low ESR and high ripple 
+current ratings such as OS-CON and POSCAP Setting Output Voltage
+The LTC7804 output voltage is set by an external feed -
+back resistor divider carefully placed across the output, 
+as shown in Figure 3The regulated output voltage is 
+determined by:
+ VOUT=1.2V 1 +RB
+RA⎛
+⎝⎜⎞
+⎠⎟
+To improve the frequency response, a feedforward capaci-
+tor , C FF, may be usedGreat care should be taken to route APPLICATIONS INFORMATION
+Figure 3Setting Output Voltage L TC7804
+VFBVOUT
+RB CFF
+RA
+7804 F03
+Figure 4Using the RUN Pin as a UVLOL TC7804
+RUNVIN
+RB
+RA
+7804 F04the V FB line away from noise sources, such as the inductor 
+or the SW lineRUN Pin
+The LTC7804 is enabled using the RUN pinIt has a rising 
+threshold of 1.2V with 100mV of hysteresisPulling the 
+RUN pin below 1.1V shuts down the main control loop
+Pulling it below 0.7V disables the controller and most 
+internal circuits, including the INTV CC LDOsIn this state, 
+the LTC7804 draws only 1.2μA of quiescent currentThe RUN pin is high impedance and must be externally 
+pulled up/down or driven directly by logicThe RUN pin 
+can tolerate up to 40V (abs max), so it can be conveniently 
+tied to V IN in always-on applications where the controller 
+is enabled continuously and never shut downDo not 
+float the RUN pinThe RUN pin can be configured as a UVLO by connecting 
+it to the output of an external resistor divider network off V
+IN, as shown in Figure 4The rising and falling UVLO thresholds are calculated 
+using the RUN pin thresholds:
+ VUVLO(RISING) =1.2V 1 +RB
+RA⎛
+⎝⎜⎞
+⎠⎟
+VUVLO(FALLING) =1.1V 1 +RB
+RA⎛
+⎝⎜⎞
+⎠⎟
+LTC7804
+20
+RevB For more information www.analog.comthe EXTV CC LDO regulate INTV CC to 5.15VEach of these 
+can supply a peak current of at least 50mA and must be 
+bypassed to ground with a minimum of 2.2μF ceramic 
+capacitor , placed as close as possible to the pinNo mat -
+ter what type of bulk capacitor is used, an additional 1μF 
+ceramic capacitor placed directly adjacent to the INT VCC 
+and GND pins is highly recommended to supply the high 
+frequency transient currents required by the MOSFET 
+gate driversHigh input voltage applications in which large MOSFETs 
+are being driven at high frequencies may cause the maxi -
+mum junction temperature rating for the LTC7804 to be 
+exceededThe INTV CC current, which is dominated by 
+the gate charge current, may be supplied by either the 
+VBIAS LDO or the EXTV CC LDOWhen the voltage on the 
+EXTV CC pin is less than 4.7V, the V BIAS LDO is enabled
+Power dissipation for the IC in this case is highest and 
+is equal to V BIAS  IINTVCC The gate charge current is 
+dependent on operating frequency as discussed in the 
+Efficiency Considerations sectionThe junction tempera -
+ture can be estimated by using the equations given in 
+Note 2 of the Electrical CharacteristicsFor example, the LTC7804 INTV
+CC current is limited to less than 20mA in 
+the QFN package from a 40V supply when not using the EXTV
+CC supply at a 70°C ambient temperature:  
+ TJ = 70°C + (20mA)(40V)(68°C/W for QFN) = 125°C 
+In the MSOP package, the INTV CC current is limited to less 
+than 34mA from a 40V supply:
+ TJ = 70°C + (34mA)(40V)(40°C/W for MSOP) = 125°C 
+To prevent the maximum junction temperature from being 
+exceeded, the input supply current must be checked while 
+operating in forced continuous mode (MODE = INTV CC) 
+at maximum V BIASWhen the voltage applied to EXTV CC rises above 4.7V, the 
+VBIAS LDO is turned off and the EXTV CC LDO is enabled
+The EXTV CC LDO remains on as long as the voltage applied 
+to EXTV CC remains above 4.5VThe EXTV CC LDO attempts 
+to regulate the INTV CC voltage to 5.15V, so while EXTV CC 
+is less than 5.15V, the LDO is in dropout and the INTV CC 
+voltage is approximately equal to EXTV CCWhen EXTV CC 
+is greater than 5.15V, up to an absolute maximum of 30V, 
+INTV CC is regulated to 5.15V.APPLICATIONS INFORMATION
+Figure 5Using the SS Pin to Program Soft-StartL TC7804
+SS
+CSS
+GND
+7804 F05The current that flows through the R A−RB divider directly 
+adds to the shutdown, sleep, and active current of the 
+LTC7804, and care should be taken to minimize the impact 
+of this current on the overall efficiency of the application circuitResistor Values in the MΩ range may be required to keep the impact on quiescent shutdown and sleep cur -
+rents lowFor applications that do not require a precise UVLO the 
+RUN pin can be tied to V INIn this configuration, the UVLO 
+threshold is limited to the internal INTV CC UVLO threshold 
+as shown in the Electrical Characteristics tableSoft-Start (SS Pin)
+The start-up of V OUT is controlled by the voltage on the 
+SS pinWhen the voltage on the SS pin is less than the 
+internal 1.2V reference, the LTC7804 regulates the V FB 
+pin voltage to the voltage on the SS pin instead of 1.2VSoft-start is enabled by simply connecting a capacitor 
+from the SS pin to ground, as shown in Figure 5An inter -
+nal 12.5μA current source charges the capacitor , provid -
+ing a linear ramping voltage at the SS pinThe LTC7804 
+will regulate the V FB pin (and hence V OUT) according to 
+the voltage on the SS pin, allowing V OUT to rise smoothly 
+to its final regulated valueThe total soft-start time will be approximately:
+ tSS=CSS1.2V
+12.5µA
+INTV CC Regulators
+The LTC7804 features two separate internal P-channel 
+low dropout linear regulators (LDOs) that supply power 
+at the INTV CC pin from either the V BIAS supply pin or 
+the EXTV CC pin depending on the connection of the 
+EXTV CC pinINTV CC powers the gate drivers and much 
+of the LTC7804 ’s internal circuitryThe V BIAS LDO and 
+LTC7804
+21
+RevB For more information www.analog.comSignificant thermal gains can be realized by powering 
+INTV CC from an external supply, and efficiency is also 
+improved if the external supply is derived from another 
+switching regulator This is accomplished by tying the 
+EXTV CC pin directly to an external supply that is greater 
+than the INTV CC regulation pointTying the EXTV CC pin to an 8.5V supply reduces the junc -
+tion temperature in the previous examples from 125°C 
+to 82°C:
+ TJ = 70°C + (20mA)(8.5V)(68°C/W) = 82°C 
+and from 125°C to 82°C in an MSOP package
+ TJ = 70°C + (34mA)(8.5V)(40°C/W) = 82°C 
+The following list summarizes the three possible connec -
+tions for EXTV CC:
+1EXT
+VCC GroundedThis will cause INTV CC to be pow -
+ered from the internal 5.15V regulator resulting in an 
+efficiency penalty of up to 10% at high input voltages2EXTV CC Connected Directly to V INThis can be used 
+if VBIAS is tied to V OUT and the maximum regulator 
+input voltage is 30V or lessThis approach allows the 
+regulator to ride through very low input voltage con -
+ditions (V IN<4.5V) and provides significant thermal 
+benefit when V IN > 4.7V3EXT V CC Connected to an External SupplyThis can 
+be used if an external supply compatible with the 
+MOSFET gate drive requirements is available in the 
+5V to 30V rangeThe supply may be higher or lower than V
+BIAS, however , a lower EXTV CC voltage results 
+in higher efficiencyTopside MOSFET Driver Supply (C B, DB)
+An external bootstrap capacitor C B connected to the 
+BOOST pin supplies the gate drive voltage for the topside MOSFET Capacitor C
+B in the Block Diagram is charged 
+though external diode D B from INTV CC when the SW pin 
+is lowWhen the topside MOSFET is to be turned on, the driver places the C
+B voltage across the gate and source 
+of the desired MOSFET This enhances the MOSFET and 
+turns on the topside switchFor typical applications, a 
+suitable value of C B is in the 0.1µF to 0.47µF rangeThe 
+switch node voltage, SW , rises to V OUT and the BOOST pin followsWith the topside MOSFET on, the boost voltage 
+is above the output voltage:  VBOOST = VOUT + VINTVCC The 
+value of the boost capacitor C B needs to be 100 times that 
+of the total input capacitance of the topside MOSFET(s)
+For typical applications, a suitable value of C B is in the 
+0.1µF to 0.47µF rangeThe reverse breakdown of the 
+external diode D B must be greater than V OUT(MAX) The external diode D B can be a Schottky diode or silicon 
+diode, but in either case it should have low leakage and fast recoveryPay close attention to the reverse leakage at high temperatures, where it generally increases sub -
+stantiallyA leaky diode not only increases the quiescent 
+current of the boost converter , but it can create a cur -
+rent path from the BOOST pin to INTV CCThis will cause 
+INTV CC to rise if the diode leakage exceeds the current 
+consumption on INTV CC, which is primarily a concern in 
+Burst Mode operation where the load on INTV CC can be 
+very smallThere is an internal voltage clamp on INTV CC 
+that prevents the INTV CC voltage from running away, but 
+this clamp should be regarded as a failsafe only
+The topside MOSFET driver includes an internal charge 
+pump that delivers current to the bootstrap capacitor from 
+the BOOST pinThis charge current maintains the bias 
+voltage required to keep the top MOSFET on continuously 
+during pass-through/overvoltage conditionsIn applica-
+tions supporting pass-through or overvoltage conditions, 
+the Schottky or PN-junction diode selected for the topside 
+driver should have a reverse leakage less than the avail -
+able output current the charge pump can supplyCurves 
+displaying the available charge pump current under dif-
+ferent operating conditions can be found in the Typical 
+Performance Characteristics section
+Phase-Locked Loop and Frequency Synchronization 
+The LTC7804 has an internal phase-locked loop (PLL) com -
+prised of a phase frequency detector , a lowpass filter , and a 
+voltage-controlled oscillator (VCO)This allows the turn-on 
+of the bottom MOSFET to be locked to the rising edge of 
+an external clock signal applied to the PLLIN/SPREAD pin
+The phase detector is an edge sensitive digital type that 
+provides zero degrees phase shift between the external and 
+internal oscillatorsThis type of phase detector does not exhibit false lock to harmonics of the external clock.APPLICATIONS INFORMATION
+LTC7804
+22
+RevB For more information www.analog.comIf the external clock frequency is greater than the internal 
+oscillator’ s frequency, f OSC, then current is sourced contin -
+uously from the phase detector output, pulling up the VCO 
+inputWhen the external clock frequency is less than f OSC, 
+current is sunk continuously, pulling down the VCO inputIf the external and internal frequencies are the same but exhibit 
+a phase difference, the current sources turn on for an amount 
+of time corresponding to the phase differenceThe voltage at the VCO input is adjusted until the phase and frequency of the internal and external oscillators are identicalAt the stable operating point, the phase detector output is high impedance 
+and an the internal filter capacitor , holds the voltage at the 
+VCO inputNote that the LTC7804 can only be synchronized to an external clock whose frequency is within range of the 
+LTC7804’ s internal VCO, which is nominally 100kHz to 3MHzRapid phase locking can be achieved by using the FREQ pin to set a free-running frequency near the desired syn -
+chronization frequencyThe VCO’s input voltage is prebi -
+ased at a frequency corresponding to the frequency set 
+by the FREQ pinOnce prebiased, the PLL only needs 
+to adjust the frequency slightly to achieve phase lock 
+and synchronizationAlthough it is not required that the free-running frequency be near external clock frequency, doing so will prevent the operating frequency from pass -
+ing through a large range of frequencies as the PLL locksWhen synchronized to an external clock, the LTC7804 oper -
+ates in forced continuous mode if the MODE pin is set to 
+Burst Mode operation or forced continuous operationIf the MODE pin is set to pulse-skipping operation, the LTC7804  
+maintains pulse-skipping operation when synchronizedSetting the Operating Frequency
+The switching frequency is set using the FREQ and PLLIN/
+SPREAD pins as shown in Table 1Table 1 
+FREQ PIN PLLIN/SPREAD PIN FREQUENCY
+0V 0V 375kHz
+INTV CC 0V 2.25MHz
+Resistor 0V 100kHz to 3MHz
+Any of the Above External Clock  
+100kHz to 3MHzPhase-Locked to 
+External Clock
+Any of the Above INT VCC Spread Spectrum f OSC 
+Modulated 0% to +20%APPLICATIONS INFORMATION
+Figure 6 Setting the Operating Frequency
+FREQ PIN RESISTOR (Ω)
+10k
+100k
+500k
+100k
+1M
+10M
+FREQUENCY (Hz)
+7804 F06
+77.5% AT 2.25MHz
+(b) Relationship Between Maximum Duty 
+Cycle and Operating Frequency
+(a) Relationship Between Oscillator 
+Frequency and Resistor Value at the FREQ Pin
+FREQUENCY (MHz)
+0.1
+1
+3
+65
+70
+75
+80
+85
+90
+95
+100
+MAXIMUM DUTY CYCLE (%)Tying the FREQ pin to ground selects 375kHz while tying 
+FREQ to INTV CC selects 2.25MHzPlacing a resistor 
+between FREQ and ground allows the frequency to be pro -
+grammed anywhere between 100kHz and 3MHzChoose a 
+FREQ pin resistor from Figure  6a or the following equation:
+ RFREQ(in  kΩ)=37MHz
+fOSC
+A further constraint on the operating frequency is due to 
+the maximum duty cycle of the boost converter The maxi -
+mum duty cycle, which can be approximated as DC MAX = (1 
+– VIN(MIN) /VOUT)  100%, is limited as shown in Figure  6b
+At low frequencies, the output will lose regulation if the 
+required duty cycle is higher than 93%At high frequencies, 
+LTC7804
+23
+RevB For more information www.analog.comthe maximum duty cycle available to maintain constant fre -
+quency operation is reduced further In this region, if a higher 
+duty cycle is required to keep the output voltage in regulation, 
+the controller will skip the top MOSFET (TG) turn-on and keep 
+the bottom MOSFET (BG) on for more than one clock cycle to 
+achieve the higher duty cycle at an effectively lower frequency
+Choose a frequency that limits the maximum duty cycle to a 
+value lower than the curve shown in Figure 6bSwitching regulators can be particularly troublesome for 
+applications where electromagnetic interference (EMI) is a concernTo improve EMI, spread spectrum mode can optionally be selected by tying the PLLIN/SPREAD pin to INTV
+CCWhen spread spectrum in enabled, the switch -
+ing frequency varies within 0% to +20% of the frequency selected by the FREQ pinSpread spectrum may be used in any operating mode selected by the MODE pin (Burst Mode, pulse-skipping, or for ced continuous mode)Selecting the Light-Load Operating Mode
+The LTC7804 can be set to enter high efficiency Burst 
+Mode operation, constant frequency pulse-skipping mode 
+or forced continuous conduction mode at light load cur -
+rentsTo select Burst Mode operation, tie the MODE to 
+groundTo select forced continuous operation, tie the 
+MODE pin to INTV CCTo select pulse-skipping mode, tie 
+the MODE pin to INTV CC through a 100k resistor An inter -
+nal 100k resistor from the MODE pin to ground selects 
+Burst Mode operation if the pin is floatingWhen syn -
+chronized to an external clock through the PLLIN/SPREAD 
+pin, the LTC7804 operates in pulse -skipping mode if it is 
+selected, or in for
+ced continuous mode otherwiseTable 2  
+summarizes the use of the MODE pin to select the light load operating modeTable 2 
+MODE PINLIGHT-LOAD 
+OPERATING MODE MODE WHEN SYNCHRONIZED
+0V or Floating Burst Mode Forced Continuous 
+100k to INTV CC Pulse-Skipping Pulse-Skipping
+INTV CC Forced Continuous Forced Continuous 
+In general, the requirements of each application will dictate 
+the appropriate choice for light-load operating modeIn 
+Burst Mode operation, the inductor current is not allowed to reverseThe reverse current comparator turns off the 
+top MOSFET just before the inductor current reaches zero, 
+preventing it from reversing and going negativeThus, 
+the regulator operates in discontinuous conductionIn 
+addition, when the load current is very light, the inductor 
+current will begin bursting at frequencies lower than the switching frequency, and enter a low current sleep mode 
+when not switchingAs a result, Burst Mode operation 
+has the highest possible efficiency at light loadIn forced continuous mode, the inductor current is 
+allowed to reverse at light loads and switches at the same 
+frequency regardless of loadIn this mode, the efficiency at light loads is considerably lower than in Burst Mode operationHowever , continuous operation has the advan -
+tage of lower output voltage ripple and less interference to 
+audio circuitryIn forced continuous mode, the inductor current ripple is independent of load currentIn pulse-skipping mode, constant frequency operation is 
+maintained down to approximately 1% of designed maxi -
+mum output currentAt very light loads, the PWM com -
+parator may remain tripped for several cycles and force the bottom MOSFET to stay off for the same number of cycles 
+(i.e., skipping pulses)The inductor current is not allowed 
+to reverse (discontinuous operation)This mode, like forced continuous operation, exhibits low output ripple as well as low audio noise and reduced RF interference as compared 
+to Burst Mode operationIt provides higher light load effi -
+ciency than forced continuous mode, but not nearly as high 
+as Burst Mode operationConsequently, pulse-skipping mode 
+represents a compromise between light load efficiency, out-put ripple and EMI
+In some applications, it may be desirable to change light 
+load operating mode based on the conditions present in 
+the systemFor example, if a system is inactive, one might 
+select high efficiency Burst Mode operation by keeping 
+the MODE pin set to 0VWhen the system wakes, one 
+might send an external clock to PLLIN/SPREAD, or tie 
+MODE to INTV CC to switch to low noise forced continu-
+ous modeSuch on-the-fly mode changes can allow an individual application 
+to benefit from the advantages of 
+each light -load operating mode.APPLICATIONS INFORMATION
+LTC7804
+24
+RevB For more information www.analog.comMinimum On-Time Considerations
+Minimum on-time, t ON(MIN) , is the smallest time duration 
+that the LTC7804 is capable of turning on the bottom 
+MOSFET It is determined by internal timing delays and 
+the gate charge required to turn on the bottom MOSFET Low duty cycle applications may approach this minimum on-time limit and care should be taken to ensure that:
+ tON(MIN) <VOUT−VIN 
+VOUT f
+If the duty cycle falls below what can be accommodated by the minimum on-time, the controller will begin to skip 
+cyclesThe output voltage will continue to be regulated, but 
+the ripple voltage and current will increaseMore cycles 
+will be skipped when V IN increasesOnce V IN rises above 
+VOUT, the loop keeps the top MOSFET continuously onThe 
+minimum on-time for the LTC7804 is approximately 80nsFault Conditions: Overtemperature Protection
+At higher temperatures, or in cases where the internal 
+power dissipation causes excessive self-heating on chip, 
+the overtemperature shutdown circuitry will shut down 
+the LTC7804When the junction temperature exceeds 
+approximately 180˚C, the overtemperature circuitry dis-
+ables the INTV CC LDO, causing the INTV CC supply to col -
+lapse and effectively shut down the entire LTC7804 chip
+When the junction temperature drops back to approxi -
+mately 160˚C, the INTV CC LDO turns back onLong-term 
+overstress (T J > 125˚ C) should be avoided as it can 
+degrade the performance or shorten the life of the partEfficiency Considerations
+The percent efficiency of a switching regulator is equal to 
+the output power divided by the input power times 100%
+It is often useful to analyze individual losses to determine 
+what is limiting the efficiency and which change would 
+produce the most improvementPercent efficiency can 
+be expressed as:
+ %Efficiency = 100% – (L1 + L2 + L3 + .) 
+where L1, L2, etcare the individual losses as a per
+cent-
+age of input power .Although all dissipative elements in the circuit produce 
+losses, four main sources usually account for most of the 
+losses in LTC7804 circuits:  1) IC V BIAS current, 2) INTV CC 
+regulator current, 3) I2R losses, 4) bottom side MOSFET 
+transition losses.1 The V BIAS current is the DC supply current given in 
+the Electrical Characteristics table, which excludes 
+MOSFET driver and control currentsV BIAS current 
+typically results in a small (<0.1%) loss2INT
+VCC current is the sum of the MOSFET driver and 
+control currentsThe MOSFET driver current results 
+from switching the gate capacitance of the power 
+MOSFETsEach time a MOSFET gate is switched 
+from low to high to low again, a packet of charge, d q, 
+moves from INTV CC to groundThe resulting d q/dt is 
+a current out of INTV CC that is typically much larger 
+than the control circuit currentIn continuous mode, I
+GATECHG  = f(QT + QB) , where QT and QB are the gate 
+charges of the topside and bottom side MOSFETs3I2R losses are predicted from the DC resistances of 
+the fuse (if used), MOSFET , inductor , current sense 
+resistor and input and input capacitor ESRIn con -
+tinuous mode the average input current flows through 
+L and R SENSE , but is chopped between the topside 
+MOSFET and the synchronous MOSFET If the two 
+MOSFETs have approximately the same R DS(ON) , then 
+the resistance of one MOSFET can simply be summed 
+with the resistances of L, R SENSE  and ESR to obtain 
+I2R losses4T ransition losses apply only to the bottom MOSFET 
+and become significant only when operating at higher 
+output voltages (typically 15V or greater) or at high 
+frequency (MHz range)T ransition losses can be esti -
+mated from the equation for the main switch power dissipation in the Power MOSFET Selection section
+Other hidden losses such as copper trace and internal battery resistances can account for an additional 5% to 10% efficiency degradation in portable systemsIt is very important to include these system level losses during the design phaseThe internal battery and fuse resistance losses can be minimized by making sure that C
+IN has adequate charge storage and very low ESR at the APPLICATIONS INFORMATION
+LTC7804
+25
+RevB For more information www.analog.comswitching frequencyA 25W supply will typically require 
+a minimum of 20μF to 40μF of capacitance having a maximum of 20mΩ to 50mΩ of ESROther losses includ -
+ing body diode conduction losses during dead-time and in
+ductor core losses generally account for less than 2% 
+total additional loss but can be significant when operating at high switching frequenciesChecking T ransient Response
+The regulator loop response can be checked by looking at 
+the load current transient responseSwitching regulators 
+take several cycles to respond to a step in DC (resistive) 
+load currentWhen a load step occurs, V OUT shifts by an 
+amount equal to ∆I LOAD (ESR), where ESR is the effective 
+series resistance of C OUT∆ILOAD also begins to charge or 
+discharge C OUT generating the feedback error signal that 
+forces the regulator to adapt to the current change and 
+return V OUT to its steady-state valueDuring this recovery 
+time V OUT can be monitored for excessive overshoot or 
+ringing, which would indicate a stability problemOPTI-LOOP compensation allows the transient response to be 
+optimized over a wide range of output capacitance and 
+ESR valuesThe availability of the ITH pin not only allows optimization of control loop behavior , but it also provides a DC coupled and AC filtered closed-loop response test pointThe DC step, rise time and settling at this test point truly reflects the closed-loop responseAssuming a pre -
+dominantly second order system, phase margin and/or 
+damping factor can be estimated using the percentage 
+of overshoot seen at this pinThe bandwidth can also be estimated by examining the rise time at the pinThe ITH external components shown in the first page circuit will provide an adequate starting point for most applicationsThe ITH series R
+C−CC filter sets the dominant pole-zero 
+loop compensationThe values can be modified slightly 
+to optimize transient response once the final PC layout is done and the particular output capacitor type and value have been determinedThe output capacitors need to be selected because the various types and values determine the loop gain and phaseAn output current pulse of 20% to 80% of full-load current having a rise time of 1μs to 10μs will produce output voltage and ITH pin waveforms that will give a sense of the overall loop stability without breaking the feedback loop.Placing a power MOSFET directly across the output 
+capacitor and driving the gate with an appropriate signal 
+generator is a practical way to produce a realistic load step 
+conditionThe initial output voltage step resulting from the step change in output current may not be within the bandwidth of the feedback loop, so this signal cannot be 
+used to determine phase marginThis is why it is better to 
+look at the ITH pin signal which is in the feedback loop and 
+is the filtered and compensated control loop responseThe gain of the loop will be increased by increasing 
+RC and the bandwidth of the loop will be increased by 
+decreasing C CIf R C is increased by the same factor that 
+CC is decreased, the zero frequency will be kept the same, 
+thereby keeping the phase shift the same in the most 
+critical frequency range of the feedback loopThe output voltage settling behavior is related to the stability of the closed-loop system and will demonstrate the actual over -
+all supply performanceA second, more severe transient is caused by switching 
+in loads with large (>1μF
+) supply bypass capacitorsThe 
+discharged bypass capacitors are effectively put in parallel 
+with C OUT, causing a rapid drop in V OUTNo regulator can 
+alter its delivery of current quickly enough to prevent this sudden step change in output voltage if the load switch 
+resistance is low and it is driven quicklyIf the ratio of 
+CLOAD to C OUT is greater than 1:50, the switch rise time 
+should be controlled so that the load rise time is limited 
+to approximately 25   CLOADThus a 10μF capacitor would 
+require a 250μs rise time, limiting the charging current to about 200mA
+Design Example
+As a design example, assume V
+IN = 12V (nominal), V IN 
+= 22V (max), V OUT = 24V, I OUT(MAX)  = 4A and f = 1MHz
+The frequency is not one of the internal preset values, so 
+a resistor from the FREQ pin to GND is required, with a value of:
+ RFREQ(in  kΩ)≤37MHz
+1 MHz= 37kΩAPPLICATIONS INFORMATION
+LTC7804
+26
+RevB For more information www.analog.comThe inductance value is chosen based on a 30% ripple 
+current assumptionThe minimum inductance for 30% 
+ripple current is:
+ L=VIN
+f ΔIL1–VIN
+VOUT⎛
+⎝⎜⎞
+⎠⎟
+The largest ripple happens when V IN = 1/2V OUT = 12V, 
+where the average maximum inductor current is I L(MAX)  
+= IOUT(MAX)   (V OUT/VIN) = 8AA 2.4μH inductor will pro -
+duce 31% ripple currentThe peak inductor current will 
+be the maximum DC value plus one half the ripple current, 
+or 9.25A
+The minimum on-time occurs at maximum V IN:
+ tON(MIN) <VOUT−VIN(MAX)  
+VOUT f=2V
+24V  1 MHz=83ns
+If the minimum on time of 80ns is violated, the LTC7804 
+skips pulses at high input voltage, resulting in lower fre-quency operation and higher inductor current ripple than desiredIf undesirable, this behavior can be avoided by 
+decreasing the frequency (with the inductor value accord -
+ingly adjusted) to avoid operation near the minimum 
+on-timeThe equivalent R SENSE  resistor value can be calculated by 
+using the minimum value for the maximum current sense 
+threshold (50mV):
+ RSENSE≤45mV
+9.25A≈0.004Ω
+To allow for additional margin, a lower value R SENSE  
+may be used;  however , be sure that the inductor satu -
+ration current has sufficient margin above V SENSE(MAX) /
+RSENSE , where the maximum value of 55mV is used for 
+VSENSE(MAX) Choosing 1% resistors: R A = 11.3k and R B = 215k yields 
+an output voltage of 24.032V.The best way to evaluate MOSFET performance in a par -
+ticular application is to build and test the circuit on the 
+bench, facilitated by an LTC7804 demo boardHowever , an 
+educated guess about the application is helpful to initially 
+select MOSFETsT ransition losses will likely dominate over I2R losses for the bottom MOSFET Therefore, choose 
+a MOSFET with higher R DS(ON)  as opposed to lower gate 
+charge to minimize the combined loss termsThe top 
+MOSFET does not experience transition losses, and its 
+power loss is generally dominated by I2R lossesFor 
+this reason, the top MOSFET is typically chosen to be of 
+lower R DS(ON)  and subsequently higher gate charge than 
+the bottom MOSFET Be sure to select logic-level thresh -
+old MOSFETs, since the gate drive voltage is limited to 
+5.15V (INTV CC)COUT is chosen to filter the square current in the output
+The maximum output capacitor current peak is:
+ IOUT(PEAK) =IL(MAX)  1+RIPPLE%
+2⎛
+⎝⎜⎞
+⎠⎟–IOUT(MAX)
+=8  1+31%
+2⎛
+⎝⎜⎞
+⎠⎟– 4=5.24A
+A low ESR (5m) capacitor is suggestedThis capacitor 
+will limit output voltage ripple to 26.2mV (assuming 
+ESR-dominant ripple)For an 10ms
+ soft start, select a 0.1μF capacitor for the 
+SS pinAs a first pass estimate for the bias components, 
+select C INTVCC  = 4.7μF, boost supply capacitor C B = 2.2μF
+The TG gate drive voltage (relative to SW) should be 
+around 4.5~5VIf it is too low, increase C B or use a boost 
+diode with a lower forward voltage dropDetermine and set application-specific parametersSet 
+the MODE pin based on the trade-off of light load effi -
+ciency and constant frequency operationSet the PLLIN/
+SPREAD pin based on whether a fixed, spread spectrum, or phase-locked frequency is desiredThe RUN pin can be used to control the minimum input voltage for regula -
+tor operation or can be tied to V
+IN for always-on opera -
+tionUse ITH compensation components from the typical 
+applications as a first guess, check the transient response 
+for stability, and modify as necessaryPC Board Layout Checklist
+When laying out the printed circuit board, the following 
+checklist should be used to ensure proper operation of the ICThese items are also illustrated graphically in the APPLICATIONS INFORMATION
+LTC7804
+27
+RevB For more information www.analog.comlayout diagram of Figure 7Figure 8 illustrates the cur -
+rent waveforms present in the various branches of the 
+synchronous regulator operating in the continuous modeCheck the following in your layout:
+1Are the signal and power grounds kept separate?  The  
+LTC7804  ground pin and the ground return of C INTVCC  
+must return to the combined C OUT (–) terminalsThe 
+area of the loop formed by the top N-channel MOSFET , 
+bottom N-channel MOSFET and the high frequency 
+(ceramic) C OUT capacitor(s) should be minimized with 
+short leads, planar connections and multiple paral -
+leled vias where needed2Does the LTC7804  VFB pin’s resistive divider con-
+nect to the (+) terminal of C OUT? The resistive divider 
+must be connected between the (+) terminal of C OUT 
+and signal groundThe feedback resistor connections 
+should not be along the high current input feeds from 
+the input capacitor(s)3Are the SENSE– and SENSE+ leads routed together 
+with minimum PC trace spacing? The filter capacitor 
+between SENSE+ and SENSE– should be as close as 
+possible to the ICEnsure accurate current sensing with Kelvin connections at the SENSE resistor 4 Is the INTV CC decoupling capacitor connected close 
+to the IC, between the INTV CC and the GND pin? This 
+capacitor carries the MOSFET drivers’ current peaks
+An additional 1μF ceramic capacitor placed imme -
+diately next to the INTV CC and GND pins can help 
+improve noise performance substantially5Keep the SW , TG, and BOOST nodes away from sensi -
+tive small-signal nodesAll of these nodes have very 
+large and fast-moving signals and therefore should be 
+kept on the output side of the LTC7804 and occupy minimum external layer PC trace areaMinimize the loop inductance of the TG and BG gate drive traces and their respective return paths to the controller IC (SW and GND) by using wide, preferably inner-layer , traces and multiple parallel vias6 Use a 
+modified star ground technique: a low imped -
+ance, large copper area central grounding point on 
+the same side of the PC board as the input and output APPLICATIONS INFORMATION
+capacitors with tie-ins for the bottom of the INTV CC 
+decoupling capacitor , the bottom of the voltage feed-back resistive divider and the GND pin of the IC7 Use separate 
+traces and vias to connect the INTV CC 
+capacitor to the BOOST diodes versus the connec -
+tions to the controller , bias, and pull-up connectionsPC Board Layout Debugging
+It is helpful to use a DC − 50MHz current probe to moni -
+tor the current in the inductor while testing the circuit
+Monitor the output switching node (SW pin) to synchro -
+nize the oscilloscope to the internal oscillator and probe 
+the actual output voltage as wellCheck for proper per -
+formance over the operating voltage and current range 
+expected in the applicationThe frequency of operation should be maintained over the input voltage range down to dropout and until the output load drops below the low current operation threshold—typically 25% of the maxi -
+mum designed current level in Burst Mode operationThe duty cycle percentage should be maintained from cycle 
+to cycle in a well-designed, low noise PCB implementation
+Variation in the duty cycle at a subharmonic rate can sug -
+gest noise pickup at the current or voltage sensing inputs 
+or inadequate loop compensationOvercompensation of 
+the loop can be used to tame a poor PC layout if regulator bandwidth optimization is not requiredReduce V
+BIAS from its nominal level to verify operation of 
+the regulator at the maximum duty cycleCheck the opera -
+tion of the undervoltage lockout circuit by further lowering 
+VBIAS while monitoring the outputs to verify operationInvestigate whether any problems exist only at higher output 
+currents or only at higher input voltagesIf problems coin -
+cide with high input voltages and low output currents, look 
+for capacitive coupling between the BOOST , SW , TG, and pos -
+sibly BG connections and the sensitive voltage and current 
+pinsThe capacitor placed across the current sensing pins needs to be placed immediately adjacent to the pins of the 
+ICThis capacitor helps to minimize the effects of differential 
+noise injection due to high frequency capacitive couplingIf problems are encountered with high current output loading at lower input voltages, look for inductive coupling between 
+COUT, top MOSFET and the bottom MOSFET components to 
+LTC7804
+28
+RevB For more information www.analog.comTYPICAL APPLICATIONS
+Figure 7Recommended Printed Circuit Layout Diagram
+Figure 8Branch Current WaveformsSENSE–
+SENSE+RUN V IN
+VIN
+VOUTSW
+TG
+BOOST
+BG fINCB
+M1
+M2
+GND
+7804 F07L1 RSENSE
+VBIAS
+GNDL TC7804
+FREQ
+MODEPLLIN/SPREAD
+RUN
+VFB
+ITH
+SSINTV CC+
++
+RLL1SW RSENSEVOUT
+COUT
+7804 F08VIN
+CINRIN
+BOLD LINES INDICATE HIGH SWITCHING CURRENT
+KEEP LINES TO A MINIMUM LENGTHthe sensitive current and voltage sensing tracesIn addition, 
+investigate common ground path voltage pickup between 
+these components and the GND pin of the ICAn embarrassing problem, which can be missed in an 
+otherwise properly working switching regulator , results 
+when the current sensing leads are hooked up backwardsAPPLICATIONS INFORMATION
+The output voltage under this improper hookup will still 
+be maintained but the advantages of current mode control 
+will not be realizedCompensation of the voltage loop 
+will be much more sensitive to component selectionThis 
+behavior can be investigated by temporarily shorting out the current sensing resistor—don’t worry, the regulator will still maintain control of the output voltage.
+LTC7804
+29
+RevB For more information www.analog.comFigure 9High Efficiency Wide Input Range 375kHz 24V/6A Boost Converter
+Figure 10Low I Q Nonsynchronous 80V/120W Boost ConverterTYPICAL APPLICATIONS
+SENSE+
+SENSE–
+TG
+CB
+0.1µF
+CITHA
+220pFL TC7804
+CSS
+0.1µF
+CITH
+22nFCIN
+10µF
+MTOP
+MBOT
+CINT
+4.7µF
+7804 F09VOUT
+24V
+6A*VIN
+4.5V TO 38VRSENSE
+2m/uni03A9
+L2µH
+BOOSTSWVBIASRUN
+BG
+GNDINTV
+CC
+VFBITHSS
+RA
+31.6kRITH
+8.06k
+RS
+604k
+CIN, COUTA : MURATA GCM32EC71H106KA03   
+COUTB : SUNCON 63HVPF100M
+D: INFINEON BAS140W
+L: COILCRAFT SER2011-202MLDMBOT , MTOP: INFINEON BSC059N04LS6*WHEN V
+IN > 24V , V OUT FOLLOWS  VIN; WHEN V IN < 9V , MAXIMUM LOAD CURRENT AVAILABLE IS REDUCED.FREQPLLIN/SPREADEXTV CC
+COUTA
+10µF
+×2COUTB
+100µF+MODE
+D1nF
+200Ω
+SENSE+
+SENSE–
+BOOST
+TG
+CITHA
+100pFL TC7804CSS
+0.1µF
+CITH
+10nFCIN
+10µF×2
+MBOTD
+CINT
+4.7µF
+7804 F10VOUT*
+80V1.5AV
+IN
+9V TO 38V RSENSE
+7m/uni03A9
+L33µHVBIAS
+BG
+GNDINTV
+CC
+VFBITHSS
+RA
+12.1kRITH
+45.3k
+RS
+806kSWFREQRUN
+PLLIN/SPREADMODEEXTVCC
+COUTA
+10µF
+×3COUTB
+68µF+
+CIN: MURATA GCM32EC71H106KA03
+COUTA : TDK C5750X7S2A106K230KE
+COUTB : SUNCON100CE68LX
+D: VISHAY VS-12CWQ10FN-M3
+L: COILCRAFT XAL1510-333MEBMBOT: INFINEON BSC159N10LSF-G
+*WHEN V IN < 24V , MAXIMUM LOAD CURRENT AVAILABLE IS DERATED BY INPUT CURRENT LIMIT 
+LTC7804
+30
+RevB For more information www.analog.comFigure 11High Efficiency 2.25MHz, 10V Boost ConverterTYPICAL APPLICATIONS
+SENSE+
+SENSE–
+TG
+CB
+0.1µF
+CITHA
+100pFL TC7804
+CSS
+0.1µF
+CITH
+4.7nFCIN
+10µF
+×2
+MBOTMTOP
+CINT
+4.7µF
+7804 F11aVOUT*
+10V6AV
+IN
+4.5V TO 24V START-UP
+AND OPERATION THROUGHTRANSIENTS DOWN TO 1V
+L0.47µH
+BOOSTSWRUN
+BG
+GNDINTV CC
+VFBITHSS
+RA
+73.2kRITH
+4.99k
+RB
+549kFREQ
+COUTA
+10µF
+×5RSENSE
+2mΩ
+COUTB
+150µF+
+CIN, COUTA : MURATA GCM32EC71H106KA03
+COUTB : SUNCON 50HVPF150M
+L: WURTH 744355047MBOT , MTOP: INFINEON BSC059N04LS6D: INFINEON BAS140W
+*WHEN V
+IN > 10V , V OUT FOLLOWS V IN;VBIAS
+PLLIN/SPREAD
+WHEN V IN < 4.5V , MAXIMUM LOAD CURRENT AVAILABLE IS REDUCED.1nF
+100k100ΩEXTV CC
+MODE
+INTV CCINTV CC
+D
+V
+IN
+=12V
+V
+IN
+=9V
+V
+IN
+=6V
+V
+IN
+=5V
+OUTPUT CURRENT (A)
+0
+0.5
+1
+1.5
+2
+2.5
+3
+3.5
+4
+4.5
+5
+5.5
+6
+80
+82
+84
+86
+88
+90
+92
+94
+96
+98
+100
+EFFICIENCY (%)
+7804 F11b
+LTC7804
+31
+RevB For more information www.analog.comFigure 12High Efficiency 2.25MHz, 24V Boost Converter with Spread SpectrumTYPICAL APPLICATIONS
+SENSE+
+SENSE–
+TG
+CB
+0.1µF
+CITHA
+220pFL TC7804
+CSS
+0.1µF
+CITH
+3.3nFCIN
+10µF
+×2
+MTOP
+MBOT
+CINT
+4.7µF
+7804 F12aVOUT
+24V4A*V
+IN**
+5V TO 24VRSENSE
+3m/uni03A9
+L0.68µH
+BOOSTSWVBIASRUN
+BG
+GNDINTV
+CC
+VFBITHSS
+RA
+12.1kRITH
+27.4k
+RS
+232k
+CIN, COUTA : MURATA GCM32EC71H106KA03   
+COUTB : SUNCON 50HVPF150M
+D: INFINEON BAS140W
+L: WURTH 7443330068MBOT , MTOP: INFINEON BSC059N04LS6FREQPLLIN/SPREADEXTV CC
+COUTA
+10µF
+×5COUTB
+150µF+MODE
+  *WHEN V IN < 8V , MAXIMUM LOAD CURRENT AVAILABLE IS DERATED BY INPUT CURRENT LIMIT
+**CONSTANT FREQUENCY OPERATION WHEN V IN > 6V (SEE FIGURE 6B RELATIONSHIP BETWEEN 
+    MAXIUM DUTY CYCLE AND OPERATING   FREQUENCY)D1nF
+100Ω
+INTV CC
+V
+IN
+ = 12V
+OUTPUT CURRENT (A)
+0
+0.5
+1
+1.5
+2
+2.5
+3
+3.5
+4
+80
+82
+84
+86
+88
+90
+92
+94
+96
+98
+100
+EFFICIENCY (%)
+7804 F12b
+LTC7804
+32
+RevB For more information www.analog.comPACKAGE DESCRIPTION
+MSOP (MSE16) 0213 REV F0.53 ±0.152
+(.021 ±.006)
+SEATING
+PLANE0.18
+(.007)1.10
+(.043)
+MAX
+0.17 –/uni00A00.27
+(.007 – .011)
+TYP0.86
+(.034)
+REF
+0.50
+(.0197)
+BSC16
+16151413121110
+1 2 3 4 5 6 7 8991 8
+NOTE:
+1DIMENSIONS IN MILLIMETER/(INCH)2DRAWING NOT TO SCALE3DIMENSION DOES NOT INCLUDE MOLD FLASH, PROTRUSIONS OR GATE BURRS   MOLD FLASH, PROTRUSIONS OR GATE BURRS SHALL NOT EXCEED 0.152mm (.006") PER SIDE4DIMENSION DOES NOT INCLUDE INTERLEAD FLASH OR PROTRUSIONS   INTERLEAD FLASH OR PROTRUSIONS SHALL NOT EXCEED 0.152mm (.006") PER SIDE5LEAD COPLANARITY (BOTTOM OF LEADS AFTER FORMING) SHALL BE 0.102mm (.004") MAX6EXPOSED PAD DIMENSION DOES INCLUDE MOLD FLASHMOLD FLASH ON E-PAD SHALL    NOT EXCEED 0.254mm (.010") PER SIDE0.254
+(.010)0° – 6° TYP
+DETAIL “A”DETAIL “A”
+GAUGE PLANE5.10
+(.201)
+MIN3.20 – 3.45
+(.126 – .136)0.889 ±0.127
+(.035 ±.005)
+RECOMMENDED SOLDER PAD LAYOUT0.305 ±0.038
+(.0120 ±.0015)
+TYP0.50
+(.0197)
+BSCBOTTOM VIEW OF
+EXPOSED PAD OPTION
+2.845 ±0.102
+(.112 ±.004)2.845 ±0.102
+(.112 ±.004)
+4.039 ±0.102
+(.159 ±.004)
+(NOTE 3)1.651 ±0.102
+(.065 ±.004)1.651 ±0.102
+(.065 ±.004)
+0.1016 ±0.0508
+(.004 ±.002)3.00 ±0.102
+(.118 ±.004)
+(NOTE 4)0.280 ±0.076
+(.011 ±.003)
+REF
+4.90 ±0.152
+(.193 ±.006)DETAIL “B”DETAIL “B”
+CORNER TAIL IS PART OF
+THE LEADFRAME FEATUREFOR REFERENCE ONL Y
+NO MEASUREMENT PURPOSE0.12 REF0.35REFMSE Package
+16-Lead Plastic MSOP, Exposed Die Pad
+(Reference LTC DWG # 05-08-1667 Rev F)
+LTC7804
+33
+RevB For more information www.analog.comInformation furnished by Analog Devices is believed to be accurate and reliableHowever , no responsibility is assumed by Analog 
+Devices for its use, nor for any infringements of patents or other rights of third parties that may result from its useSpecifications 
+subject to change without noticeNo license is granted by implication or otherwise under any patent or patent rights of Analog Devices.PACKAGE DESCRIPTION
+3.00 ±0.10
+(4 SIDES)RECOMMENDED SOLDER PAD PITCH AND DIMENSIONS1.45 ±0.05
+(4 SIDES)
+NOTE:
+1DRAWING CONFORMS TO JEDEC PACKAGE OUTLINE MO-220 VARIATION (WEED-2)2DRAWING NOT TO SCALE3ALL DIMENSIONS ARE IN MILLIMETERS4DIMENSIONS OF EXPOSED PAD ON BOTTOM OF PACKAGE DO NOT INCLUDE     MOLD FLASHMOLD FLASH, IF PRESENT, SHALL NOT EXCEED 0.15mm ON ANY SIDE5EXPOSED PAD SHALL BE SOLDER PLATED6SHADED AREA IS ONLY A REFERENCE FOR PIN 1 LOCATION    ON THE TOP AND BOTTOM OF PACKAGE  PIN 1TOP MARK(NOTE 6)
+0.40 ±0.10BOTTOM VIEW—EXPOSED PAD
+1.45 ± 0.10
+(4-SIDES)0.75 ±0.05R = 0.115
+TYP
+0.25 ±0.051PIN 1 NOTCH R = 0.20 TYPOR 0.25 × 45° CHAMFER
+15 16
+2
+0.50 BSC0.200 REF2.10 ±0.053.50 ±0.050.70 ±0.05
+0.00 – 0.05(UD16) QFN 09040.25 ±0.05
+0.50 BSCPACKAGE OUTLINEUD Package
+16-Lead Plastic QFN (3mm × 3mm)
+(Reference LTC DWG # 05-08-1691 Rev Ø)
+REVISION HISTORY
+REV DATE DESCRIPTION PAGE NUMBER
+A 10/20 Update top mark from for UD package from 7804 to LHHMUpdate Foot note for Shutdown Current vs Input Voltage Plot (Change from 3897 to 7804)Remove “Drop Out Det” from Block Diagram.18
+11
+B 06/22 Updated AEC-Q100 Qualifications1
+LTC7804
+34
+RevB  ANALOG DEVICES, INC2019-202206/22
+www.analog.comRELATED PARTSTYPICAL APPLICATION
+High Efficiency 35V Boost Converter with DCR Current Sensing
+SENSE+
+SENSE–
+TG
+CITHA
+330pFCB
+0.1µFL TC7804
+CSS
+0.1µF
+CITH
+15nFCIN
+10µF
+×2
+MBOT1MTOP
+CINT
+4.7µF
+7804 TA02VOUT
+35V6A*V
+IN
+6V TO 38V
+C10.47µFL2.2µH
+BOOSTSWVBIAS
+BGGNDINTV
+CC
+VFBITHSS
+RA
+8.25kRITH
+7.5k
+RB
+232kFREQRUN
+COUTA
+10µF
+×5COUTB
+150µF+
+CIN, COUTA : TDK C3225X5R1H106M250AB
+COUTB : SUNCON 50HVPF150M
+D: INFINEON BAS140WL: COILCRAFT SER2915H-222KLMBOT1, MBOT2: INFINEON BSC059N04LS6 
+MTOP: INFINEON BSC014N04LSI
+*WHEN V
+IN > 35V , V OUT FOLLOWS  VIN; WHEN V IN < 9V , MAXIMUM LOAD CURRENT AVAILABLE IS REDUCED.RS1
+3.74k
+1%PLLIN/SPREADEXTV CC
+MODE
+DRS2
+7.15k1%
+MBOT2
+PART NUMBER DESCRIPTION COMMENTS
+LTC3787 Single Output, Low I Q Multiphase Synchronous 
+Boost Controller4.5V (Down to 2.5V After Start-Up) ≤ V IN ≤ 38V, V OUT Up to 60V, 50kHz to 
+900kHz Fixed Operating Frequency, 4mm × 5mm QFN-28, SSOP-28
+LTC3788/ LTC3788-1 Dual Output, Low I Q Multiphase Synchronous 
+Boost Controller4.5V (Down to 2.5V After Start-Up) ≤ V IN ≤ 38V, V OUT Up to 60V, 50kHz to 
+900kHz Fixed Operating Frequency, 5mm × 5mm QFN-32, SSOP-28
+LTC3786 Low I Q Synchronous Step-Up Controller 4.5V (Down to 2.5V After Start-Up) ≤ V IN ≤ 38V, V OUT Up to 60V, 50kHz to 
+900kHz Fixed Operating Frequency, 3mm × 3mm QFN-16, MSOP-16E
+LTC3769 60V Low I Q Synchronous Boost Controller 4.5V (Down to 2.3V After Start-Up) ≤ V IN ≤ 60V, V OUT Up to 60V, 50kHz to 
+900kHz Fixed Operating Frequency, 4mm × 4mm QFN-24, TSSOP-20
+LTC3784 60V Single Output, Low I Q Multiphase 
+Synchronous Boost Controller4.5V (Down to 2.3V After Start-Up) ≤ V IN ≤ 60V, V OUT Up to 60V, 50kHz to 
+900kHz Fixed Operating Frequency, 4mm × 5mm QFN-28, SSOP-28
+LTC3897 PolyPhase® Synchronous Boost Controller with 
+Input/ Output Protection4.5V ≤ V IN ≤ 65V, 5V to 10V Gate Drive, 100kHz to 750kHz Fixed Operating 
+Frequency, TSSOP-38, 5mm × 7mm QFN-38
+LTC3862/ LTC3862-1 Single Output, Multiphase Current Mode 
+Step-Up DC/DC Controller4V ≤ V IN ≤ 36V, 5V or 10V Gate Drive, 75kHz to 500kHz Fixed Operating 
+Frequency, SSOP-24, TSSOP-24, 5mm × 5mm QFN-24
+LT3757A/LT3758 Boost, Flyback, SEPIC and Inverting Controller 2.9V ≤ V IN ≤ 40V/100V, 100kHz to 1MHz Fixed Operating Frequency, 3mm × 3mm 
+DFN-10 and MSOP-10E
+LTC7818 Low I Q, 3MHz, T riple Output, Buck/Buck/Boost 
+Synchronous ControllerAll Outputs Remain in Regulation Through Cold Crank, 4.5V (Down to 1V After Start-Up) ≤ V
+IN ≤ 40V, V OUT(BUCKS)  Up to 40V, V OUT(BOOST)  Up to 40V, I Q = 14µA
+LTC3789 High Efficiency Synchronous 4-Switch Buck-Boost DC/DC Controller4V ≤ V
+IN ≤ 38V, 0.8V ≤ V OUT ≤ 38V, SSOP-28, 4mm × 5mm QFN-28, SSOP-28

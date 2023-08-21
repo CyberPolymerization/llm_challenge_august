@@ -1,0 +1,27 @@
+{
+  "0": {
+    "question": "What is the differential input resistance of the LTC6416 module when the input voltage is ±1.2V?",
+    "answer": "The differential input resistance of the LTC6416 module when the input voltage is ±1.2V is 9121.5 Ω (minimum).",
+    "datasheet": "parsed/6416f.txt"
+  },
+  "1": {
+    "question": "What is the function of the feedforward capacitor, CFF, in setting the output voltage of the LTC7804 module?",
+    "answer": "The feedforward capacitor, CFF, is used to improve the frequency response in setting the output voltage of the LTC7804 module.",
+    "datasheet": "parsed/ltc7804.txt"
+  },
+  "5": {
+    "question": "What should designers do before using the AD V7611W model in automotive applications?",
+    "answer": "Designers should review the Specifications section of the data sheet carefully before using the AD V7611W model in automotive applications.",
+    "datasheet": "parsed/ADV7611.txt"
+  },
+  "47": {
+    "question": "What is the purpose of the Conditional Search ROM command in the DS28E04-100 module?",
+    "answer": "The purpose of the Conditional Search ROM command in the DS28E04-100 module is to allow the bus master to identify devices on a multidrop system that fulfill certain conditions (CSR = 1) and have to signal an important event. Only those devices that fulfill the conditions will participate in the search. After each pass of the conditional search that successfully determined the 64-bit ROM code for a specific device on the multidrop bus, that particular device can be individually accessed as if a Match ROM had been issued, since all other devices will have dropped out of the search process and will be waiting for a reset pulse.",
+    "datasheet": "parsed/DS28E04-100.txt"
+  },
+  "50": {
+    "question": "What is the recommended range for the value of C1 in the LTC7804 module and why is it chosen in that range?",
+    "answer": "The recommended range for the value of C1 in the LTC7804 module is 0.1μF to 0.47μF. It is chosen in that range to force R1 || R2 to around 2k, reducing error that might have been caused by the SENSE− pin’s ±1μA current.",
+    "datasheet": "parsed/ltc7804.txt"
+  }
+}

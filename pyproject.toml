@@ -1,0 +1,29 @@
+[tool.poetry]
+name = "llm-challenge"
+version = "0.1.0"
+description = "start kit for LLM Challenge"
+authors = ["Al Dujaili, Ash <ash.aldujaili@analog.com>"]
+readme = "README.md"
+packages = [{include = "llm_challenge"}]
+
+[tool.poetry.dependencies]
+python = ">=3.8.1,<4.0"
+pydantic = "^1.10.9"
+openai = "^0.27.8"
+langchain = "^0.0.198"
+python-dotenv = "^1.0.0"
+jupyter = "^1.0.0"
+ipykernel = "^6.23.1"
+gym = "^0.26.2"
+matplotlib = "^3.7.1"
+tiktoken = "^0.4.0"
+chromadb = "^0.3.26"
+jq = "^1.4.1"
+tqdm = "^4.65.0"
+black = "^23.3.0"
+pandas = "^2.0.3"
+
+
+[build-system]
+requires = ["poetry-core"]
+build-backend = "poetry.core.masonry.api"

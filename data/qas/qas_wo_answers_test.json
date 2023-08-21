@@ -1,0 +1,952 @@
+{
+  "0": {
+    "question": "What is the recommended duty cycle for the clock of the MAX19692 DAC when operating in RZ and RF modes, and what is the effect of deviating from this duty cycle?",
+    "answer": "I do not know.",
+    "datasheet": "parsed/MAX19692.txt"
+  },
+  "1": {
+    "question": "What is the purpose of the no-load threshold feature in the ADE7763 module's active energy measurement?",
+    "answer": "I do not know.",
+    "datasheet": "parsed/ADE7763.txt"
+  },
+  "2": {
+    "question": "What is the maximum conversion rate of the AD10201 dual-channel ADC module?",
+    "answer": "I do not know.",
+    "datasheet": "parsed/AD10201.txt"
+  },
+  "3": {
+    "question": "What is the function of the DTEN pin on the LTC6812-1 module and how is it enabled?",
+    "answer": "I do not know.",
+    "datasheet": "parsed/ltc6812-1.txt"
+  },
+  "4": {
+    "question": "What is the maximum actuation frequency used in the measurement of RON drift for the ADGM1001 switch?",
+    "answer": "I do not know.",
+    "datasheet": "parsed/adgm1001-1002-1003.txt"
+  },
+  "5": {
+    "question": "What is the on-resistance of the PMOS load switch in the ADP194 at VIN = 1.8 V?",
+    "answer": "I do not know.",
+    "datasheet": "parsed/ADP194.txt"
+  },
+  "6": {
+    "question": "What is the default core clock frequency for the ADuC7019/20/21/22/24/25/26/27/28/29 and how is it generated?",
+    "answer": "I do not know.",
+    "datasheet": "parsed/aduc7019_20_21_22_24_25_26_27_28_29.txt"
+  },
+  "7": {
+    "question": "What is the quickest method to perform shutdown on the MAX17843 12-Channel, High-Voltage Smart Sensor Data-Acquisition Interface and what is the maximum pulldown impedance allowed for driving SHDNL externally?",
+    "answer": "I do not know.",
+    "datasheet": "parsed/MAX17843.txt"
+  },
+  "8": {
+    "question": "What is the gain crossover frequency and phase margin for the MAX17557 in the 5V output, 10A load current, with a load of 0.5 Ω?",
+    "answer": "I do not know.",
+    "datasheet": "parsed/MAX17557EVKITE.txt"
+  },
+  "9": {
+    "question": "What is the maximum allowable continuous current for the BRIDGE POWER-DOWN SWITCH (BPDSW) in the AD7780 module?",
+    "answer": "I do not know.",
+    "datasheet": "parsed/AD7780.txt"
+  },
+  "10": {
+    "question": "What is the input leakage current for D1 and D0 when they are connected to VDD or GND for the MAX5420/MAX5421 module?",
+    "answer": "I do not know.",
+    "datasheet": "parsed/MAX5420-MAX5421.txt"
+  },
+  "11": {
+    "question": "What is the recommended design for the CNVST signal in the AD7650 module for applications where SNR is critical?",
+    "answer": "I do not know.",
+    "datasheet": "parsed/AD7650.txt"
+  },
+  "12": {
+    "question": "What are the advantages of using twisted-pair wiring for carrying video signals with the AD8110/AD8111 module?",
+    "answer": "I do not know.",
+    "datasheet": "parsed/AD8110_8111.txt"
+  },
+  "13": {
+    "question": "What are the three interface modes supported by the ADAV4622, and which one is the default?",
+    "answer": "I do not know.",
+    "datasheet": "parsed/ADAV4622.txt"
+  },
+  "14": {
+    "question": "What is the purpose of the Channel 1 rms offset compensation register in the ADE7763 module and how is it used to eliminate input noises from the rms measurement?",
+    "answer": "I do not know.",
+    "datasheet": "parsed/ADE7763.txt"
+  },
+  "15": {
+    "question": "What is the recommended configuration for the power supply and filter when using the MAX5854 module for high-speed, high-frequency applications?",
+    "answer": "I do not know.",
+    "datasheet": "parsed/MAX5854.txt"
+  },
+  "16": {
+    "question": "What is the access type for the REV_FAST7 bit in the MAX96708 14-Bit GMSL Deserializer?",
+    "answer": "I do not know.",
+    "datasheet": "parsed/MAX96708.txt"
+  },
+  "17": {
+    "question": "What is the pulse rate and pulse width of the S pin pulsing sequence in the LTC6812-1 module?",
+    "answer": "I do not know.",
+    "datasheet": "parsed/ltc6812-1.txt"
+  },
+  "18": {
+    "question": "What is the recommended setting for the PD_del_sel in the Hittite Microwave Corporation's FRACTIONAL-N PLL with INTEGRATED VCO module?",
+    "answer": "I do not know.",
+    "datasheet": "parsed/hmc833.txt"
+  },
+  "19": {
+    "question": "What is the recommended range of switching frequencies for higher voltage applications using the LTC7817 module?",
+    "answer": "I do not know.",
+    "datasheet": "parsed/ltc7817.txt"
+  },
+  "20": {
+    "question": "What is the purpose of the zero-crossing comparator with inputs ZCP and ZCN in the MAX5058/MAX5059 module?",
+    "answer": "I do not know.",
+    "datasheet": "parsed/MAX5058-MAX5059.txt"
+  },
+  "21": {
+    "question": "What is the default value for Register 0x21 in the AD9984A module?",
+    "answer": "I do not know.",
+    "datasheet": "parsed/ad9984a.txt"
+  },
+  "22": {
+    "question": "What is the load regulation and current limit for the LTM4642 module without airflow?",
+    "answer": "I do not know.",
+    "datasheet": "parsed/4642fb.txt"
+  },
+  "23": {
+    "question": "Which register determines the clock divide ratio in the AD9650 module?",
+    "answer": "I do not know.",
+    "datasheet": "parsed/AD9650.txt"
+  },
+  "24": {
+    "question": "What are the recommended guidelines for grounding and power-supply decoupling for optimal performance of the MAX19692 module in high-speed, high-frequency applications?",
+    "answer": "I do not know.",
+    "datasheet": "parsed/MAX19692.txt"
+  },
+  "25": {
+    "question": "What is the input voltage range for the AD8110/AD8111 module in all switch configurations?",
+    "answer": "I do not know.",
+    "datasheet": "parsed/AD8110_8111.txt"
+  },
+  "26": {
+    "question": "What is the Total Harmonic Distortion + Noise (THD + N) vs Amplitude for the ADA4625-1/ADA4625-2 at a frequency of 1kHz and VSY of ±18V?",
+    "answer": "I do not know.",
+    "datasheet": "parsed/ADA4625-1-4625-2.txt"
+  },
+  "27": {
+    "question": "What is the function of pin 1 on the MAX6697 module and what should be connected to it?",
+    "answer": "I do not know.",
+    "datasheet": "parsed/MAX6697.txt"
+  },
+  "28": {
+    "question": "What is the minimum output bandwidth of the MAX1969 212-Bit, 2.3Gsps, Multi-Nyquist DAC with Selectable Frequency Response?",
+    "answer": "I do not know.",
+    "datasheet": "parsed/MAX19692.txt"
+  },
+  "29": {
+    "question": "What is the maximum input capacitance for the logic input/output (SDIO/DCS) of the AD9650 module?",
+    "answer": "I do not know.",
+    "datasheet": "parsed/AD9650.txt"
+  },
+  "30": {
+    "question": "What is the recommended bias sequence during power-up for the HMC8402 module?",
+    "answer": "I do not know.",
+    "datasheet": "parsed/HMC8402.txt"
+  },
+  "31": {
+    "question": "What is the formula for calculating the phase correction in degrees when the PHCAL register is set to 11 for the ADE7763 module?",
+    "answer": "I do not know.",
+    "datasheet": "parsed/ADE7763.txt"
+  },
+  "32": {
+    "question": "What is the default value for the \"en lO\" bit in the SiGe Wideband direct Quadrature Modulator with vGa, 50-2800 MHz module?",
+    "answer": "I do not know.",
+    "datasheet": "parsed/hmc795.txt"
+  },
+  "33": {
+    "question": "What is the equation for calculating the total soft-start time for the LTM4648 module?",
+    "answer": "I do not know.",
+    "datasheet": "parsed/LTM4648.txt"
+  },
+  "34": {
+    "question": "What is the purpose of the active power offset register in the ADE7763 module and how does it correct for offsets in power calculation?",
+    "answer": "I do not know.",
+    "datasheet": "parsed/ADE7763.txt"
+  },
+  "35": {
+    "question": "What is the maximum analog input voltage that can be applied to the ADE7763 module's V1P, V1N, V2P, and V2N pins without causing permanent damage?",
+    "answer": "I do not know.",
+    "datasheet": "parsed/ADE7763.txt"
+  },
+  "36": {
+    "question": "What is the typical gain range for the HMC8402 module over the frequency range of 26 GHz to 30 GHz?",
+    "answer": "I do not know.",
+    "datasheet": "parsed/HMC8402.txt"
+  },
+  "37": {
+    "question": "What is the load regulation for sourcing and sinking for the AD5686R/AD5685R/AD5684R module at ambient temperature?",
+    "answer": "I do not know.",
+    "datasheet": "parsed/ad5686r_5685r_5684r.txt"
+  },
+  "38": {
+    "question": "What is the charge injection value for the MAX4655/MAX4656 analog switch?",
+    "answer": "I do not know.",
+    "datasheet": "parsed/MAX4655-MAX4658.txt"
+  },
+  "39": {
+    "question": "What are the recommended layout guidelines for maximizing the noise immunity of the isoSPI signal lines when using the LTC6812-1 module?",
+    "answer": "I do not know.",
+    "datasheet": "parsed/ltc6812-1.txt"
+  },
+  "40": {
+    "question": "What is the input voltage range for the LTC1772?",
+    "answer": "I do not know.",
+    "datasheet": "parsed/1772fb.txt"
+  },
+  "41": {
+    "question": "What is the maximum output update rate for the AD9753 module?",
+    "answer": "I do not know.",
+    "datasheet": "parsed/AD9753.txt"
+  },
+  "42": {
+    "question": "What is the efficiency of the MAX9736 amplifier at a total output power of 15W with a 4Ω load and fixed frequency?",
+    "answer": "I do not know.",
+    "datasheet": "parsed/MAX9736-MAX9736B.txt"
+  },
+  "43": {
+    "question": "What is the basic differential receiver application for the SSM2143 and what gain does it yield?",
+    "answer": "I do not know.",
+    "datasheet": "parsed/SSM2143.txt"
+  },
+  "44": {
+    "question": "What is the maximum input data rate supported by the AD9753 and what is the resulting DAC output update rate?",
+    "answer": "I do not know.",
+    "datasheet": "parsed/AD9753.txt"
+  },
+  "45": {
+    "question": "What happens when a write request is issued to a read-only command in the MAX34440 module?",
+    "answer": "I do not know.",
+    "datasheet": "parsed/MAX34440.txt"
+  },
+  "46": {
+    "question": "What type of capacitor is recommended for high frequency decoupling on VCC in the LTC3552 module, and what is the recommended capacitance range?",
+    "answer": "I do not know.",
+    "datasheet": "parsed/3552f.txt"
+  },
+  "47": {
+    "question": "What is the default value for the SOFT_PD field in the MAX96708 14-Bit GMSL Deserializer?",
+    "answer": "I do not know.",
+    "datasheet": "parsed/MAX96708.txt"
+  },
+  "48": {
+    "question": "What is the advantage of the JFET input stage architecture in the ADA4625-1/ADA4625-2 module?",
+    "answer": "I do not know.",
+    "datasheet": "parsed/ADA4625-1-4625-2.txt"
+  },
+  "49": {
+    "question": "What is the advantage of using the AD7780 in transducer-based applications, and how can the bridge power-down switch be utilized in low power applications?",
+    "answer": "I do not know.",
+    "datasheet": "parsed/AD7780.txt"
+  },
+  "50": {
+    "question": "What is the maximum junction temperature rating for the LT1129 series regulators and why is it important to not exceed it under normal load conditions?",
+    "answer": "I do not know.",
+    "datasheet": "parsed/112935ff.txt"
+  },
+  "51": {
+    "question": "What is the frequency range typically needed for spoken human voice in portable voice-reproduction devices like cellular phones and two-way radios, and how does this affect the design of the input filter in the MAX9712 amplifier?",
+    "answer": "I do not know.",
+    "datasheet": "parsed/MAX9712.txt"
+  },
+  "52": {
+    "question": "What is the recommended accuracy for the sense resistor in order to maintain IEEE compliance when using the LTC4259A-1 module?",
+    "answer": "I do not know.",
+    "datasheet": "parsed/4259a1fa.txt"
+  },
+  "53": {
+    "question": "What is the purpose of adjusting the WGAIN register in the ADE7763 meter?",
+    "answer": "I do not know.",
+    "datasheet": "parsed/ADE7763.txt"
+  },
+  "54": {
+    "question": "What is the lockout threshold voltage for V IN to V BAT in the LTC3552 module?",
+    "answer": "I do not know.",
+    "datasheet": "parsed/3552f.txt"
+  },
+  "55": {
+    "question": "What is the maximum input power (rfiN) for the HMC933LP4E analog phase shifter?",
+    "answer": "I do not know.",
+    "datasheet": "parsed/hmc933.txt"
+  },
+  "56": {
+    "question": "What is the equation for choosing the inductor value to guarantee that the ripple current stays below a specified maximum in the LTC3552 application?",
+    "answer": "I do not know.",
+    "datasheet": "parsed/3552f.txt"
+  },
+  "57": {
+    "question": "What is the dominant crosstalk mechanism on the input side of the AD8110/AD8111 module and how can it be minimized?",
+    "answer": "I do not know.",
+    "datasheet": "parsed/AD8110_8111.txt"
+  },
+  "58": {
+    "question": "What is the purpose of the shutdown diagnostic in the MAX17843 12-Channel, High-Voltage Smart Sensor Data-Acquisition Interface?",
+    "answer": "I do not know.",
+    "datasheet": "parsed/MAX17843.txt"
+  },
+  "59": {
+    "question": "What is the advantage of the output stage being switched to a resistor network during power-down mode in the AD5686R/AD5685R/AD5684R DACs?",
+    "answer": "I do not know.",
+    "datasheet": "parsed/ad5686r_5685r_5684r.txt"
+  },
+  "60": {
+    "question": "What is the maximum length of DVI-D or HDMI cable that can be extended using the MAX3815TMDS Digital Video Equalizer?",
+    "answer": "I do not know.",
+    "datasheet": "parsed/MAX3815.txt"
+  },
+  "61": {
+    "question": "What is the recommended placement for the inductor and filtering capacitors in the MAX20751 Multiphase Master with PMBus Interface and Internal Buck Converter?",
+    "answer": "I do not know.",
+    "datasheet": "parsed/MAX20751.txt"
+  },
+  "62": {
+    "question": "What is the temperature limit for the MAX1508 when fast charging or exposed to high ambient temperatures?",
+    "answer": "I do not know.",
+    "datasheet": "parsed/MAX1508-MAX1508Z.txt"
+  },
+  "63": {
+    "question": "What is the default value of the DELAYSEL bit in the MAX17843 module and what does it select?",
+    "answer": "I do not know.",
+    "datasheet": "parsed/MAX17843.txt"
+  },
+  "64": {
+    "question": "What is the purpose of the OCR circuit in the MAX20751 module and how does it work?",
+    "answer": "I do not know.",
+    "datasheet": "parsed/MAX20751.txt"
+  },
+  "65": {
+    "question": "What are the LO power levels used in the spurious and harmonics performance measurements for the HMC219B mixer at RF frequencies of 2.5 GHz, 4.5 GHz, and 6 GHz?",
+    "answer": "I do not know.",
+    "datasheet": "parsed/HMC219B.txt"
+  },
+  "66": {
+    "question": "What are the selectable ranges for each DAC in the ADuC7019/20/21/22/24/25/26/27/28/29?",
+    "answer": "I do not know.",
+    "datasheet": "parsed/aduc7019_20_21_22_24_25_26_27_28_29.txt"
+  },
+  "67": {
+    "question": "What is the formula for calculating the primary-side power MOSFET power dissipation in the LTC3806 module, and what factors are included in the formula?",
+    "answer": "I do not know.",
+    "datasheet": "parsed/3806fb.txt"
+  },
+  "68": {
+    "question": "What is the settling time for the 10 Hz filter and the 16.7 Hz filter in the AD7780 module?",
+    "answer": "I do not know.",
+    "datasheet": "parsed/AD7780.txt"
+  },
+  "69": {
+    "question": "What is the efficiency of the MAX9712 class D audio amplifier under typical music reproduction levels?",
+    "answer": "I do not know.",
+    "datasheet": "parsed/MAX9712.txt"
+  },
+  "70": {
+    "question": "What is the full-scale output current range that can be adjusted on the MAX5854 DAC?",
+    "answer": "I do not know.",
+    "datasheet": "parsed/MAX5854.txt"
+  },
+  "71": {
+    "question": "What is the purpose of the prequalification stage in the MAX1508 charger?",
+    "answer": "I do not know.",
+    "datasheet": "parsed/MAX1508-MAX1508Z.txt"
+  },
+  "72": {
+    "question": "What is the typical setup and hold time for the I2C-to-I2C Slave of the MAX96708 module?",
+    "answer": "I do not know.",
+    "datasheet": "parsed/MAX96708.txt"
+  },
+  "73": {
+    "question": "What is the frequency range of the HMC219B GaAs MMIC mixer and what is its typical conversion loss?",
+    "answer": "I do not know.",
+    "datasheet": "parsed/HMC219B.txt"
+  },
+  "74": {
+    "question": "What is the common mode rejection ratio of the LT1498/LT1499 module at a power supply voltage of 3V and a common mode voltage range of V- to V+?",
+    "answer": "I do not know.",
+    "datasheet": "parsed/14989fg.txt"
+  },
+  "75": {
+    "question": "What is the minimum and maximum battery voltage range for the MAX17262 fuel gauge module?",
+    "answer": "I do not know.",
+    "datasheet": "parsed/MAX17262.txt"
+  },
+  "76": {
+    "question": "What is the purpose of the overtemperature protection included in the LTC3816 module, and what are the potential consequences of operating the device above the specified absolute maximum operating junction temperature?",
+    "answer": "I do not know.",
+    "datasheet": "parsed/3816f.txt"
+  },
+  "77": {
+    "question": "What is the operating input supply voltage range for the LTC7817?",
+    "answer": "I do not know.",
+    "datasheet": "parsed/ltc7817.txt"
+  },
+  "78": {
+    "question": "What is the maximum current for continuous operation for a 50 kΩ resistor in the AD5160 module?",
+    "answer": "I do not know.",
+    "datasheet": "parsed/AD5160.txt"
+  },
+  "79": {
+    "question": "What is the maximum programmable charge current for the LTC3552 battery charger?",
+    "answer": "I do not know.",
+    "datasheet": "parsed/3552f.txt"
+  },
+  "80": {
+    "question": "What is the recommended supply bypassing for the AD5686R/AD5685R/AD5684R and what type of capacitors should be used?",
+    "answer": "I do not know.",
+    "datasheet": "parsed/ad5686r_5685r_5684r.txt"
+  },
+  "81": {
+    "question": "What is the function of the WAKEUP circuit in the LTC6812-1 module and how does it monitor activity on the serial ports?",
+    "answer": "I do not know.",
+    "datasheet": "parsed/ltc6812-1.txt"
+  },
+  "82": {
+    "question": "What is the function of pin 30 on the ADCMP566 module and how does it operate in compare mode versus latch mode?",
+    "answer": "I do not know.",
+    "datasheet": "parsed/ADCMP566.txt"
+  },
+  "83": {
+    "question": "What is the function of the FAULT pin in the MAX34440 PMBus 6-Channel Power-Supply Manager?",
+    "answer": "I do not know.",
+    "datasheet": "parsed/MAX34440.txt"
+  },
+  "84": {
+    "question": "What is the purpose of the series diode and transient suppressor in protecting a DC/DC converter from reverse battery and load dump in the LTC3816 module?",
+    "answer": "I do not know.",
+    "datasheet": "parsed/3816f.txt"
+  },
+  "85": {
+    "question": "What is the voltage range for the G1 and G2 pins in the LTC3806 module?",
+    "answer": "I do not know.",
+    "datasheet": "parsed/3806fb.txt"
+  },
+  "86": {
+    "question": "What is the purpose of the MAX21000 evaluation board adapter and what components does it include?",
+    "answer": "I do not know.",
+    "datasheet": "parsed/MAX21000EVBRD.txt"
+  },
+  "87": {
+    "question": "What is the operating current of the MAX17262 fuel-gauge IC?",
+    "answer": "I do not know.",
+    "datasheet": "parsed/MAX17262.txt"
+  },
+  "88": {
+    "question": "What are the two methods of polling the conversion status of a single LTC6812-1 device, and how do they differ in terms of allowing the controller to perform other tasks while waiting for conversions to complete?",
+    "answer": "I do not know.",
+    "datasheet": "parsed/ltc6812-1.txt"
+  },
+  "89": {
+    "question": "What is the function of the LOCK output pin on the MAX96708 14-Bit GMSL Deserializer?",
+    "answer": "I do not know.",
+    "datasheet": "parsed/MAX96708.txt"
+  },
+  "90": {
+    "question": "What is the purpose of pin 8 (GND REF) in the ADuC7026/ADuC7027 module and what is the recommended separation for the analog power supply?",
+    "answer": "I do not know.",
+    "datasheet": "parsed/aduc7019_20_21_22_24_25_26_27_28_29.txt"
+  },
+  "91": {
+    "question": "What is the function of pad number 6 in the HMC641 module?",
+    "answer": "I do not know.",
+    "datasheet": "parsed/hmc641.txt"
+  },
+  "92": {
+    "question": "What are the four MMRs that make up the Timer0 interface, and what are their respective names and addresses?",
+    "answer": "I do not know.",
+    "datasheet": "parsed/aduc7019_20_21_22_24_25_26_27_28_29.txt"
+  },
+  "93": {
+    "question": "What is the maximum allowable package warp for the HMC631LP3 / 631LP3E modulator?",
+    "answer": "I do not know.",
+    "datasheet": "parsed/hmc631.txt"
+  },
+  "94": {
+    "question": "What is the purpose of the REF output in the MAX44298 module and how is it intended to be used?",
+    "answer": "I do not know.",
+    "datasheet": "parsed/MAX44298.txt"
+  },
+  "95": {
+    "question": "What are the four 32-bit registers dedicated to IRQ and what is their function?",
+    "answer": "I do not know.",
+    "datasheet": "parsed/aduc7019_20_21_22_24_25_26_27_28_29.txt"
+  },
+  "96": {
+    "question": "What is the recommended clock speed for reading all 16 bits during the first half of the conversion phase in the AD7650 module?",
+    "answer": "I do not know.",
+    "datasheet": "parsed/AD7650.txt"
+  },
+  "97": {
+    "question": "What is the maximum load current for the LTC3816 module?",
+    "answer": "I do not know.",
+    "datasheet": "parsed/3816f.txt"
+  },
+  "98": {
+    "question": "What is the format of the PEC while writing to or reading from the LTC6812-1 module?",
+    "answer": "I do not know.",
+    "datasheet": "parsed/ltc6812-1.txt"
+  },
+  "99": {
+    "question": "What is the temperature range for the LT1011AIS8#PBF and LT1011IS8#PBF modules?",
+    "answer": "I do not know.",
+    "datasheet": "parsed/LT1011.txt"
+  },
+  "100": {
+    "question": "What is the input voltage range for the MAX25221 evaluation kit?",
+    "answer": "I do not know.",
+    "datasheet": "parsed/MAX25221EVKIT-MAX25221EVSYS.txt"
+  },
+  "101": {
+    "question": "What is the maximum peak current and continuous current that the MAX4655-MAX4658 single SPST CMOS analog switches can handle?",
+    "answer": "I do not know.",
+    "datasheet": "parsed/MAX4655-MAX4658.txt"
+  },
+  "102": {
+    "question": "What is the purpose of the exposed thermal pad on the bottom of the AD9650 package?",
+    "answer": "I do not know.",
+    "datasheet": "parsed/AD9650.txt"
+  },
+  "103": {
+    "question": "What is the input impedance of the LT1993-4 when driven differentially and how can input matching be accomplished for a 501 differential input source?",
+    "answer": "I do not know.",
+    "datasheet": "parsed/LT1993-4.txt"
+  },
+  "104": {
+    "question": "What is the recommended operating temperature range for the PMBus 6-Channel Power-Supply Manager MAX34440?",
+    "answer": "I do not know.",
+    "datasheet": "parsed/MAX34440.txt"
+  },
+  "105": {
+    "question": "What are the three modes of operation for the AD7650 and which mode allows for the fastest conversion rate?",
+    "answer": "I do not know.",
+    "datasheet": "parsed/AD7650.txt"
+  },
+  "106": {
+    "question": "What is the function of the LTC4259A-1 in controlling the delivery of power to the PSE port?",
+    "answer": "I do not know.",
+    "datasheet": "parsed/4259a1fa.txt"
+  },
+  "107": {
+    "question": "What is the default width and value of the bit named \"lut_4\" for line 44 in the SiGe Wideband direct Quadrature Modulator module?",
+    "answer": "I do not know.",
+    "datasheet": "parsed/hmc795.txt"
+  },
+  "108": {
+    "question": "What is the default value for the Undervoltage Comparison Voltage in the LTC6812-1 module?",
+    "answer": "I do not know.",
+    "datasheet": "parsed/ltc6812-1.txt"
+  },
+  "109": {
+    "question": "What is the range of the ADC inside the LTC6812-1 and how is negative readings handled?",
+    "answer": "I do not know.",
+    "datasheet": "parsed/ltc6812-1.txt"
+  },
+  "110": {
+    "question": "What is the command code for erasing a page and writing to a location pointed by FEEADR in the ADuC7019/20/21/22/24/25/26/27/28/29 module, and how long does it take to execute?",
+    "answer": "I do not know.",
+    "datasheet": "parsed/aduc7019_20_21_22_24_25_26_27_28_29.txt"
+  },
+  "111": {
+    "question": "What is the worst second or third harmonic for a signal with a frequency of 30 MHz and a temperature of 25°C when using the AD9650BCPZ-80 module?",
+    "answer": "I do not know.",
+    "datasheet": "parsed/AD9650.txt"
+  },
+  "112": {
+    "question": "What does the 9-bit red gain control in the AD9984A module do?",
+    "answer": "I do not know.",
+    "datasheet": "parsed/ad9984a.txt"
+  },
+  "113": {
+    "question": "What is the settling time of the AD5170 digital potentiometer during power-up?",
+    "answer": "I do not know.",
+    "datasheet": "parsed/ad5170.txt"
+  },
+  "114": {
+    "question": "What changes were made to the General-Purpose Input/Output Section in the ADuC7019/20/21/22/24/25/26/27/28/29 datasheet from RevG to RevH?",
+    "answer": "I do not know.",
+    "datasheet": "parsed/aduc7019_20_21_22_24_25_26_27_28_29.txt"
+  },
+  "115": {
+    "question": "What is the recommended capacitance for decoupling the power supply pins of the MAX4885 VGA multiplexer, and where should the capacitors be placed on the PCB?",
+    "answer": "I do not know.",
+    "datasheet": "parsed/MAX4885.txt"
+  },
+  "116": {
+    "question": "What is the recommended compensation capacitor for the AD8021 when used with the AD7650 module?",
+    "answer": "I do not know.",
+    "datasheet": "parsed/AD7650.txt"
+  },
+  "117": {
+    "question": "What is the purpose of the AGND pin in the AD7650 module?",
+    "answer": "I do not know.",
+    "datasheet": "parsed/AD7650.txt"
+  },
+  "118": {
+    "question": "What is the benefit of the wide adjustment span of I OUTFS in the AD9753 module and how is it adjusted?",
+    "answer": "I do not know.",
+    "datasheet": "parsed/AD9753.txt"
+  },
+  "119": {
+    "question": "What is the recommended input for sync processing in the AD9984A module and what bit must be set to ensure proper operation?",
+    "answer": "I do not know.",
+    "datasheet": "parsed/ad9984a.txt"
+  },
+  "120": {
+    "question": "What is the purpose of the exposed pad on the AD5686R/AD5685R/AD5684R module and how should it be connected?",
+    "answer": "I do not know.",
+    "datasheet": "parsed/ad5686r_5685r_5684r.txt"
+  },
+  "121": {
+    "question": "What is the purpose of the shunt on jumper J2 in the Taiyo Yuden EV kit?",
+    "answer": "I do not know.",
+    "datasheet": "parsed/MAX14653EVKIT-MAX14655EVKIT.txt"
+  },
+  "122": {
+    "question": "What is the recommended voltage range for TTL drivers to ensure proper compatibility with the AD9753 module?",
+    "answer": "I do not know.",
+    "datasheet": "parsed/AD9753.txt"
+  },
+  "123": {
+    "question": "What is the recommended layout for the PCB when using the MAX144/MAX145 ADCs?",
+    "answer": "I do not know.",
+    "datasheet": "parsed/MAX144-MAX145.txt"
+  },
+  "124": {
+    "question": "What is the rated dielectric insulation voltage for the ADuM5401/ADuM5402/ADuM5403/ADuM5404 module?",
+    "answer": "I do not know.",
+    "datasheet": "parsed/adum5401_5402_5403_5404.txt"
+  },
+  "125": {
+    "question": "What is the adjustable range of the Sample Rate in the MAX30105 Evaluation Kit software?",
+    "answer": "I do not know.",
+    "datasheet": "parsed/MAX30105ACCEVKIT.txt"
+  },
+  "126": {
+    "question": "What is the purpose of the OW bit in the AD5170 module and how does it affect the RDAC setting?",
+    "answer": "I do not know.",
+    "datasheet": "parsed/ad5170.txt"
+  },
+  "127": {
+    "question": "What is the purpose of the Hsync filter and regenerator in the AD9984A module, and how is the filter window timing set?",
+    "answer": "I do not know.",
+    "datasheet": "parsed/ad9984a.txt"
+  },
+  "128": {
+    "question": "What are the four main sources of losses in LTC3552 circuits and how are they calculated?",
+    "answer": "I do not know.",
+    "datasheet": "parsed/3552f.txt"
+  },
+  "129": {
+    "question": "What is the purpose of utilizing a 5V output on the EXTV CC pin in the LTM4642 module?",
+    "answer": "I do not know.",
+    "datasheet": "parsed/4642fb.txt"
+  },
+  "130": {
+    "question": "What is the purpose of the AITC amplifier in the LTC3816 module?",
+    "answer": "I do not know.",
+    "datasheet": "parsed/3816f.txt"
+  },
+  "131": {
+    "question": "What is the default mode for sending data in the AD9650 module and can it be changed via the SPI port configuration register?",
+    "answer": "I do not know.",
+    "datasheet": "parsed/AD9650.txt"
+  },
+  "132": {
+    "question": "What is the purpose of the J13 jumper and how does it relate to the boost circuitry input voltage selection controlled by J8 in the MAX25221 Evaluation Kit?",
+    "answer": "I do not know.",
+    "datasheet": "parsed/MAX25221EVKIT-MAX25221EVSYS.txt"
+  },
+  "133": {
+    "question": "What is included in the MAX30210 evaluation kit and what is the purpose of the MAX32630FTHR microcontroller board?",
+    "answer": "I do not know.",
+    "datasheet": "parsed/max30210evkit.txt"
+  },
+  "134": {
+    "question": "What is the default TV audio flow loaded on reset for the ADAV4622 audio processor?",
+    "answer": "I do not know.",
+    "datasheet": "parsed/ADAV4622.txt"
+  },
+  "135": {
+    "question": "What is the default idle mode for the UART transmitter in the MAX17843 module and how does it work with transformer coupling?",
+    "answer": "I do not know.",
+    "datasheet": "parsed/MAX17843.txt"
+  },
+  "136": {
+    "question": "What is the purpose of the VID code in the LTC3816 module and how is it used to program the switcher output voltage?",
+    "answer": "I do not know.",
+    "datasheet": "parsed/3816f.txt"
+  },
+  "137": {
+    "question": "What is the input voltage range for the MAXM17552 compact step-down power module?",
+    "answer": "I do not know.",
+    "datasheet": "parsed/MAXM17552.txt"
+  },
+  "138": {
+    "question": "What is the VCO tuning sensitivity at 2800 MHz for the SMTHMC833LP6GE module?",
+    "answer": "I do not know.",
+    "datasheet": "parsed/hmc833.txt"
+  },
+  "139": {
+    "question": "What is the purpose of the COMDIV2 register in the ADuC7019/20/21/22/24/25/26/27/28/29 module?",
+    "answer": "I do not know.",
+    "datasheet": "parsed/aduc7019_20_21_22_24_25_26_27_28_29.txt"
+  },
+  "140": {
+    "question": "What is the common mode rejection ratio (CMRR) match for the LT1498/LT1499 module when VCM is varied from V- + 0.1V to V+?",
+    "answer": "I do not know.",
+    "datasheet": "parsed/14989fg.txt"
+  },
+  "141": {
+    "question": "What is the function of pin 1 (QP) in the MAX4885 module?",
+    "answer": "I do not know.",
+    "datasheet": "parsed/MAX4885.txt"
+  },
+  "142": {
+    "question": "What is the typical output third order intercept for the LT1993-4 module at a frequency of 60 MHz with a filtered output and a load of 400 ohms?",
+    "answer": "I do not know.",
+    "datasheet": "parsed/LT1993-4.txt"
+  },
+  "143": {
+    "question": "What is the range of input sample rates that can be accepted by the SRCs in the ADAV4622 module?",
+    "answer": "I do not know.",
+    "datasheet": "parsed/ADAV4622.txt"
+  },
+  "144": {
+    "question": "What is the maximum LO drive for the 3HMC527LC4 GaAs MMIC I/Q mixer?",
+    "answer": "I do not know.",
+    "datasheet": "parsed/hmc527.txt"
+  },
+  "145": {
+    "question": "What is the efficiency of the MAX9736 amplifier at an output power of 10W with a 204Ω load and fixed frequency?",
+    "answer": "I do not know.",
+    "datasheet": "parsed/MAX9736-MAX9736B.txt"
+  },
+  "146": {
+    "question": "What is the recommended capacitance and voltage rating for the bypass capacitor connected to the BYP pin of the LTC4259A-1 module?",
+    "answer": "I do not know.",
+    "datasheet": "parsed/4259a1fa.txt"
+  },
+  "147": {
+    "question": "What is the maximum differential voltage measured for the HMC-C062 50 Gbps fanout buffer module?",
+    "answer": "I do not know.",
+    "datasheet": "parsed/hmc-c062.txt"
+  },
+  "148": {
+    "question": "What is the dynamic range for active energy measurement with less than 0.1% error for the ADE7763 energy metering IC?",
+    "answer": "I do not know.",
+    "datasheet": "parsed/ADE7763.txt"
+  },
+  "149": {
+    "question": "What is the recommended method for connecting the package ground leads and exposed paddle of the HMC774LC3B mixer to the circuit board in the evaluation PCB?",
+    "answer": "I do not know.",
+    "datasheet": "parsed/hmc774.txt"
+  },
+  "150": {
+    "question": "What is the purpose of the MFR_MODE command in the MAX34440 module and how long should you wait before sending another command after using it?",
+    "answer": "I do not know.",
+    "datasheet": "parsed/MAX34440.txt"
+  },
+  "151": {
+    "question": "What is the recommended power solution for the ADA4625-1 in a dual-supply application and what products are suggested for the positive and negative supplies?",
+    "answer": "I do not know.",
+    "datasheet": "parsed/ADA4625-1-4625-2.txt"
+  },
+  "152": {
+    "question": "What is the maximum input current rating for the LTM4642 module and what type of fuse is recommended to protect it from catastrophic failure?",
+    "answer": "I do not know.",
+    "datasheet": "parsed/4642fb.txt"
+  },
+  "153": {
+    "question": "What is the default value of the PWMDAT1 register and what is its purpose?",
+    "answer": "I do not know.",
+    "datasheet": "parsed/aduc7019_20_21_22_24_25_26_27_28_29.txt"
+  },
+  "154": {
+    "question": "What is the Packet Error Code (PEC) and how is it calculated for the LTC6812-1 module?",
+    "answer": "I do not know.",
+    "datasheet": "parsed/ltc6812-1.txt"
+  },
+  "155": {
+    "question": "What is the purpose of the MUTE and UNMUTE commands in the LTC6812-1 module and how do they affect measurement accuracy?",
+    "answer": "I do not know.",
+    "datasheet": "parsed/ltc6812-1.txt"
+  },
+  "156": {
+    "question": "What is the maximum total serial-data rate supported by the MAX96708 GMSL Deserializer with Coax or STP Cable Input?",
+    "answer": "I do not know.",
+    "datasheet": "parsed/MAX96708.txt"
+  },
+  "157": {
+    "question": "What is the recommended solder pad layout for the N8 package of the LT1011/LT1011A module?",
+    "answer": "I do not know.",
+    "datasheet": "parsed/LT1011.txt"
+  },
+  "158": {
+    "question": "What is the recommended serial mode for the AD7650 when used with a fast throughput, and what are the advantages of this mode?",
+    "answer": "I do not know.",
+    "datasheet": "parsed/AD7650.txt"
+  },
+  "159": {
+    "question": "What is the recommended voltage range for the differential signal amplitude when driving the ENCODE inputs of the AD10201?",
+    "answer": "I do not know.",
+    "datasheet": "parsed/AD10201.txt"
+  },
+  "160": {
+    "question": "What is the purpose of adding a small capacitor near the RPTC pin in the LTC3816 module?",
+    "answer": "I do not know.",
+    "datasheet": "parsed/3816f.txt"
+  },
+  "161": {
+    "question": "What is the range of the external-reference input voltage for the MAX5854 Dual, 10-Bit, 165Msps, Current-Output DAC?",
+    "answer": "I do not know.",
+    "datasheet": "parsed/MAX5854.txt"
+  },
+  "162": {
+    "question": "What is the recommended method for isolating the isoSPI signal traces in the LTC6812-1 module?",
+    "answer": "I do not know.",
+    "datasheet": "parsed/ltc6812-1.txt"
+  },
+  "163": {
+    "question": "What is the maximum output power for the MAX9712 amplifier with a supply voltage of 3.3V and an 8Ω load, and what is the corresponding THD+N percentage?",
+    "answer": "I do not know.",
+    "datasheet": "parsed/MAX9712.txt"
+  },
+  "164": {
+    "question": "What is the frequency range of the HMC833LP6GE VCO subsystem and how does it generate frequencies below and above its fundamental frequency?",
+    "answer": "I do not know.",
+    "datasheet": "parsed/hmc833.txt"
+  },
+  "165": {
+    "question": "What is the purpose of the RDY/DOUT output in the MAX11206/MAX11207 module and how can it be used to determine the conversion status?",
+    "answer": "I do not know.",
+    "datasheet": "parsed/MAX11206-MAX11207.txt"
+  },
+  "166": {
+    "question": "What is the function of pin 35 on the ADuC7019/20/21/22/24/25/26/27/28/29 module?",
+    "answer": "I do not know.",
+    "datasheet": "parsed/aduc7019_20_21_22_24_25_26_27_28_29.txt"
+  },
+  "167": {
+    "question": "What is the equation for approximating the inrush current at the port of the PD in the absence of an output load current, and what factors does it depend on?",
+    "answer": "I do not know.",
+    "datasheet": "parsed/4276fa.txt"
+  },
+  "168": {
+    "question": "What is the maximum serial bit rate for the MAX96708 14-Bit GMSL Deserializer?",
+    "answer": "I do not know.",
+    "datasheet": "parsed/MAX96708.txt"
+  },
+  "169": {
+    "question": "What is the maximum output current range for each channel of the LTM4642 module at a VIN of 12V and VOUT of 1.5V?",
+    "answer": "I do not know.",
+    "datasheet": "parsed/4642fb.txt"
+  },
+  "170": {
+    "question": "What is the purpose of the MAX20069 Evaluation Kit?",
+    "answer": "I do not know.",
+    "datasheet": "parsed/MAX20069EVKIT.txt"
+  },
+  "171": {
+    "question": "What is the maximum gain control range in dB for the X2 module's bypass mode?",
+    "answer": "I do not know.",
+    "datasheet": "parsed/hmc795.txt"
+  },
+  "172": {
+    "question": "What is the purpose of the TRACK/SS pin in the LTC7817 module?",
+    "answer": "I do not know.",
+    "datasheet": "parsed/ltc7817.txt"
+  },
+  "173": {
+    "question": "What is the typical range of variation for lock detect windows in digital mode for the Hittite Microwave Corporation's SMTHMC833LP6GE PLL with integrated VCO?",
+    "answer": "I do not know.",
+    "datasheet": "parsed/hmc833.txt"
+  },
+  "174": {
+    "question": "What is the full-scale output current of the MAX19692 DAC if the internal reference is used and RSET is set to 2kΩ?",
+    "answer": "I do not know.",
+    "datasheet": "parsed/MAX19692.txt"
+  },
+  "175": {
+    "question": "What is the recommended value and placement of the bypass capacitors for the power supply in a high speed application using the ADCMP566 comparator?",
+    "answer": "I do not know.",
+    "datasheet": "parsed/ADCMP566.txt"
+  },
+  "176": {
+    "question": "What happens if the host sends a command code that is not supported by the current PAGE setting to the MAX34440 module?",
+    "answer": "I do not know.",
+    "datasheet": "parsed/MAX34440.txt"
+  },
+  "177": {
+    "question": "What is the maximum input frequency that the AD9650 analog-to-digital converter can handle?",
+    "answer": "I do not know.",
+    "datasheet": "parsed/AD9650.txt"
+  },
+  "178": {
+    "question": "What is the voltage compliance range for the I MON pin in the LTC4232-1 module?",
+    "answer": "I do not know.",
+    "datasheet": "parsed/42321fb.txt"
+  },
+  "179": {
+    "question": "What is the recommended minimum capacitance for the input and output capacitors for the ADP5134 module, and what type of capacitors are recommended and not recommended for use?",
+    "answer": "I do not know.",
+    "datasheet": "parsed/ADP5134.txt"
+  },
+  "180": {
+    "question": "What is the typical temperature coefficient of the on-chip reference for the AD5686R/AD5685R/AD5684R quad nanoDAC+ devices?",
+    "answer": "I do not know.",
+    "datasheet": "parsed/ad5686r_5685r_5684r.txt"
+  },
+  "181": {
+    "question": "What is the common-mode voltage bias for the MAX17843 12-Channel, High-Voltage Smart Sensor Receiver?",
+    "answer": "I do not know.",
+    "datasheet": "parsed/MAX17843.txt"
+  },
+  "182": {
+    "question": "What is the purpose of the PWM shutdown controller in the ADuC7019/20/21/22/24/25/26/27/28/29 module and how does it ensure correct PWM shutdown?",
+    "answer": "I do not know.",
+    "datasheet": "parsed/aduc7019_20_21_22_24_25_26_27_28_29.txt"
+  },
+  "183": {
+    "question": "What is the maximum allowable operating limit for the junction temperature of the ADP5134 micro PMU?",
+    "answer": "I do not know.",
+    "datasheet": "parsed/ADP5134.txt"
+  },
+  "184": {
+    "question": "What is the purpose of the ALTREF in MAX17843 12-Channel, High-Voltage Smart Sensor?",
+    "answer": "I do not know.",
+    "datasheet": "parsed/MAX17843.txt"
+  },
+  "185": {
+    "question": "What is the frequency range of the HMC527LC4 GaAs MMIC I/Q mixer?",
+    "answer": "I do not know.",
+    "datasheet": "parsed/hmc527.txt"
+  },
+  "186": {
+    "question": "What is the LDO output voltage of the MAX5058 at -10°C with an input voltage of 27V?",
+    "answer": "I do not know.",
+    "datasheet": "parsed/MAX5058-MAX5059.txt"
+  },
+  "187": {
+    "question": "What is the purpose of selecting R DES in the MAX20751 Multiphase Master with PMBus Interface and Internal Buck Converter, and how is it related to the overcurrent-protection (OCP) value?",
+    "answer": "I do not know.",
+    "datasheet": "parsed/MAX20751.txt"
+  },
+  "188": {
+    "question": "What is the recommended source for detailed start-up configuration of the HMC833LP6GE module?",
+    "answer": "I do not know.",
+    "datasheet": "parsed/hmc833.txt"
+  },
+  "189": {
+    "question": "What is the purpose of the GND plane on the AD5686R/AD5685R/AD5684R device and how can it be increased?",
+    "answer": "I do not know.",
+    "datasheet": "parsed/ad5686r_5685r_5684r.txt"
+  }
+}

@@ -1,0 +1,1705 @@
+ 
+ 
+ 1 of 37  
+ 
+ 
+ 
+ 
+ 
+ 
+GENERAL DESCRIPTION  
+The DS28E04-100 is a 4096-bit, 1 -Wire® EEPROM 
+chip with seven address inputsThe address inputs 
+are directly mapped into the 1- Wire 64-bit Device ID 
+Number to easily enable the host system to identify 
+the physical loca tion or functional association of the 
+DS28E04-100 in a multidevice 1- Wire network en-
+vironmentThe 4096-bit  EEPROM array is configured 
+as 16 pages of 32 bytes with a 32 byte scratchpad to 
+perform write operationsEEPROM memory pages can be individually w rite protected or put in EPROM -
+emulation mode, where bits can only be changed from a 1 to a 0 stateIn addition to the memory, the DS28E04-100 has two general -purpose I/O ports that 
+can be used for input or to generate level and/or 
+pulse out putsActivit y registers also capture port 
+activity for state change monitoringThe DS28E04-
+100 commu nicates over the single-contact 1- Wire 
+busThe communication follows the standard Maxim  
+1-Wire protocol 
+ 
+APPLICATIONS  
+Autoconfiguration of Modular Systems such as  
+Central -Office Switches, Cellular Base Stations, 
+Access Products, Optical Network Units, and 
+PBXs 
+Accessory/PCB Identification  
+ 
+TYPICAL OPERATING CIRCUIT 
+PX.Y
+µCRPUPVCC
+IOVCC
+POL
+P1
+P0
+GNDA0A6
+DS28E04 #1IOVCC
+POL
+P1
+P0
+GNDA0A6
+DS28E04 #7 RST1 RST0LEDFEATURES  
+ 4096 bits of EEPROM Memory Partitioned into 
+16 Pages of 256 Bits  
+ Seven Address Inputs for Physical Location 
+Configuration 
+ Two General -Purpose PIO Pins with Pulse-
+Generation Capability  
+ Individual Memory Pages can be Permanently 
+Write -Protected or put in OTP EPROM -
+Emulation Mode (“Write to 0”)  
+ Commun icates to Host with a Single Digital 
+Signal at 15.3kbps or 111kbps Using 1- Wire 
+Protocol 
+ Parasitic or V CC Powered  
+ Conditional Search Based on PIO Status or PIO Activity  
+ Switchpoint Hysteresis and Filtering to Optimize Performance in the Presence of Noise 
+ Reads and Writes Over a Wide 2.8V to 5.25V Voltage Range from -40°C to +85°C  
+ 16-Pin, 150- mil SO Package 
+ 
+ORDERING INFORMATION  
+PART  TEMP RANGE  PIN-PACKAGE  
+DS28E04S -100+ -40°C to +85°C  16 SO  
+DS28E04S -100+T -40°C to +85°C  16 SO   
+(2.5k pieces)  
++ Indicates lead(Pb) -free/RoHS -compliant package 
+T = Tape and reel 
+ 
+PIN CONFIGURATION  
+ 
+SO (150 mils)  
+ 
+Commands, Registers, and Modes are capitalized for 
+clarity 
+1-Wire is a r egistered trademark of Maxim Integrated Products, Inc DS28E04 -100  
+4096-Bit Addressable 1- Wire EEPROM with PIO  
+ 19-6134 ; Rev 12/11 
+DS28E04-100: 4096-Bit 1 -Wire Addressable EEPROM with PIO  
+ 
+ 
+ 2 of 37 ABSOLUTE MAXIMUM RATINGS  
+All Pins: Voltage to GND  -0.5V, +6V  
+All Pins: Sink Current  20mA  
+Operating T emperature Range  -40°C to +85°C  
+Junction Temperature  +150°C  
+Storage Temperature Range  -55°C to + 125°C 
+Lead Temperature (soldering , 10s) +300°C  
+Soldering Temperature  (reflow)  +260°C  
+Stresses beyond those listed under “Abs olute Maximum Ratings” may cause permanent damage to the deviceThese are stress ratings only, 
+and functional operation of the device at these or any other conditions beyond those indicated in the operational sections of  the specifications is 
+not implied Exposure to the absolute maximum rating conditions for extended periods may affect device reliability 
+ELECTRICAL CHARACTERISTICS  
+(VPUP = 2.8V to 5.25V, V CC = V PUP, not connected or grounded, T A = -40°C to +85°C.)  
+PARAMETER  SYMBOL  CONDITIONS  MIN TYP MAX  UNITS  
+Ground Current  IGND (Notes 1, 2, 3)    20 mA 
+Supply Current  ICC VCC = V PUP (Note 3)    1 mA 
+Standby Supply Current  ICCS  Device idle; A0 to A6 not connected    11 µA 
+PINS A0 TO A6  
+Input Low Voltage  VILA (Note 1)    0.30 V 
+Input High  Voltage  VIHA VX = max(V PUP, VCC) (Note 1)  VX - 
+0.3V   V 
+Input Load Current  ILA Pin at GND (Note 4)  -1.1   µA 
+POL PIN  
+Input Low Voltage  VILPOL  (Note 1)    0.30 V 
+Input High Voltage  VIHPOL  VX = max(V PUP, VCC) (Note 1)  VX - 
+0.3V   V 
+Leakage Current  ILKPOL  Pin at 5.25V    1 µA 
+PIO PINS  
+Input Low Voltage  VILP (Note 1)    0.30 V 
+Input High Voltage  VIHP VX = max(V PUP, VCC) (Note 1)  VX - 
+0.3V   V 
+Output Low Voltage at 
+4mA  VOLP (Note 5)    0.4 V 
+Leakage Current  ILKP Pin at 5.25V    1 µA 
+Minimum Sensed P IO 
+Pulse  tPWMIN  (Note 6)  1  10 µs 
+Output Pulse Duration  tPULSE  (Note 7)  250  1000  ms 
+IO PIN GENERAL DATA      
+1-Wire Pullup Resistance  RPUP (Notes 1, 8)  0.3  2.2 kΩ 
+Input Capacitance  CIO (Notes 3, 9)   100 800 pF 
+Input Load Current  IL IO pin at V PUP, A0 to A6 not connected , 
+VCC at GND  0.05  11.00  
+µA IO pin at V PUP, A0 to A6 not connected , 
+VCC at V PUP  0.05  8.25 
+High-to-Low Switching 
+Threshold  VTL (Notes 3, 10, 11)  0.46  4.40 V 
+Input Low Voltage  VIL (Notes 1, 12)    0.3 V 
+Input Hi gh Voltage  VIH VX = max(V PUP, VCC) (Note 1)  VX - 
+0.3V   V 
+Low-to-High Switching 
+Threshold  VTH (Notes 3, 10, 13)  1.0  4.9 V 
+Switching Hysteresis  VHY (Notes 3, 10, 14)  0.21  1.70 V 
+Output Low Voltage  VOL At 4mA Current Load (Note 5)    0.4 V 
+Recovery Tim e  
+(Notes 1, 15)  tREC Standard speed, R PUP = 2.2kΩ 5   
+µs Overdrive speed, R PUP = 2.2kΩ 2   
+Overdrive speed, directly prior to reset 
+pulse; R PUP = 2.2kΩ 5   
+Rising -Edge Hold -Off Time  
+(Note 3)  tREH Standard speed (Note 16)  0.5  5.0 µs Overdrive speed  Not applicable (0)  
+DS28E04-100: 4096-Bit 1 -Wire Addressable EEPROM with PIO  
+ 
+ 
+3 of 37 PARAMETER  SYMBOL  CONDITIONS  MIN TYP MAX  UNITS  
+Time Slot Duration  
+(Note 1)  tSLOT  Standard speed  65   µs Overdrive speed  9   
+IO PIN, 1 -Wire  RESET, PRESENCE DETE CT CYCLE  
+Reset Low Time (Note 1)  tRSTL Standard speed, V PUP > 4.5V  480  640 
+µs Standard speed (Note 17)  504  640 
+Overdrive speed, V PUP > 4.5V  48  80 
+Overdrive speed (Note 17)  53  80 
+Presence -Detect High 
+Time  tPDH Standard speed  15  60 µs Overdrive speed (Note 17)  2  7 
+Presence- Detect Fall Time  
+(Notes 3, 18)  tFPD Standard speed, V PUP > 4.5V  1.10  3.75 
+µs Standard speed  1.1  7.0 
+Overdrive speed  0  1.1 
+Presence- Detect Low 
+Time  tPDL Standard speed  60  240 
+µs Overdrive speed, V PUP > 4.5V  8  24 
+Overdrive speed (Note 17)  8  26 
+Presence- Detect Sample 
+Time (Note 1)  tMSP Standard speed, V PUP > 4.5V  64  75 
+µs Standard speed  67  75 
+Overdrive speed  8.1  10 
+IO PIN, 1 -Wire  WRITE  
+Write -0 Low Time  
+(Note s 1, 19) tW0L Standard speed  60  120 µs Overdrive speed (Note 17)  7  16 
+Write -1 Low Time  
+(Notes 1, 19)  tW1L Standard speed  5  15 µs Overdrive speed  1  2 
+IO PIN, 1 -Wire  READ  
+Read Low Time  
+(Notes 1, 20)  tRL Standard speed  5  15 - δ µs Overdrive speed  1  2 - δ 
+Read Sample Time  
+(Notes 1, 20)  tMSR  Standard speed  tRL + δ  15 µs Overdrive speed  tRL + δ  2 
+EEPROM  
+Programming Current  IPROG  (Note 21)    1 mA 
+Programming Time  tPROG  (Note 22)    10 ms 
+Write/Erase Cycles 
+(Endurance)  (Note 23)  NCY At +25°C  200k     At +85°C (worst case)  50k   
+Data Retention   
+(Notes 23, 24)  tDR At +85°C (worst case)  40   years  
+ 
+ 
+Note 1: System requirement 
+Note 2:  Maximum instantaneous pulldown current through all pins combined 
+Note 3:  Guaranteed by design, simulation onlyNot production tested 
+Note 4:  This load current is caused by the internal weak pullup, which asserts  a logical 1 to address pins that are not connectedThe 
+logical state of the address pins must not change during the execution of ROM function commands during those time slots in 
+which these bits are relevant 
+Note 5:  The I -V characteristic is linear for  voltages less than 1V 
+Note 6:  Width of the narrowest pulse that trips the activity latchBack to back pulses that are active for < t PWMIN  (max) and that have an 
+intermediate inactive time  < t PWMIN  (max) are not guaranteed to be filtered 
+Note 7:  The Pulse function requires that V CC power is available; otherwise the command will not be executed 
+Note 8:  Maximum allowable pullup resistance is a function of the number of 1 -Wire devices in the system and 1 -Wire recovery timesThe 
+specified value here applies to systems with only one device and with the minimum 1 -Wire recovery timesFor more heavily 
+loaded systems, an active pullup such as that found in the DS2482 -x00, DS2480B, or DS2490 may be required 
+Note 9:  Capacitance on the data pin could be 8 00pF when V PUP is first appliedIf a 2.2k Ω resistor is used to pull up the data line, 2.5µs 
+after V PUP has been applied the parasite capacitance will not affect normal communications 
+Note 10:  VTL, VTH, and V HY  are a function of the internal supply volt age, which in parasite power mode, is a function of V PUP and the 1 -Wire 
+recovery timesThe V TH and V TL maximum specifications are valid at V CC = V PUP = 5.25VIn any case, V TL < V TH < V PUP  
+Note 11:  Voltage below which, during a falling edge on IO, a logic 0 is detected 
+Note 12:  The voltage on IO needs to be less than or equal to V ILMAX whenever the master drives the line low 
+Note 13:  Voltage above which, during a rising edge on IO, a logic 1 is detected 
+Note 14:  After V TH is crossed during a r ising edge on IO, the voltage on IO has to drop by at least V HY to be detected as logic '0' 
+Note 15:  Applies to a single DS28E04 -100 without V CC supply, attached to a 1 -Wire line 
+Note 16:  The earliest recognition of a negative edge is possible at t REH after V TH has been previously reached 
+Note 17:  Highlighted numbers are NOT in compliance with legacy 1 -Wire product standardsSee comparison table 
+Note 18:  Interval during the negative edge on IO at the beginning of a Presence Detect pulse between th e time at which the voltage is   
+80% of V PUP and the time at which the voltage is 20% of V PUP 
+DS28E04-100: 4096-Bit 1 -Wire Addressable EEPROM with PIO  
+ 
+ 
+4 of 37 Note 19:  ε in Figure 16 represents the time required for the pullup circuitry to pull the voltage on IO up from V IL to V THThe actual maximum 
+duration for the  master to pull the line low is t W1LMAX  + tF - ε and t W0LMAX  + tF - ε respectively 
+Note 20:  δ in Figure 16 represents the time required for the pullup circuitry to pull the voltage on IO up from V IL to the input high threshold 
+of the bus masterThe actu al maximum duration for the master to pull the line low is t RLMAX  + tF
+Note 21:  Current drawn during the EEPROM programming intervalIf the device does not get V CC power, the pullup circuit on IO during the 
+programming interval should be such that the v oltage at IO is greater than or equal to V PUP(min)If V PUP in the system is close to 
+Vpup(min) then a low -impedance bypass of R PUP that can be activated during programming may need to be added 
+Note 22:  The t PROG interval begins t REHmax  after the traili ng rising edge on IO for the last time slot of the E/S byte for a valid Copy Scratchpad 
+sequenceInterval ends once the device's self -timed EEPROM programming cycle is complete and the current drawn by the 
+device has returned from I PROG to I L or I CCS, respectively 
+Note 23:  Not production testedGuaranteed by design or characterization 
+Note 24:  EEPROM writes can become nonfunctional after the data -retention time is exceeded Long -time storage at elevated temperatures 
+is not recommended; the device can lose its write capability after 10 years at +125°C or 40 years at +85°C 
+ 
+ LEGACY VALUES  DS28E04 -100 VALUES  
+PARAMETER  STANDARD SPEED  OVERDRIVE SPEED  STANDARD SPEED  OVERDRIVE SPEED  
+ MIN MAX  MIN MAX  MIN MAX  MIN MAX  
+tSLOT (inclt REC) 61µs  (undef)  7µs (undef) 65µs1) (undef)  9µs (undef)  
+tRSTL  480µs  (undef)  48µs  80µs  504µs  640µs  53µs  80µs  
+tPDH 15µs  60µs  2µs 6µs 15µs  60µs  2µs 7µs 
+tPDL 60µs  240µs  8µs 24µs  60µs  240µs  8µs 26µs  
+tW0L 60µs  120µs  6µs 16µs  60µs  120µs  7µs 16µs  
+1) Intentional change, longer recovery time requirement due to modified 1-Wire front end 
+PIN DESCRIPTION  
+PIN NAME  FUNCTION  
+1 A3 Address bit input (place value = 8), with weak pullup 
+2 A2 Address bit input (place value = 4), with weak pullup 
+3 A1 Address bit input (place value = 2), w ith weak pullup 
+4 A0 Least significant address bit input (place value = 1), with weak pullup 
+5, 12  GND  Ground Reference  
+6, 11  N.CNot Connected  
+7 VCC Optional power supply for the chip; leave unconnected or ground if V CC power 
+is not available 
+8 POL Power -up polarity (logical state) for P0 and P1; pin has a weak pulldown 
+9 P0 Remote -controlled I/O pin, open drain with weak pulldown 
+10 P1 Remote -controlled I/O pin, open drain with weak pulldown 
+13 A6 Address bit input (place value = 64),  with weak pullup 
+14 A5 Address bit input (place value = 32), with weak pullup 
+15 A4 Address bit input (place value = 16), with weak pullup 
+16 IO 1-Wire Bus InterfaceOpen drain, requires external pullup resistor 
+DETAILED DESCRIPTION  
+The DS28E 04-100 combines 4096 bits of EEPROM, a 16-byte control page, two general -purpose PIO pins, seven 
+external address pins, and a fully featured 1- Wire interface in a single chipPIO outputs are configured as open-
+drain and provide an on-resistance of 100 Ω maxA robust PIO channel -access communication protocol ensures 
+that PIO output -setting changes occur error -freeThe DS28E04-100 has an additional memory area called the 
+scratchpad that acts as a buffer when writing to the main memory or the control pageData is first written to the 
+scratchpad from which it can be read backThe copy scratchpad command transfers the data to its final memory 
+locationEach DS28E04-100 has a device ID number that is 64 bits longThe user can define seven bits of this number  through address pinsThe remaining 57 bits are factory -lasered into the chipThe device ID number 
+guarantees unique identification and is used to address the device in a multidrop 1- Wire network environment, 
+where multiple devices reside on a common 1- Wire bus and operate independently of each otherThe DS28E04-
+100 also supports 1- Wire conditional search capability based on PIO conditions or power -on-reset activityThe 
+DS28E04-100 has an optional V
+CC supply connectionWhen an external supply is absent , device power is supplied 
+parasitically from the 1- Wire busWhen an external supply is present, PIO states are maintained in the absence of 
+the 1- Wire bus power sourceApplications of the DS28E04-100 include autoconfiguration and state monitoring of 
+modular systems such as central -office switches, cellular base stations, access products, optical network units, and 
+PBXs, and acces sory/PC board identification 
+ 
+DS28E04-100: 4096-Bit 1 -Wire Addressable EEPROM with PIO  
+ 
+ 
+5 of 37 OVERVIEW  
+The block diagram in Figure 1 shows the relationships between the major control and m emory sections of the 
+DS28E04-100The DS28E04-100 has five main data components: 1) 64-bit device ID number, 2) 32- byte 
+scratchpad, 3) sixteen 32-byte pages of EEPROM, 4) Special Function Register, and 5) PIO Control RegistersThe 
+hierarchical structure of the 1- Wire protocol is shown in Figure 2The bus master must first provide one of the eight 
+ROM Function Commands, 1) Read ROM, 2) Match ROM, 3) Search ROM, 4) Conditional Search ROM, 5) Skip 
+ROM, 6) Resume, 7) Overdrive-Skip ROM or 8) Overdrive-Match ROMUpon completion of an Overdrive ROM 
+command byte executed at standard speed, the device enters Overdrive mode where all subsequent communication occurs at a higher speedThe protocol required for these ROM function commands is described in Figure 14 After a ROM function command is successfully executed, the memory/control functions become 
+accessible and the master may provide any one of the nine Memory/Control Function commandsThe protocol for 
+these commands is described in Figure 9All data is read and written least significant bit first 
+ 
+Figure 1Block Diagram  
+ 
+ 
+1-Wire Network  
+Device ID  
+Number Register  1-Wire  
+Function Control  
+Memory  
+Function  
+Control Unit  
+Special Function 
+Registers  32-Byte 
+Scratchpad  Data Memory  
+16 Pages of  
+32 Bytes Each  CRC16  
+Generator  A0 
+A6 IO 
+Internal V DD PIO 
+Control Registers  P0 VCC 
+P1 
+POL Internal V DD 
+ 
+DS28E04-100: 4096-Bit 1 -Wire Addressable EEPROM with PIO  
+ 
+ 
+6 of 37 Figure 2Hierarchical Structure for 1- Wire Protocol  
+ 
+ DS28E04 -100 
+Available  
+Commands:  Command  
+Level:  Data Field  
+Affected:  
+1-Wire ROM Function  
+Commands (see Figure 14)  
+DS28E04 -Specific  
+Memory/Control Function  
+Commands (see Figure 9)  Read ROM  
+Match ROM  
+Search ROM  
+Conditio nal Search 
+ROM  
+Skip ROM  
+Resume  
+Overdrive Skip  
+Overdrive Match  Device ID, RC -Flag 
+Device ID, RC -Flag 
+Device ID, RC -Flag 
+Device ID , RC-Flag, PIO Status,  
+condSearch Setti ngs 
+RC-Flag 
+RC-Flag 
+RC-Flag, OD -Flag 
+Device ID, RC -Flag, OD -Flag 
+Write Scratchpad  
+Read Scratchpad  
+Copy Scratchpad  
+Read Memory  
+PIO Access Read  
+PIO Access Write  
+PIO Access Pulse  
+Reset ActLatch  
+Write Register  32-byte Scratchpad, Flags  
+32-byte Scratchpad  
+Data Memory, Register Page  
+Data Memory, Registers  
+PIO Pins  
+PIO Pins, Activity Latch  
+PIO Pins, Activity Latch  
+Activity Latch  
+Conditional Search an d  Control 
+ Registers  
+ 
+ 
+ 
+64-BIT DEVICE ID NUMBER (NETWORK ADDRESS)  
+Each DS28E04-100 has a unique device ID number that is 64 bits  long, as shown in Figure 3The first 8 bits are a 
+1-Wire family codeThe next 8 bits are an external address byte, of which the lower 7 bits are connected to the 
+address input pins A0 to A6This allows the user to s et a portion of the Device ID Number by connecting some of 
+these pins to GND (logic 0) or to V CC (logic 1) or leaving them open (logic 1)The next 40  bits are a lasered serial 
+numberEven if multiple DS28E04-100 are used in a 1 -Wire network and all address inputs are wired to the same 
+state or left open (unconnected), the unique 40-bit serialization field will prevent any address conflict, allowing to 
+communicate with each device individuallyThe last 8 bits are a lasered CRC (Cyclic Redundancy Check) of  the 
+first 56 bits , assuming that the address input pins A0 to A6 are at logic 1The 1- Wire CRC is generated using a 
+polynomial generator consisting of a shift register and XOR gates as shown in Figure 4The polynomial is X8 + X5 + 
+X4 + 1Further inform ation on the Device ID CRC is found in section CRC Generation near the end of this 
+document 
+  
+Figure 364 -Bit Device ID Number  
+MSB    LSB 
+8-Bit CRC 
+Code  40-Bit Lasered Serial Number  8-Bit External  
+Address Input  8-Bit Family Code 
+(1Ch)  0 A
+6 A
+5 A
+4 A
+3 A
+2 A
+1 A
+0 
+MSB  LSB MSB  LSB MSB  LSB MSB  LSB 
+ 
+ 
+DS28E04-100: 4096-Bit 1 -Wire Addressable EEPROM with PIO  
+ 
+ 
+7 of 37 Figure 41 -Wire CRC Generator  
+ 
+X0X1X2X3X4X5X6X7X8Polynomial = X8 + X5 + X4 + 1
+1st
+STAGE2nd
+STAGE3rd
+STAGE4th
+STAGE6th
+STAGE5th
+STAGE7th
+STAGE8th
+STAGE
+INPUT DATA 
+ 
+ 
+MEMORY 
+The DS28E04-100 EEPROM array consists of 17 pages of 32 bytes each, starting at address 0000h and ending at address 021FhAll memory addresses in this range have unrestricted read accessThe data memory consists of 
+16 pages of 32 bytes eachThe register page consists of 32 bytes starting at address 0200hIt contains 16 page 
+protection control bytes (one for each data memory page), the r egister page lock byte, the factory bytes, and the 
+reserved bytesThe reserved bytes are for future use by the factory and should be not be usedThey have no effect on device operation 
+ 
+The protection control registers, along with the register page loc k byte, determine whether write protection, EPROM 
+mode, or copy protection is enabled for each of the 16 data memory pagesA value of 55h sets write protection for 
+the associated memory pageA value of AAh sets EPROM modeA value of 55h or AAh for the r egister page lock 
+byte sets copy protection for all write-protected data memory pages, as well as the register pageEPROM mode 
+pages are not affected The protection control registers and the register page lock byte write protect themselves if 
+set to 55h or AAhAny other setting leaves them open for unrestricted write access 
+ In addition to the EEPROM, the device has a 32-byte volatile scratchpadWrites to the EEPROM array are a two-
+step processFirst, data is written to the scratchpad through the Wri te Scratchpad command, and then copied into 
+the main array through the Copy Scratchpad commandThe user can verify the data written to the scratchpad 
+through the Read Scratchpad command prior to copying into the main array 
+ 
+If a memory location is write protected, data sent by the master to the associated address during a Write 
+Scratchpad command is not loaded into the scratchpadInstead, it is replaced by the data in EEPROM located at 
+the target addressIf a memory location is in EPROM mode, the scrat chpad is loaded with the logical AND of the 
+data sent by the master and the data in EEPROM at the target addressCopy Scratchpad commands to write-protected or EPROM mode memory locations are allowedThis allows write-protected data in the device to be refreshed, i.e., reprogrammed with the current data 
+ If a memory location is copy protected, a Copy Scratchpad command to that location will be blocked, which is indicated by FFh success bytesCopy protection is used for a higher level of security, and should only be used 
+after all write-protected pages and their associated protection control bytes are set to their final valuesCopy 
+protection as implemented with this device does not prevent copying data from one device to another; it only blocks 
+the exec ution of the copy scratchpad command with a target address of a copy -protected memory page 
+ 
+DS28E04-100: 4096-Bit 1 -Wire Addressable EEPROM with PIO  
+ 
+ 
+8 of 37 Figure 5Memory Map  
+Address locations 0000h to 021Fh are nonvolatileAddress locations 0220h to 0225 are volatile 
+ 
+ADDRESS RANGE  TYPE  DESCRIPTION  PROTECTION C ODES (NOTES)  
+0000h to 001Fh R/(W)  Data Memory Page 0 (Protection controlled by address 0200h)  
+0020h to 003Fh R/(W)  Data Memory Page 1 (Protection controlled by address 0201h)  
+0040h to 005Fh R/(W)  Data Memory Page 2 (Protection controlled by address 0202h)  
+0060h to 007Fh R/(W)  Data Memory Page 3 (Protection controlled by address 0203h)  
+0080h to 009Fh R/(W)  Data Memory Page 4 (Protection controlled by address 0204h)  
+00A0h to 00BFh  R/(W)  Data Memory Page 5 (Protection controlled by address 0205h)  
+00C0h to 0DFh R/(W)  Data Memory Page 6 (Protection controlled by address 0206h)  
+00E0h to 00FFh  R/(W)  Data Memory Page 7 (Protection controlled by address 0207h)  
+0100h to 011Fh R/(W)  Data Memory Page 8 (Protection controlled by address 0208h)  
+0120h to 013Fh R/(W) Data Memory Page 9 (Protection controlled by address 0209h)  
+0140h to 015Fh R/(W)  Data Memory Page 10 (Protection controlled by address 020Ah)  
+0160h to 017Fh R/(W)  Data Memory Page 11 (Protection controlled by address 020Bh)  
+0180h to 019Fh R/(W)  Data Memory Page 12 (Protection controlled by address 020Ch)  
+01A0h to 01BFh  R/(W)  Data Memory Page 13 (Protection controlled by address 020Dh)  
+01C0h to 01DFh R/(W)  Data Memory Page 14 (Protection controlled by address 020Eh)  
+01E0h to 01FFh  R/(W)  Data Memory  Page 15 (Protection controlled by address 020Fh)  
+0200h1) to 020Fh1) R/(W)  Protection Control Pages 0 
+to 15 55h: Write Protected; AAh: EPROM mode
+Address 0200h is associated with memory 
+page 0, address 0201h with page 1, etc 
+0210h1) R/(W)  Register Page Lock  (See text)  
+0211h  R Factory Byte  (Reads 55h or AAh)  
+0212h to 021Dh  N/A Reserved   
+021Eh to 021Fh  R Factory Bytes  (Undefined value)  
+    
+220h  R PIO Logic State  (The lower two bits are valid)  
+221h  R PIO Output Latch State  (The lower two bits are valid)  
+222h  R PIO Activity Latch State  (The lower two bits are valid)  
+223h  R/W2) Conditional Search PIO 
+Selection Mask   
+224h  R/W2) Conditional Search Polarity 
+Selection   
+225h  R/W2) Conditional Search Control and Status Register   
+1) Once programmed to AAh or 55h this address becomes read-onlyAll other codes can be stored but will neither 
+write -protect the address nor activate any function 
+2) Limited write access through Write Register command 
+DS28E04-100: 4096-Bit 1 -Wire Addressable EEPROM with PIO  
+ 
+ 
+9 of 37 PIO-RELATED REGISTERS  
+Figure 6 shows the simplified logi c diagram of a PIO channel The registers related to the PIO pins are located in 
+the address range 0220h to 0225hAll these registers are volatile, i.e., they lose their state when the device is 
+powered downAll PIO -related registers can be read like any  data memoryThere are special commands to control 
+the PIOs for input (read), output (write), pulse-generation, and to reset the activity latches 
+ 
+Figure  6PIO Simplified Logic Diagram  
+ 
+PIO Out put 
+Latch  PIO Acti vity 
+Latch  
+Edge 
+Detector  
+Port 
+Function 
+Control  To Activity Latch 
+State Register  To PIO Logic 
+State Register  
+To PIO Output 
+Latch State Reg R 
+Q D D Q 
+Q 
+Q "1" 
+CLR ACT LATCH  P0, P1  
+DATA  
+CLOCK  POWER ON 
+RESET  
+ 
+  
+PIO Logic State Register  
+ 
+ADDR  b7 b6 b5 b4 b3 b2 b1 b0 
+0220h  1 1 1 1 1 1 P1 P0 
+The logic state of the PIO pins can be obtained by reading this register using the Read Memory commandThis 
+register is read-onlyEach bit is associated with the pin of the respective PIO channel Bits 2 to 7 have no function; 
+they always read 1The data in this register reflects the PIO state at the last (most significant) bit of the byte that 
+proceeds reading the first (least significant) bit of this registerSee the PIO Access Read  command description for 
+details 
+ 
+ 
+PIO Output Latch State Register  
+ 
+ADDR  b7 b6 b5 b4 b3 b2 b1 b0 
+0221h  1 1 1 1 1 1 PL1 PL0 
+The data in this register represents the latest data written to the PIOs through the PIO Access Write command
+This register is read using the Read Memory commandThis register is not affected if the device re- initializes itself 
+after an ESD hitThis register is read-onlyEach bit is associated with the output latch of the respective PIO 
+channel Bits 2 to 7 have no function; they always read 1The flip- flops of this register power up as specified by the 
+state of the POL pinIf the chip has to power up with all PIO channels off, the POL pin must be connected to a logic "1" 
+ 
+DS28E04-100: 4096-Bit 1 -Wire Addressable EEPROM with PIO  
+ 
+ 
+10 of 37 PIO Activity Latch State Register  
+ 
+ADDR  b7 b6 b5 b4 b3 b2 b1 b0 
+0222h  0 0 0 0 0 0 AL1 AL0 
+The data in this register represents the current state of the PIO activity latchesThis register is read using the Read 
+Memory commandThis register is read-onlyEach bit is associated with the activity latch of the respective PIO 
+channel Bits 2 to 7 have no function; they always read 0A state transition on a PIO  pin, High Low or 
+LowHigh, of a duration greater than t PWMIN  causes the associated bit in the register to be set to a 1This register 
+is cleared to 00h by a power -on reset, or by successful execution of the Reset Activity Latches  command 
+ 
+The next three registers control the device's participation a Conditional Search ROM sequenceThe interaction of 
+the various signals that determine whether the device responds to a conditional  search is illustrated in Figure 7
+There is a selection mask, SM, to select the participating PIOs, a polarity selection SP to specify for each channel 
+whether the channel signal needs to be 1 or 0 to qualify, and a PLS bit to select either the activity l atches or PIO 
+pins as inputsThe signals of all channels are fed into an AND gate as well as an OR gateThe CT bit finally selects the ANDed or ORed result as the conditional search response signal CSRIf CT is 0, the channel signal of 
+at least one of the selected channels must match the corresponding polarityIf CT is 1, the channel signals of all 
+selected channels must match the corresponding polarity 
+ 
+Figure 7CONDITIONAL SEARCH L OGIC  
+ 
+AL1
+P1PLS SP0 SM0 CT
+SM1 SP1AL0
+P0
+CSRChannel 0
+Channel 1
+PORL
+ 
+ 
+ 
+Conditional Search Channel Se lection Mask Register 
+ 
+ADDR  b7 b6 b5 b4 b3 b2 b1 b0 
+0223h  0 0 0 0 0 0 SM1 SM0 
+The data in this register controls whether a PIO channel qualifies for participation in the conditional search 
+commandTo include a PIO channel , the bits in this register that  correspond to those channels need to be set to 1
+This register can only be written through the Write Register commandThis register is read/writeEach bit is 
+associated with the respective PIO channel  as shown in Figure 7Bits 2 to 7 have no function;  they always read 0 
+and cannot be changed to 1This register is cleared to 00h by a power -on reset 
+ 
+DS28E04-100: 4096-Bit 1 -Wire Addressable EEPROM with PIO  
+ 
+ 
+11 of 37 Conditional Search Channel Polarity Selection Register 
+ 
+ADDR  b7 b6 b5 b4 b3 b2 b1 b0 
+0224h  0 0 0 0 0 0 SP1 SP0 
+The data in this register specifies the polarity of each selected PIO channel for the device to respond to the 
+conditional search commandThis register can only be written through the Write Registers commandWithin a PIO 
+channel, the data source may be either the channel's input pin or the channel's activity latch, as specified by the 
+PLS bit in the Control/Status register at address 0225hThis register is read/writeEach bit is associated with the 
+respective PIO channel as shown in Figure 7Bits 2 to 7 have no function; they always read 0 and cannot be 
+changed to 1This register is cleared to 00h at power -up 
+  
+Control/Status Register  
+ 
+ADDR  b7 b6 b5 b4 b3 b2 b1 b0 
+0225h  VCCP  POL 0 0 PORL  0 CT PLS 
+The data in this register reports status information and further configures the device for conditional searchThis register can only be written through the Write Registers commandThis register is read/writeThe power -up state 
+of the PORL bit is "1"CT and PLS power up as "0"The functional assignments of the individual bits are explained 
+in the table belowBits 2, 4, and 5 have no function; they always read 0 and cannot be set to 1 
+ 
+Control/Status Register Details  
+BIT DESCRIPTION  BIT(S)  DEFINITION  
+PLS: Pin or Activity 
+Latch Select  b0 Selects either the PIO pins or the PIO activity latches  as input for the 
+conditional search 
+ 0: pin selected (default)  
+ 1: activity latch selected  
+CT: Conditional Search Logical Term  b1 Specifies whether the data of two channels needs to be OR ed or 
+AND’ed to meet the qualifying condition for the device to respond to 
+a conditional searchIf only a single channel is selected in the channel selection mask (0223h) this bit is a don't care 
+ 0: bitwise OR (default)  
+ 1: bitwise AND  
+PORL: Power -On Reset 
+Latch b3 Specifies whether the device has performed a pow er-on resetThis 
+bit can only be cleared to 0 by writing to the Control/Status RegisterAs long as this bit is 1 the device will always respond to a Conditional 
+Search ROM sequence 
+POL: PIO Default Polarity (Read-Only)  b6 Reports the state of the POL pinThe state of the POL pin specifies 
+whether the PIO pins P0 and P1 power up high or lowThe polarity 
+of a pulse generated at a PIO pin is the opposite of the pin's power -
+up state 
+ 0: PIO powers up 0  
+ 1: PIO powers up 1  
+VCCP: V CC Power 
+Status (Read-Only)  b7 For V CC-powered operation, the V CC pin needs to be connected to a 
+voltage source equal to V PUP
+ 0: V CC power not available  
+ 1: V CC-powered operation  
+ 
+ 
+DS28E04-100: 4096-Bit 1 -Wire Addressable EEPROM with PIO  
+ 
+ 
+12 of 37 ADDRESS REGISTERS AND TRANSFER STATUS  
+The DS28E04-100 employs three address registers, called TA1, TA2, and E/S (Figure 8)Registers TA1 and TA2 
+must be loaded with the target address to which the data will be written or from which data is readRegister E/S is 
+a read-only transfer -status register, used to verify data integrity of write commands The lower five bits of the E/S 
+register indicate the Ending Offset within the 32-byte scratchpadBit 5 of the E/S register, called PF, is set if the 
+number of data bits sent by the master is not an integer multiple of 8 or if the data in the scratchpad i s not valid due 
+to a loss of powerA valid write to the scratchpad clears the PF bitBit 6 has no function; it always reads 0Note 
+that the lowest five bits of the target address also determine the address within the scratchpad, where intermediate 
+stora ge of data will beginThis address is called byte offsetIf the target address (TA1) for a Write command is 
+03CH for example, then the scratchpad stores incoming data beginning at the byte offset 1CH and is full after only 
+four bytesThe corresponding ending offset in this example is 1FHFor maximum data bandwidth, the target 
+address for writing should point to the beginning of a new page, i.e., the byte offset is 0Thus the full 32 -byte 
+capacity of the scratchpad is available, resulting also in the ending offset of 1FHHowever, it is possible to write 
+one or several contiguous bytes somewhere within a pageThe ending offset together with the partial flag support 
+the master checking the data integrity after a Write commandThe highest valued bit of t he E/S register, called AA 
+is valid only if the PF flag reads 0If PF is 0 and AA is 1, a copy has taken placeWriting data to the scratchpad 
+clears the AA flag
+ 
+Figure 8Address Registers  
+ 
+Bit # 7 6 5 4 3 2 1 0 
+Target Address (TA1)  T7 T6 T5 T4 T3 T2 T1 T0 
+         
+Target Address (TA2)  T15 T14 T13 T12 T11 T10 T9 T8 
+ 
+        Ending Address with  
+Data Status (E/S)  
+(Read Only)  AA 0 PF E4 E3 E2 E1 E0 
+  
+WRITING WITH VERIFIC ATION  
+To write data to the DS28E04-100 EEPROM sections, the scratchpad has to be used as intermediate storageFirst 
+the master issues the Write Scratchpad command to specify the desired target address, followed by the data to be 
+written to the scratchpadUnder certain conditions (see Write Scratchpad command) the master will receiv e an 
+inverted CRC16 of the command, address (actual address sent), and data (as sent by the master) at the end of the 
+Write Scratchpad command sequenceKnowing this CRC value, the master can compare it to the value it has calculated to decide whether the communication was successful and proceed to the Copy Scratchpad commandIf 
+the master could not receive the CRC16, it should use the Read Scratchpad command to verify data integrityAs a 
+preamble to the scratchpad data, the DS28E04-100 repeats the target  address TA1 and TA2 and sends the 
+contents of the E/S registerIf the PF flag is set, data did not arrive correctly in the scratchpad or there was a loss 
+of power since data was last written to the scratchpadThe master does not need to continue reading; it can start a 
+new trial to write data to the scratchpadSimilarly, a set AA flag together with a cleared PF flag indicates that the device did not recognize the Write commandIf everything went correctly, both flags are cleared and the ending 
+offset i ndicates the address of the last byte written to the scratchpad Now the master can continue reading and 
+verifying every data byteAfter the master has verified the data, it can send the Copy Scratchpad commandThis command must be followed exactly by the data of the three address registers, TA1, TA2, and E/SThe master 
+should obtain the contents of these registers by reading the scratchpad 
+ 
+ 
+DS28E04-100: 4096-Bit 1 -Wire Addressable EEPROM with PIO  
+ 
+ 
+13 of 37 MEMORY/CONTROL FUNCT ION COMMANDS  
+The Memory/Control Function Flow Chart  (Figure 9) describes the protocols neces sary to access the memory and 
+the PIO pins of the DS28E04-100Examples on how to use these functions are included at the end of this 
+documentThe communication between master and DS28E04-100 takes place either at standard speed (default, 
+OD = 0) or at Ov erdrive peed (OD = 1)If not explicitly set into the Overdrive Mode, the DS28E04-100 powers up in 
+standard speed 
+ 
+WRITE SCRATCHPAD COMMAND [0Fh]  
+The Write Scratchpad command applies to the data memory, and the writeable addresses in the register pageAfter issuing the Write Scratchpad command, the master must first provide the 2-byte target address, followed by 
+the data to be written to the scratchpadThe data is written to the scratchpad starting at the byte offset of T 4:T0
+The ending offset (E4:E0) i s the byte offset at which the master stops writing dataOnly full data bytes are 
+acceptedIf the last data byte is incomplete, its content will be ignored and the partial byte flag PF will be set 
+ When executing the Write Scratchpad command, the CRC generator inside the DS28E04-100  (Figure 18 ) 
+calculates a CRC of the entire data stream, starting at the command code and ending at the last data byte as sent 
+by the masterThis CRC is generated using the CRC16 polynomial by first clearing the CRC generator  and then 
+shifting in the command code (0FH) of the Write Scratchpad command, the Target Addresses (TA1 and TA2)  as 
+supplied by the master , and all the data bytesThe master may end the Write Scratchpad command at any time
+However, if the end of the scratchpad is reached (E 4:E0 = 11111b), the master can send 16 read-time slots and 
+receive the CRC generated by the DS28E04-100 
+ 
+If a Write Scratchpad is attempted to a write-protected location, the scratchpad is loaded with the data already in 
+memory, rather than the data transmittedSimilarly, if the target address page is in EPROM mode, the scratchpad 
+is loaded with the bitwise logical AND of the transmitted data and data already in memory 
+ 
+READ SCRATCHPAD COMM AND [AA h] 
+The Read Scratchpad command allows  verification of the target address and the scratchpad dataAfter issuing the 
+command code, the master begins readingThe first two bytes are the target addressThe next byte is the ending 
+offset/data status byte (E/S) followed by the scratchpad data, w hich may be different from what the master 
+originally sentThis is of particular importance if the target address is within the register page or a page in either 
+Write -Protected or EPROM modesSee the Write Scratchpad description for detailsThe master shoul d read 
+E4:E0 -T4:T0+1 bytes , after which it receives the inverted CRC16, based on data as it was sent by the DS28E04-
+100If the master continues reading after the CRC, all data will be logic 1s 
+ 
+COPY SCRATCHPAD [55h]  
+The Copy Scratchpad command is used to copy data from the scratchpad to the data memory and the writable sections of the Register PageAfter issuing the Copy Scratchpad command, the master must provide a 3-byte 
+authorization pattern, which should have been obtained by an immediately preceding Read Scratchpad command
+This 3 -byte pattern must exactly match the data contained in the three address registers (TA1, TA2, E/S, in that 
+order)If the pattern matches, the target address is valid, the PF flag is not set, and the target memory is not copy -
+protected, the AA (Authorization Accepted) flag is set and the copy beginsThe data to be copied is determined by 
+the three address registersThe scratchpad data from the beginning offset through the ending offset will be copied 
+to memory, starti ng at the target addressAnywhere from 1 to 32 bytes can be copied with this commandThe 
+device’s internal data transfer takes 10ms maximum during which the voltage on the 1- Wire bus must not fall below 
+2.8VAfter waiting 10ms, the master may issue read time slots to receive AAh confirmation bytes until the master 
+issues a reset pulseIf the PF flag is set or the target memory is copy -protected, the copy will not begin and the AA 
+flag will not be set 
+ 
+ 
+DS28E04-100: 4096-Bit 1 -Wire Addressable EEPROM with PIO  
+ 
+ 
+14 of 37 Figure 9 -1Memory/Control Function Flow Chart  
+ 
+0Fh 
+Write Scratch - 
+pad ?  
+Bus Master TX EEPROM 
+Array Target Address  
+TA1 (T7:T0), TA2 (T15:T8)  Y N To Figure 9 
+2nd Part  
+From Figure 9 
+2nd Part  Bus Master TX Memory 
+Function Command  
+To ROM Functions 
+Flow Chart (Figure 14)  From ROM Functions 
+Flow Chart (Figure 14)  
+Master  
+TX Reset ?  Master TX Data Byte  
+To Scratchpad Offset  
+N 
+Y DS28E04 sets Scratchpad  
+Offset = (T4:T0 ), 
+Clears PF, AA  
+ScrpadOffset  
+= 11111b?  
+DS28E04 TX CRC16  
+of Command, Address, 
+Data Bytes as they were 
+sent by the bus master  DS28E04  
+Increments  
+Scratchpad 
+Offset  
+Master  
+TX Reset ?  
+Y N Bus Master  
+RX “1”s  N Partial  
+Byte ?  
+PF = 1  Y N Y Applies only if the page is not write 
+protected or in EPROM modeIf write -
+protected, then the DS28E04 copies the 
+data byte from the target address into 
+the scratchpad If in EPROM mode, 
+then the DS28E04 stores the bitwise 
+logical AND o f the transmitted byte and 
+the data byte from the targeted address 
+into the scratchpad 
+ 
+DS28E04-100: 4096-Bit 1 -Wire Addressable EEPROM with PIO  
+ 
+ 
+15 of 37 Figure 9 -2Memory/Control Function Flow Chart (continued)  
+AAh
+Read Scratch-
+Pad ?
+DS28E04 sets Scratchpad
+Offset = (T4:T0)Bus Master RX
+TA1 (T7:T0), TA2 (T15:T8)
+and E/S Byte
+Bus Master RX Data Byte
+from Scratchpad Offset
+Bus Master RX CRC16
+of Command, Address,
+E/S Byte, Data Bytes as
+sent by the DS28E04Y
+Bus Master
+RX “1”sMaster
+TX Reset ?
+YNMaster
+TX Reset ?DS28E04
+Increments
+Scratchpad
+Offset
+Scrpad Offset
+= E4:E0 ?Y
+YN
+NNFrom Figure 9
+1st  Part
+To Figure 9
+1st  PartTo Figure 9
+3rd  Part
+From Figure 9
+3rd  PartSee note in Write
+Scratchpad flow chart
+for additional details 
+DS28E04-100: 4096-Bit 1 -Wire Addressable EEPROM with PIO  
+ 
+ 
+16 of 37 Figure 9 -3Memory/Control Function Flow Chart (continued)  
+ 
+From Figure 9 
+2nd Part  
+To Figure 9  
+2nd Part  To Figure 9  
+4th Part  
+From Figure 9 
+4th Part  * 1-Wire idle high 10ms for power  55h 
+Copy Scratch - 
+Pad ?  
+Bus Master TX  
+TA1 (T7:T0), TA2 (T15:T8)  
+and E/S Byte  Y N 
+Bus Master  
+RX “1”s  
+Master  
+TX Reset ?  
+Y N Y AuthCode  
+Match ?  
+N 
+N Copy - 
+Protected ?  Y 
+DS28E04 copies Scratch - 
+pad Data to Address  AA = 1  
+* 
+DS28E04 TX “0”  
+Master  
+TX Reset ?  
+Master  
+TX Reset ?  
+Y N DS28E04 TX “1”  N Y Applicable to all R/W 
+memory locations 
+Y T15:T0  
+< 0220h ?  
+N 
+PF = 0 ?  
+Y N 
+ 
+DS28E04-100: 4096-Bit 1 -Wire Addressable EEPROM with PIO  
+ 
+ 
+17 of 37 Figure 9 -4Memory/Control Function Flow Chart (continue d) 
+ 
+ 
+DS28E04-100: 4096-Bit 1 -Wire Addressable EEPROM with PIO  
+ 
+ 
+18 of 37 Figure 9 -5Memory/Control Function Flow Chart (continued)  
+ 
+ 
+DS28E04-100: 4096-Bit 1 -Wire Addressable EEPROM with PIO  
+ 
+ 
+19 of 37 Figure 9 -6Memory/Control Function Flow Chart (continued)  
+ 
+ 
+DS28E04-100: 4096-Bit 1 -Wire Addressable EEPROM with PIO  
+ 
+ 
+20 of 37 READ MEMORY [F0 h] 
+The Read Memory command is the general function to read data from the DS28E04-100After issuing the 
+command, the master must provide a 2-byte target address in the range of 0000h to 0225hAfter these two bytes, 
+the master reads data beginning from the target address and may continue until address 0225hIf the master 
+continues reading, the result will be logic 1sThe device's internal TA1, TA2, E/S, and scratchpad contents are not affected by a Read Memory command 
+ 
+The hardware of the DS28E04-100 provides a means to accomplish error -free writing to the memory sectionTo 
+safeguard reading data in the 1- Wire environment and to simultaneously speed up data transfers, it is 
+recommended to packetize data into data packets the size of one memory page eachSuch a packet would typically st ore a 16-bit CRC with each page of data to insure rapid, error -free data transfers that eliminate having to 
+read a page multiple times to determine if the received data is correct or not(See Application Note 114 for the 
+recommended file structure.)  
+ 
+WRIT E REGISTER [CCh]  
+The conditional search settings and the status/control register are volatileThey need to be loaded after every 
+power -up cycle with the Write Register commandAfter issuing the command, the master sends the 2-byte target 
+address, which s hould be a value between 0223h and 0225hNext the master sends the byte to be written to the 
+addressed cellIf the address was valid, the byte is immediately written to its memory locationThe master now can either end the com mand by issuing a 1- Wire r eset or send another byte for the next higher addressOnce 
+memory address 0225h has been written, any subsequent data bytes will be ignoredThe master has to send a 
+1-Wire reset to end the commandSince the Write Register flow does not include any error -checking for the new 
+register data, it is important to verify correct writing by reading the registers using the Read Memory command 
+ 
+PIO ACCESS READ [F5h]  
+In contrast to reading the PIO logical state from address 0220h, this command reads the PIO logic al status in an 
+endless loopAfter 32 bytes of PIO pin status the DS28E04-100 inserts an inverted CRC16 into the data stream, 
+which allows the master to verify whether the data was received error -freeA PIO Access Read can be terminated 
+at any time with a 1- Wire ResetThe state of the POL pin does not affect this command 
+ 
+The status of both PIO channels is sampled at the same timeThe first sampling occurs during the last (most 
+significant) bit of the command code F5hThe first (least significant) bit  of the PIO status byte is associated to P0, 
+and the next bit to P1The other 6 bits of a PIO status byte do not have corresponding PIO pins; they always read 
+"1"While the master receives the last bit of the PIO status byte, the next sampling occurs and so on until the 
+master has received 32 PIO samplesNext the master receives the inverted CRC16 of the command byte and 32 PIO samples (first pass) or the CRC of 32 PIO samples (subsequent passes)While the last (most significant) bit of the CRC is trans mitted, the next PIO sampling takes placeThe sampling occurs with a delay of t
+REH + x from the 
+rising edge of the MS bit of the previous byte, as shown in Figure 10The value of "x" is approximately 0.2µs 
+ 
+Figure  10PIO Access Read Timing Diagram  
+IOExample - Sampled State = FEh
+MS 2 bits of
+previous byteLS 2 bits of
+data byte ( FEh)
+VTH
+Sampling PointtREH+x
+ 
+Notes:  
+1 The "previous byte" could be the command code, the data byte resulting from the previous PIO sample, or the MS byte of a CRC16 
+2 The sample point timing also applies to the PIO Access Write and Pulse command, with the "prev ious byte" 
+being the write confirmation byte (AAh) 
+DS28E04-100: 4096-Bit 1 -Wire Addressable EEPROM with PIO  
+ 
+ 
+21 of 37 PIO ACCESS WRITE [5A h] 
+The PIO Access Write command is the only way to write to the PIO output -latch state register (address 0221h), 
+which controls the open-drain output transistors of the PIO channelsIn an endless loop, this command first writes 
+new data to the PIO and then reads back the PIO statusThe implicit read-after -write can be used by the master for 
+status verificationA PIO Access Write can be terminated at any time with a 1- Wire ResetThe state of the POL pin 
+does not affect this command 
+ 
+After the command code, the master transmits a byte that determines the new state of the PIO output transistors
+The first (least significant) bit is associated to P0; the next bit affects P1The other 6 bits of the new state byte do 
+not have corresponding PIO pinsThese bits should always be transmitted as "1"sTo switch the output transistor 
+off (nonconducting) the corresponding bit value is 1To switch the transistor on, that bit needs to be 0Thi s way the 
+data byte transmitted as the new PIO output state arrives in its true form at the PIO pinsTo protect the 
+transmission against data errors, the master must repeat the new PIO byte in its inverted formOnly if the 
+transmission was error -free does the PIO status changeThe actual PIO transition to the new state occurs with a 
+delay of t REH + x from the rising edge of the MS bit of the inverted PIO byte, as shown in Figure 11The value of "x" 
+is approximately 0.2µsTo inform the master about the successful change of the PIO status, the DS28E04-100 transmits a confirmation byte with the data pattern AAhAfter the MS bit of the confirmation byte is transmitted, the 
+DS28E04-100 samples the status of the PIO pins, as shown in Figure 10, and sends it to the masterDepending on 
+the data the master can either continue writing more data to the PIO or issue a 1- Wire reset to end the command 
+ 
+Figure  11PIO Access Write Timing Diagram  
+ 
+IO
+PIOExample - Old State = FEh, New state = FDh
+MS 2 bits of inverted
+new-state byteLS 2 bits of confir-
+mation byte (AAh)
+FEh FDhVTH
+tREH+x
+ 
+ 
+PIO ACCESS PULSE [A5h]  
+As a convenient alternative to using PIO Access Write, the PIO Access Pulse command generates a self -timed 
+pulse on the selected PIO outputsThe polarity of the pulse is determined by the state of the POL pinIf POL = 1, 
+the pulse is negative (active low) and vice versaThe PIO Access Pulse command is accepted only if the device is 
+VCC powered 
+ 
+After the command code the master transmits a selection mask that specifies the PIO at which the pulse is to be 
+generatedA PIO is selected if the corresponding bit in the sel ection mask is a "1"The first (least significant) bit is 
+associated to P0; the next bit affects P1The other 6 bits of the selection mask do not have corresponding PIO pinsThese bits should always be transmitted as "1"sTo protect the transmission against data errors, the master 
+must repeat the selection mask in its inverted formOnly if the transmission was error -free does the pulse occur
+The pulse begins with a delay of t
+REH + x from the rising edge of the MS bit of the inverted selection mask, as  
+shown in Figure 12The value of "x" is approximately 0.2µsTo inform the master about the successful pulse 
+generation, the DS28E04-100 transmits a confirmation byte with the data pattern AAhWhile the last bit of the 
+confirmation byte is transmitted, t he DS28E04-100 samples the status of the PIO pins, as shown in Figure 10, and 
+sends it to the masterNow the master can issue a 1-Wire reset to exit the command flowThis does not terminate 
+the pulse on a PIO pin 
+ 
+DS28E04-100: 4096-Bit 1 -Wire Addressable EEPROM with PIO  
+ 
+ 
+22 of 37 Figure  12PIO Access Pulse Timing Dia gram 
+tPULSEIO
+PIOMS 2 bits of inverted
+Selection MaskLS 2 bits of confir-
+mation byte (AAh)
+VTH
+tREH+x
+POL=1
+POL=0 
+ 
+RESET ACTIVITY LATCHES [C3 h] 
+Each PIO channel includes an activity latch that is set whenever there is a state transition at a PIO pin of duration 
+greater than t PWMIN This change can be caused by an external event/signal  or by writing to the PIO or by 
+generating a pulseDepending on the application there may be a need to reset the activity latch after having 
+captured and serviced an external eventSince there is only read access to the PIO Activity Latch State Register,  
+the DS28E04-100 supports a special command to reset these latchesAfter having received the command code, 
+the device resets all activity latches simultaneouslyThere are two ways for the master to verify the execution of the Reset Activity Latches commandOne way is to start reading from the 1- Wire line right after the command code 
+is transmittedIn this case, the master reads AAh bytes until it sends a 1- Wire resetThe other way is reading 
+register address 0222h  
+ 
+1-Wire BUS SYSTEM  
+The 1- Wire bus i s a system that has a single bus master and one or more slavesIn all instances the DS28E04-
+100 is a slave deviceThe bus master is typically a microcontrollerThe discussion of this bus system is broken 
+down into three topics: hardware configuration, t ransaction sequence, and 1- Wire signaling (signal types and 
+timing)The 1- Wire protocol defines bus transactions in terms of the bus state during specific time slots, which are 
+initiated on the falling edge of sync pulses from the bus master 
+  
+HARDWARE CONFIGURATION  
+The 1- Wire bus has only a single line by definition; it is important that each device on the bus be able to drive it at 
+the appropriate timeTo facilitate this, each device attached to the 1- Wire bus must have open-drain or tri -state 
+outputs The 1- Wire port of the DS28E04-100 is open drain with an internal circuit equivalent to that shown in 
+Figure 13 
+ 
+A multidrop bus consists of a 1- Wire bus with multiple slaves attachedThe DS28E04-100 supports both a 
+standard and Overdrive communication speed of 15.4kbps (max) and 111kbps (max), respectivelyNote that legacy 1- Wire products support a standard communication speed of 16.3kbps and Overdrive of 142kbpsThe 
+slightly reduced rates for the DS28E04-100 are a result of additional recovery times, which in turn were driven by a 
+1-Wire physical interface enhancement to improve noise immunityThe value of the pullup resistor primarily 
+depends on the network size and load conditionsThe DS28E04-100 requires a pullup resistor of 2.2k Ω (max) at 
+any speed 
+ The idle state for the 1- Wire bus is highIf, for any reason, a transaction needs to be suspended, the bus MUST be 
+left in the idle state if the transaction is to resumeIf this does not occur and the bus is left low for more than 16µs 
+(Overdriv e speed) or more than 120µs (standard speed), one or more devices on the bus can be reset 
+ 
+DS28E04-100: 4096-Bit 1 -Wire Addressable EEPROM with PIO  
+ 
+ 
+23 of 37  Figure 13Hardware Configuration   
+ 
+ 
+Open -Drain  
+Port Pin  RX = RECEIVE  
+ 
+TX = TRANSMIT  100 Ω 
+MOSFET  VPUP 
+RX 
+TX TX RX DATA  RPUP 
+11µA
+Max BUS MASTER  DS28E04 1 -Wire PORT  
+ 
+ 
+ 
+TRANSACTION SEQUENCE  
+The protocol for accessing the DS28E04-100 through the 1- Wire port is as f ollows:  
+ 
+ Initialization 
+ ROM Function Command  
+ Memory/Control Function Command  
+ Transaction/Data  
+ 
+INITIALIZATION  
+All transactions on the 1- Wire bus begin with an initialization sequenceThe initialization sequence consists of a 
+reset pulse transmitted by the bus master followed by presence pulse(s) transmitted by the slave(s)The presence 
+pulse lets the bus master know that the DS28E04-100 is on the bus and is ready to operateFor more details, see 
+the 1-Wire Signaling section 
+ 
+1-Wire ROM FUNCTION COMMANDS  
+Once the bus master has detected a presence, it can issue one of the eight ROM function commands that the 
+DS28E04-100 supportsAll ROM function commands are 8 bits longA list of these commands follows (refer to the 
+flow chart in Figure 14) 
+ 
+READ ROM [33 h] 
+This command allows the bus master to read the DS28E04-100’s 8 -bit family code, unique 40-bit serial number, 8-
+bit address byte, and 8-bit CRCThe lower order 7 bits of the address byte read back the state of the address pins 
+A6 to A0See also Figur e 3This command can only be used if there is a single slave on the busIf more than one 
+slave is present on the bus, a data collision occurs when all slaves try to transmit at the same time (open drain 
+produces a wired-AND result)The resultant family code and 48-bit serial number result in a mismatch of the CRC
+Note that there will also be a CRC mismatch if one or more of the external address inputs are connected to GND
+The ROM CRC is hardcoded with A6 to A0 set to 1sThe master should comprehend th is and calculate the ROM 
+CRC similarly 
+ 
+MATCH ROM [55 h] 
+The Match ROM command, followed by a 64-bit ROM sequence, allows the bus master to address a specific 
+DS28E04-100 on a multidrop busOnly the DS28E04-100 that exactly matches the 64-bit ROM sequence, 
+including the external address, responds to the following Memory/Control Function commandAll other slaves wait for a reset pulseThis command can be used with a single or multiple devices on the bus 
+  
+DS28E04-100: 4096-Bit 1 -Wire Addressable EEPROM with PIO  
+ 
+ 
+24 of 37 SEARCH ROM [F0h]  
+When a system is initially brought up, the bus master might not know the number of devices on the 1- Wire bus or 
+their device ID numbersBy taking advantage of the wired-AND property of the bus, the master can use a process 
+of elimination to identify the device ID numbers of all slave dev icesFor each bit of the device ID number, starting 
+with the least significant bit, the bus master issues a triplet of time slotsOn the first slot, each slave device participating in the search outputs the true value of its device ID number bitOn the second slot, each slave device participating in the search outputs the complemented value of its device ID number bitOn the third slot, the master 
+writes the true value of the bit to be selectedAll slave devices that do not match the bit written by the master stop 
+participating in the searchIf both of the read bits are zero, the master knows that slave devices exist with both 
+states of the bitBy choosing which state to write, the bus master branches in the romcode treeAfter one complete 
+pass, the bus master knows the device ID number of a single deviceAdditional passes identify the device ID 
+numbers of the remaining devicesRefer to Application Note 187:  1-Wire Search Algorithm for a detailed 
+discussion, including an example 
+ 
+Note:  Since the DS28E04-100 lasered ROM CRC is calculated assuming the address inputs are all logic 1, then 
+any address inputs that are connected to GND are not validatedIt is recommended to do a double search when 
+building a list of devices on the 1- Wire line 
+ 
+CONDITIONAL SEARCH [ECh]  
+The Conditional Search ROM command operates similarly to the Search ROM command except that only those 
+devices, which fulfill certain conditions (CSR = 1), will participate in the searchThis function provides an efficient 
+means for the bus master to identify devices on a multidrop system that have to signal an important eventAfter 
+each pass of the conditional search that successfully determined the 64-bit ROM code for a specific device on the 
+multidrop bus, that particular device can be individually accessed as if a Match ROM had been issued, since all other devices will have dropped out of the search process and will be waiting for a reset pulseThe DS28E04-100 
+responds to the conditional search if the CSR signal is activeSee the description of the registers at addresses 0223h to 0225h and Figure 7 for more details 
+ 
+SKIP ROM [CCh]  
+This command can save time in a single-drop bus system by allowing the bus master to access the memory functions without providing the 64-bit ROM codeI f more than one slave is present on the bus and, for example, a 
+Read command is issued following the Skip ROM command, data collision occurs on the bus as multiple slaves transmit simultaneously (open-drain pulldowns produce a wired-AND result) 
+ 
+RESUME [A 5h] 
+To maximize the data throughput in a multidrop environment, the Resume function is availableThis function checks the status of the RC bit and, if it is set, directly transfers control to the Memory functions, similar to a Skip 
+ROM commandThe only w ay to set the RC bit is through successfully executing the Match ROM, Search ROM, or 
+Overdrive Match ROM commandOnce the RC bit is set, the device can repeatedly be accessed through the 
+Resume Command functionAccessing another device on the bus clears the RC bit, preventing two or more 
+devices from simultaneously responding to the Resume Command function 
+ 
+OVERDRIVE SKIP ROM [3C h] 
+On a single-drop bus this command can save time by allowing the bus master to access the memory functions 
+without providing the 64-bit ROM codeUnlike the normal Skip ROM command, the Overdrive Skip ROM sets the 
+DS28E04-100 in the Overdrive mode (OD = 1)All communication following this command has to occur at 
+Overdrive speed until a reset pulse of minimum 480µs duration res ets all devices on the bus to standard speed 
+(OD = 0) 
+ 
+When issued on a multidrop bus, this command sets all Overdrive-supporting devices into Overdrive modeTo 
+subsequently address a specific Overdrive-supporting device, a reset pulse at Overdrive speed has to be issued 
+followed by a Match ROM or Search ROM command sequenceThis speeds up the time for the search processIf 
+more than one slave supporting Overdrive is present on the bus and the Overdrive Skip ROM command is followed 
+by a Read command, da ta collision occurs on the bus as multiple slaves transmit simultaneously (open-drain 
+pulldowns produce a wired-AND result) 
+DS28E04-100: 4096-Bit 1 -Wire Addressable EEPROM with PIO  
+ 
+ 
+25 of 37 Figure 14- 1ROM Functions Flow Chart  
+ 
+From Figure 14 
+2nd Part  To Memory Functions 
+Flow Chart (Figure 9)  Master TX Bit 0  
+Master TX Bit 63  Master TX Bit 1  
+RC = 1  DS28E04 TX  
+Family Code  
+(1 Byte)  
+Bit 0 
+Match?  
+Y N 
+Bit 1 
+Match?  
+Y N 
+Bit 63  
+Match?  
+Y N DS28E04 TX Bit 0  
+DS28E0 4 TX Bit 0  
+Master TX Bit 0  
+DS28E04 TX Bit 1  
+DS28E04 TX Bit 1  
+Master TX Bit 1  
+DS28E04  TX Bit 63  
+DS28E04  TX Bit 63  
+Master TX Bit 63  
+RC = 1  Bit 0 
+Match?  
+Y N 
+Bit 1 
+Match?  
+Y N 
+Bit 63  
+Match?  
+Y N To Figure 14 
+2nd Part  
+RC = 0  RC = 0  RC = 0  RC = 0  Y Y Y Y N F0h 
+Search ROM  
+Command?  N 55h 
+Match ROM  
+Command?  N ECh 
+CondSearch  
+Command?  N 33h 
+Read ROM  
+Command?  
+To Figure 14 
+2nd Part  From Memory Functions 
+Flow Chart (Figure 9)  
+Bus Master TX ROM 
+Function Command  DS28E04 TX 
+Presence Pulse  OD 
+Reset Pulse?  N 
+Y OD = 0  Bus Master TX 
+Reset Pulse  From Figure 14, 2nd Part  
+CSR = 1?  
+Y N 
+DS28E04 TX Bit 0  
+DS28E04 TX Bit 0  
+Master TX Bit 0  
+DS28E04 TX Bit 1  
+DS28E04 TX Bit 1  
+Master TX Bit 1  
+DS28E04  TX Bit 63  
+DS28E04  TX Bit 63  
+Master TX Bit 63  
+RC = 1  Bit 0 
+Match?  
+Y N 
+Bit 1 
+Match?  
+Y N 
+Bit 63  
+Match?  
+Y N DS28E04 TX  
+CRC Byte  DS28E04 TX  
+ExtAddress  
+(7 bits)  
+DS28E04 TX  
+Serial Number  
+(40 bits)  DS28E04 TX  
+"0" (1 bit)  
+The CRC is hard -coded assuming 
+all external address bits ar e 1's 
+ 
+DS28E04-100: 4096-Bit 1 -Wire Addressable EEPROM with PIO  
+ 
+ 
+26 of 37 Figure 14- 2ROM Functions Flow Chart (continued)  
+ 
+From Figure 14 
+1st Part  
+From Figure 14 
+1st Part  To Figure 14, 1st Part  
+RC = 1 ?  N 
+Y RC = 0 ; OD = 1  
+Master TX Bit 0  
+Master TX Bit  63 Master TX Bit 1  
+RC = 1  Bit 0 
+Match?  
+Y N 
+Bit 1 
+Match?  
+Y N 
+Bit 63  
+Match?  
+Y N Y N 69h 
+Overdrive Match  
+ROM?  
+RC = 0 ; OD = 1  
+Master  
+TX Reset ?  Y 
+N 
+Master  
+TX Reset ?  
+N Y Y N 3Ch 
+Overdrive  
+Skip ROM?  
+Y N A5h 
+Resume  
+Command?  
+RC = 0  Y N CCh 
+Skip ROM  
+Command?  
+To Figure 14  
+1st Part  
+ 
+DS28E04-100: 4096-Bit 1 -Wire Addressable EEPROM with PIO  
+ 
+ 
+27 of 37 OVERDRIVE MATCH ROM [69h]  
+The Overdrive Match ROM command followed by a 64-bit ROM sequence transmitted at Overdrive speed allows 
+the bus master to address a specific DS28E04-100 on a multidrop bus and to simultaneously set it in Overdrive 
+modeOnly the DS28E04-100 that exactly matches the 64-bit ROM sequence responds to the subsequent 
+Memory/Control Function commandSlaves already in Overdrive mode from a previous Overdrive Skip or successful Overdrive Match command remain in Overdrive modeAll overdrive-capable slaves return to standard speed at the next Reset Pulse of minimum 480µs durationThe Overdrive Match ROM command can be used with 
+a single or multiple devices on the bus 
+ 
+1-Wire SIGNALING  
+The DS28E04-100 requires strict protocols  to ensure data integrityThe protocol consists of four types of signaling 
+on one line: Reset Sequence with Reset Pulse and Presence Pulse, Write- Zero, Write-One, and Read-Data
+Except for the Presence pulse, the bus master initiates all falling edgesThe DS28E04-100 can communicate at 
+two different speeds, standard speed, and Overdrive speedIf not explicitly set into the Overdrive mode, the DS28E04-100 communicates at standard speedWhile in Overdrive Mode, the fast timing applies to all waveforms 
+ 
+To get from idle to active, the voltage on the 1- Wire line needs to fall from V
+PUP below the threshold V TLTo get 
+from active to idle, the voltage needs to rise from V ILMAX past the threshold V THThe time it takes for the voltage to 
+make this rise is see n in Figure 15 as ' ε' and its duration depends on the pullup resistor (R PUP) used and the 
+capacitance of the 1- Wire network attached The voltage V ILMAX is relevant for the DS28E04-100 when determining 
+a logical level, not triggering any events 
+ Figure 15 shows the initialization sequence required to begin any communication with the DS28E04-100A Reset 
+Pulse followed by a Presence Pulse indicates the DS28E04-100  is ready to receive data, given the correct ROM 
+and Memory/Control Function commandIf the bus master uses slew -rate control on the falling edge, it must pull 
+down the line for t
+RSTL + tF to compensate for the edgeA t RSTL duration of 480µs or longer exits the Overdrive 
+Mode, returning the device to standard speedIf the DS28E04-100 is in Over drive Mode and t RSTL is no longer than 
+80µs, the device remains in Overdrive ModeIf the device is in Overdrive Mode and t RSTL is between 80µs and 
+480µs, the device will reset, but the communication speed is undetermined 
+ 
+Figure 15Initialization Proc edure: Reset and Presence Pulse  
+ 
+ 
+After the bus master has released the line, it goes into receive modeNow the 1-Wire bus is pulled to V PUP through 
+the pullup resistor, or in case of a DS2482-x00 or DS2480B driver, by active ci rcuitryWhen the threshold V TH is 
+crossed, the DS28E04-100 waits for t PDH and then transmits a Presence Pulse by pulling the line low for t PDLTo 
+detect a presence pulse, the master must test the logical state of the 1- Wire line at t MSP 
+ 
+The t RSTH window must be at least the sum of t PDHMAX , tPDLMAX , and t RECMIN Immediately after t RSTH is expired, the 
+DS28E04-100 is ready for data communicationIn a mixed population network, t RSTH should be extended to 
+minimum 480µs at standard speed and 48µs at Overdr ive speed to accommodate other 1- Wire devices 
+ 
+DS28E04-100: 4096-Bit 1 -Wire Addressable EEPROM with PIO  
+ 
+ 
+28 of 37  Read/Write Time Slots  
+Data communication with the DS28E04-100 takes place in time slots, which carry a single bit eachWrite time slots 
+transport data from bus master to slaveRead time slots transfer data from slave to masterFigure 16 illustrates 
+the definitions of the write and read time slots 
+ All communication begins with the master pulling the data line lowAs the voltage on the 1- Wire line falls below the 
+threshold V
+TL, the DS28E04-100 starts its  internal timing generator that determines when the data line is sampled 
+during a write time slot and how long data is valid during a read time slot 
+ 
+Figure 16Read/Write Timing Diagram  
+ 
+Write -One Time Slot  
+RESISTOR MASTERVPUP
+VIHMASTER
+VTH
+VTL
+VILMAX
+0V
+tFtSLOTtW1L
+ε
+ 
+ 
+Write -Zero Time Slot 
+ 
+ RESISTOR  MASTER  tREC VPUP 
+VIHMASTER  
+VTH 
+VTL 
+VILMAX 
+0V 
+tF tSLOT tW0L 
+ε 
+ 
+ 
+Read -Data Time Slot  
+ 
+ 
+ 
+DS28E04-100: 4096-Bit 1 -Wire Addressable EEPROM with PIO  
+ 
+ 
+29 of 37 Master -to-Slave  
+For a write -one  time slot, the voltage on the data line must have crossed the V TH threshold before the write -one 
+low time t W1LMAX  is expiredFor a write -zero time slot, the voltage on the data line must stay below the V TH 
+threshold until the write-zero low time t W0LMIN  is expiredFor the most reliable communication, the voltage on the 
+data line should not exceed V ILMAX during the entire t W0L or t W1L window After the V TH threshold has been crossed, 
+the DS28E04-100 needs a recovery time t REC before it is ready for the next time slot 
+ 
+Slave -to-Master  
+A read -data time slot begins like a write-one time slotThe voltage on the data line must remain below V TL until the 
+read low time t RL is expiredDuring the t RL window, when responding with a 0, the DS28E04-100 starts pulling the 
+data line low; its internal timing generator determines when this pulldown ends and the voltage starts rising again
+When responding w ith a 1, the DS28E04-100 does not hold the data line low at all, and the voltage starts rising as 
+soon as t RL is over 
+ 
+The sum of t RL + δ (rise time) on one side and the internal timing generator of the DS28E04-100 on the other side 
+define the master sam pling window (t MSRMIN  to t MSRMAX ) in which the master must perform a read from the data line
+For the most reliable communication, t RL should be as short as permissible, and the master should read close to 
+but no later than t MSRMAX After reading from the data line, the master must wait until t SLOT is expiredThis 
+guarantees sufficient recovery time t REC for the DS28E04-100 to get ready for the next time slotNote that t REC 
+specified herein applies only to a single DS28E04-100 attached to a 1- Wire lineF or multidevice configurations, 
+tREC needs to be extended to accommodate the additional 1- Wire device input capacitanceAlternatively, an 
+interface that performs active pullup during the 1- Wire recovery time such as the DS2482-x00 or DS2480B 1- Wire 
+line dr ivers can be used 
+ 
+ 
+IMPROVED NETWORK BEH AVIOR (SWITCHPOINT H YSTERESIS)  
+In a 1- Wire environment, line termination is possible only during transients controlled by the bus master (1 -Wire 
+driver)1- Wire networks, therefore, are susceptible to noise of various originsDepending on the physical size and 
+topology of the network, reflections from end points and branch points can add up, or cancel each other to some 
+extentSuch reflections are visible as glitches or ringing on the 1- Wire communication lineNoi se coupled onto the 
+1-Wire line from external sources can also result in signal glitchingA glitch during the rising edge of a time slot can 
+cause a slave device to lose synchronization with the master and, consequently, result in a search ROM command coming to a dead end or cause a device-specific function command to abortFor better performance in network 
+applications, the DS28E04-100 uses a new 1- Wire front end, which makes it less sensitive to noise and also 
+reduces the magnitude of noise injected by the slave device itself 
+ 
+The 1- Wire front end of the DS28E04-100 differs from traditional slave devices in four characteristics 
+1) The falling edge of the presence pulse has a controlled slew rateThis provides a better match to the line 
+impedance than a digitally switched transistor, converting the high- frequency ringing known from traditional 
+devices into a smoother low -bandwidth transitionThe slew -rate control is specified by the parameter t
+FPD, 
+which has different values for standard and Overdrive s peed 
+2) There is additional lowpass filtering in the circuit that detects the falling edge at the beginning of a time slot
+This reduces the sensitivity to high- frequency noiseThis additional filtering does not apply at Overdrive speed 
+3) There is a hyster esis at the low -to-high switching threshold V THIf a negative glitch crosses V TH but does not go 
+below V TH - VHY, it will not be recognized (Figure 17, Case A)The hysteresis is effective at any 1- Wire speed 
+4) There is a time window specified by the risi ng edge hold-off time t REH during which glitches are ignored, even if 
+they extend below V TH - VHY threshold (Figure 17, Case B, t GL < tREH)Deep voltage droops or glitches that 
+appear late after crossing the V TH threshold and extend beyond the t REH window  cannot be filtered out and are 
+taken as the beginning of a new time slot (Figure 17, Case C, t GL ≥ tREH) 
+Only devices that have the parameters t FPD, V HY, and t REH specified in their electrical characteristics use the 
+improved 1- Wire front end 
+ 
+DS28E04-100: 4096-Bit 1 -Wire Addressable EEPROM with PIO  
+ 
+ 
+30 of 37  Figure 1 7Noise Suppression Scheme  
+ 
+VPUP
+VTH
+VHY
+0VtREH
+tGLtREH
+tGLCase A Case C Case B
+ 
+ 
+ 
+CRC GENERATION  
+With the DS28E04-100 there are two different types of CRCsOne CRC is an 8-bit type and is stored in the most 
+significant byte of the 64-bit ROMThe bus master can compute a CRC value from the first 56 bits of the ROM and, 
+if none of the address inputs is connected to GND, compare it to the value stored within the DS28E04-100 to 
+determine whether the ROM data has been received error -freeIf any of the address pins are connected t o GND, 
+the bus master can calculate the CRC based on an all 1s external address field to determine whether the non-
+external address ROM data has been received error -freeThe equivalent polynomial function of this CRC is X8 + X5 
++ X4 + 1This 8-bit CRC is  received in the true (noninverted) formIt is computed at the factory and hardcoded into 
+the ROM 
+ 
+The other CRC is a 16-bit type, generated according to the standardized CRC16-polynomial function x16 + x15 + x2 
++ 1This CRC is used for fast verification of a data transfer when writing to or reading from the scratchpad or when 
+reading from the PIOsIn contrast to the 8-bit CRC, the 16-bit CRC is always communicated in the inverted formA 
+CRC generator inside the DS28E04-100 chip (Figure 18) calculates a new 16-bit CRC, as shown in the command 
+flow chart (Figure 9)The bus master compares the CRC value read from the device to the one it calculates from the data, and decides whether to continue with an operation or to reread the portion of the data with the CRC error 
+ With the Write Scratchpad command, the CRC is generated by first clearing the CRC generator and then shifting in 
+the command code, the target addresses TA1 and TA2, and all the data bytes as they were sent by the bus 
+masterThe DS28E04-100 transmits this CRC only if E4:E0 = 11111b, i.e., the end of the scratchpad is hit 
+ 
+With the Read Scratchpad command, the CRC is generated by first clearing the CRC generator and then shifting in 
+the Command code, the target addresses TA1 and TA2, the E/ S byte, and the scratchpad data as they were sent 
+by the DS28E04-100 The DS28E04-100 transmits this CRC only if the reading continues through the end of the 
+data written in the previous write scratchpad sequenceExample: if one writes a single byte to the scratchpad and then reads the scratchpad, one will receive a CRC of the command, TA1, TA2, and the data byte 
+ 
+With the initial pass through the PIO Access Read command flow, the CRC is generated by first clearing the CRC 
+generator and then shifting in the command code followed by 32 bytes of PIO pin dataSubsequent passes 
+through the command flow generate a 16-bit CRC that is the result of clearing the CRC generator and then shifting in 32 bytes read from the PIO pinsFor more information on generating CRC values, refer to Application Note 27 
+DS28E04-100: 4096-Bit 1 -Wire Addressable EEPROM with PIO  
+ 
+ 
+31 of 37  Figure 18CRC -16 Hardware Description and Polynomial  
+ 
+Polynomial = X16 + X15 + X2 + 1
+X0X1X2X3X4X5X6X7
+X8X9X10X11X12X13X14X15X161st
+STAGE2nd
+STAGE3rd
+STAGE4th
+STAGE6th
+STAGE5th
+STAGE7th
+STAGE8th
+STAGE
+9th
+STAGE10th
+STAGE11th
+STAGE12th
+STAGE13th
+STAGE14th
+STAGE15th
+STAGE16th
+STAGE
+INPUT DATACRC
+OUTPUT
+ 
+ 
+ 
+COMMAND-SPECIFIC 1 -Wire COMMUNICATION PROTOCOL —LEGEND  
+SYMBOL  DESCRIPTION  
+RST 1-Wire Reset Pulse generated by master 
+PD 1-Wire Presence Pulse generated by slave 
+Select  Command and data to satisfy the ROM function protocol 
+WS Command "Write Scratchpad" 
+RS Command "Read Scratchpad" 
+CPS Command "Copy Scratchpad" 
+RM Command "Read Memory" 
+WREG  Command "Write Register" 
+PIOR  Command "PIO Access Read" 
+PIOW  Command "PIO Access Write" 
+PIOP  Command "PIO Access Pulse" 
+RAL Command "Reset Activity Latches" 
+TA Target address TA1, TA2 
+TA-E/S Target address TA1, TA2 with E/S byte 
+<32 – T4:T0 bytes>  Transfer of as many  bytes as needed to reach the end of the scratchpad for a given 
+target address 
+<data to EOM>  Transfer of as many data bytes as are needed to reach the end of the memory 
+<register data>  Data for registers at addresses 223h to 225h, 1 to 3 bytes, depend ing on start address 
+CRC16 \ Transfer of an inverted CRC16 
+FF loop  Indefinite loop where the master reads FF bytes 
+AA loop  Indefinite loop where the master reads AA bytes 
+Programming  Data transfer to EEPROM; no activity on the 1 -Wire bus permitted d uring this time 
+ 
+DS28E04-100: 4096-Bit 1 -Wire Addressable EEPROM with PIO  
+ 
+ 
+32 of 37 COMMAND-SPECIFIC 1 -Wire COMMUNICATION PROTOCOL —COLOR CODES  
+Master to slave  Slave to master  Programming  
+ 
+ 
+ 
+WRITE SCRATCHPAD (CA NNOT FAIL)  
+RST PD Select  WS TA <32 – T4:T0 bytes>  CRC16\  FF loop  
+ 
+ 
+ 
+READ SCRATCHPAD (CANNOT FAIL)  
+RST PD Select RS TA-E/S <E4:E0 - T4:T0 +1 bytes>  CRC16\  FF loop  
+ 
+ 
+ 
+COPY SCRATCHPAD 1 -Wire  POWERED (SUCCESS)  
+RST PD Select  CPS TA-E/S wait t PROGMAX  AA loop 
+ 
+COPY SCRATCHPAD (INV ALID ADDRESS OR PF =  1 OR COPY PROTECTED)  
+RST PD Select  CPS TA-E/S FF loop  
+ 
+ 
+ 
+READ MEMO RY (SUCCESS)  
+RST PD Select  RM TA <data to EOM>  FF loop  
+ 
+READ MEMORY (INVALID ADDRESS)  
+RST PD Select  RM TA FF loop  
+ 
+ 
+ 
+WRITE REGISTER (SUCC ESS)  
+RST PD Select  WREG  TA <register data>  FF loop  
+ 
+WRITE REGISTER (INVA LID ADDRESS)  
+RST PD Select  WREG  TA FF loop  
+ 
+ 
+ 
+DS28E04-100: 4096-Bit 1 -Wire Addressable EEPROM with PIO  
+ 
+ 
+33 of 37  
+ 
+PIO ACCESS READ (CAN NOT FAIL)  
+RST PD Select  PIOR  <32 bytes PIO data>  CRC16\  
+ 
+  
+ 
+ 
+ 
+PIO ACCESS WRITE (SU CCESS)  
+RST PD Select  PIOW  <new PIO data>  <inverted new PIO data>  <AAh>  <PIO data>  
+ 
+  
+ 
+PIO ACCESS WRITE ( INVALID DATA BYTE ) 
+RST PD Select  PIOW  <new PIO data>  <invalid data byte>  FF loop  
+ 
+ 
+ 
+PIO ACCESS PULSE (SU CCESS)  
+RST PD Select  PIOP  <selection mask>  <inverted selection mask>  <AAh>  <PIO data>  
+ 
+PIO ACCESS PULSE ( INVALID SELECTION MA SK) 
+RST PD Select  PIOP  <selection mask>  <invalid selection mask>  FF loop  
+ 
+ 
+ 
+RESET ACTIVITY LATCH ES (CANNOT FAIL)  
+RST PD Select  RAL AA loop 
+ 
+ 
+ 
+ 
+ Loop until master sends Reset Pulse  
+Loop until master sends Re set Pulse  
+DS28E04-100: 4096-Bit 1 -Wire Addressable EEPROM with PIO  
+ 
+ 
+34 of 37 MEMORY FUNCTION EXAMPLE  
+ 
+Write 5 bytes to memory page 1, starting at address 0021hRead the entire memory and the PIO -related registers 
+With only a single DS28E04-100  connected to the bus master, the communication looks like this:  
+ 
+MASTER MODE  DATA (LSB FIRST)  COMMENTS  
+TX (Reset)  Reset pulse  
+RX (Presence)  Presence pulse  
+TX CCh Issue “Skip ROM” command  
+TX 0Fh Issue “Write Scratchpad” command  
+TX 21h TA1, beginning offset = 21h  
+TX 00h TA2, address = 0021h 
+TX <5 data bytes>  Write 5 bytes of data to scratchpad  
+TX (Reset)  Reset pulse  
+RX (Presence)  Presence pulse  
+TX CCh Issue “Skip ROM” command  
+TX AAh Issue “Read Scratchpad” command  
+RX 21h Read TA1, beginning offset = 21 h 
+RX 00h Read TA2, address = 0021h 
+RX 05h Read E/S, ending offset = 00101b, AA, PF = 0  
+RX <5 data bytes>  Read scratchpad data and verify  
+RX <2 bytes CRC16 \> Read CRC to check for data integrity  
+TX (Reset)  Reset pulse  
+RX (Presence)  Presence pulse  
+TX CCh Issue “Skip ROM” command  
+TX 55h Issue “Copy Scratchpad” command  
+TX 21h TA1 
+TX 00h TA2  (AUTHORIZATION CODE)  
+TX 05h E/S 
+---- <1-Wire idle high>  Wait 10ms for the copy function to complete  
+RX AAh Read copy status, AAh = success  
+TX (Reset)  Reset pu lse 
+RX (Presence)  Presence pulse  
+TX CCh Issue “Skip ROM” command  
+TX F0h Issue “Read Memory” command  
+TX 00h TA1, beginning offset = 00h  
+TX 00h TA2, address = 0000h 
+RX <550 data bytes>  Read the entire memory  
+TX (Reset)  Reset pulse  
+RX (Presence)  Prese nce pulse  
+ 
+DS28E04-100: 4096-Bit 1 -Wire Addressable EEPROM with PIO  
+ 
+ 
+35 of 37 PIO ACCESS READ EXAMPLE  
+ 
+Read the state of the PIOs 32 times 
+With only a single DS28E04-100  connected to the bus master, the communication looks like this:  
+ 
+MASTER MODE  DATA (LSB FIRST)  COMMENTS  
+TX (Reset)  Reset pulse  
+RX (Presence)  Presence  pulse  
+TX CCh Issue “Skip ROM” command  
+TX F5h Issue “PIO Access Read” command  
+RX <32 data bytes>  Read 32 PIO samples  
+RX <2 bytes CRC16 \> Read CRC to check for data integrity  
+TX (Reset)  Reset pulse  
+RX (Presence)  Presence pulse  
+The inverted CRC16 is t ransmitted after 32 bytes of PIO data 
+ 
+ 
+PIO ACCESS WRITE EXA MPLE  
+ 
+Set both PIOs to 0 and then to 1Both PIOs are pulled high to V CC or V PUP by a resistor 
+With only a single DS28E04-100  connected to the bus master, the communication looks like this:  
+ 
+MASTER MODE  DATA (LSB FIRST)  COMMENTS  
+TX (Reset)  Reset pulse  
+RX (Presence)  Presence pulse  
+TX CCh Issue “Skip ROM” command  
+TX 5Ah Issue “PIO Access Write” command  
+TX FCh Write new PIO output state  
+TX 03h Write inverted new PIO output state  
+RX AAh Read  confirmation byte  
+RX FCh Read new PIO pin status  
+TX FFh Write new PIO output state  
+TX 00h Write inverted new PIO output state  
+RX AAh Read confirmation byte  
+RX FFh Read new PIO pin status  
+TX (Reset)  Reset pulse  
+RX (Presence)  Presence pulse  
+ 
+DS28E04-100: 4096-Bit 1 -Wire Addressable EEPROM with PIO  
+ 
+ 
+36 of 37 PIO ACCESS PULSE EXAMPLE  
+ 
+Generate a pulse on PIO1Both PIOs are pulled high to V CC by a resistorPOL = 1V CC power is present 
+With only a single DS28E04-100  connected to the bus master, the communication looks like this:  
+ 
+MASTER MODE  DATA (LSB FIRST)  COMMENT S 
+TX (Reset)  Reset pulse  
+RX (Presence)  Presence pulse  
+TX CCh Issue “Skip ROM” command  
+TX A5h Issue “PIO Access Pulse” command  
+TX FEh Write PIO selection mask  
+TX 01h Write inverted PIO selection mask  
+RX AAh Read confirmation byte  
+RX 1111110Xb  Read P IO pin status 1) 
+TX (Reset)  Reset pulse  
+RX (Presence)  Presence pulse  
+1) The "X" indicates the state of PIO0, which is not defined in this example 
+ 
+PACKAGE INFORMATION  
+For the latest package outline information and land patterns (footprints), go to www.maxim- ic.com/packages 
+Note that a “+”, “#”, or “ -” in the package code indicates RoHS status onlyPackage drawings may show a different 
+suffix character, but the drawing pertains to the package regardless of RoHS status 
+PACKAGE TYPE  PACKAGE CODE  OUTLINE NO LAND PATTERN NO 
+16 SO  S16+1 21-0041  90-0097  
+ 
+ 
+ 
+ 
+ 
+DS28E04-100: 4096-Bit 1 -Wire Addressable EEPROM with PIO  
+ 
+ 37 of 37 
+ 
+Maxim cannot assume responsibility for use of any circuitry other than circuitry entirely embodied in a Maxim productNo cir cuit patent licenses are impliedMaxim 
+reserves the right to change the circuitry and specifications without notice at any time 
+Maxim Integrated Products, 120 San Gabriel Drive, Sunnyvale, CA 94086 408 -737- 7600 
+© 2011 Maxim Integrated Products                                                               Maxim is a registered trademark of Maxim Integrated Products, Inc 
+ REVISION HISTORY  
+REVISION 
+DATE  DESCRIPTION  PAGES 
+CHANGED  
+102704  Initial release  — 
+12/11 Changed  the Ordering Information  for lead(Pb) -free product ; updated  the lead 
+temperature and soldering temperature; e xtended the s torage temperature 
+range 1, 2 
+In the Electrical Characteristi cs table  applied Note 19 to the t W0L specification , 
+deleted ε from the t W1L specification, increased the data retention time, added 
+more details to notes 10, 19 and 20 , and added notes 23, 24 3, 4 
+Added Package Information section and Revision History 36, 37 
+ 
+ 

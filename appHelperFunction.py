@@ -21,6 +21,7 @@ from langchain.text_splitter import RecursiveCharacterTextSplitter
 from langchain.llms import OpenAI
 from langchain.chains import RetrievalQA
 from langchain.document_loaders import TextLoader
+from langchain.text_splitter import CharacterTextSplitter
 # from llm_challenge.utils.misc import read_dict_from_json, \
 #                                      set_openai_api_key, \
 #                                      write_dict_to_json, \
@@ -122,5 +123,13 @@ def reason_given_context(question, contexts):
         if idx > 10: break
     return response
     
-
+def get_text_chunks(text):
+    text_splitter = CharacterTextSplitter(
+        separator="\n",
+        chunk_size=1000,
+        chunk_overlap=200,
+        length_function=len
+    )
+    chunks = text_splitter.split_text(text)
+    return chunks
 

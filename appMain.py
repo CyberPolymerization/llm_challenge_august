@@ -6,6 +6,7 @@ import time
 import numpy as np
 import matplotlib.pyplot as plt
 import re
+import tiktoken
 
 from llm_challenge.utils.misc import set_openai_api_key,\
                                     misc_get_completion, \
@@ -56,11 +57,12 @@ dset = 'tutorial'
 # qas_fname = f"{DATA_DIR}/qas/qas_{dset}.json"
 qas_fname = f"{DATA_DIR}/qas/qas_wo_answers_test.json"
 qas_dict = read_dict_from_json(qas_fname)
-doc_fnames = list(set([DATA_DIR + "/datasheets/" + qa_dict["datasheet"]  for qa_dict in qas_dict.values()]))
+doc_fnames = list(set([DATA_DIR + "/datasheets/" + qa_dict["datasheet"]  for qa_dict in qas_dict.values()])) #parsed/something.txt
 context_length = 2 * 4000 # one token is roughly 4 characters (let's be over-conservative)
 
 #Context:
-contexts_fname = f"{DATA_DIR}/qas/contexts_{dset}.json"
+# contexts_fname = f"{DATA_DIR}/qas/contexts_{dset}.json"
+contexts_fname = "TextChunks1.json"
 contexts_dict = read_dict_from_json(contexts_fname)
 
 #Token Configurations:
@@ -72,7 +74,7 @@ MODEL_COST_PER_1K_TOKENS_GPT3P5 = 0.0015
 total_cost_fn = lambda num_tokens: 1e-3 * MODEL_COST_PER_1K_TOKENS_GPT3P5 *  num_tokens 
 
 #Embeddings:
-embeddings_fname = f"{DATA_DIR}/qas/embeddings_{dset}.npz"
+embeddings_fname = f"{DATA_DIR}/qas/embeddings_{dset}.npz" #new trained embeddings, this is not the old!
 embeddings_data = np.load(embeddings_fname)
 embeddings, texts = embeddings_data["embeddings"], embeddings_data["texts"]
 
@@ -111,7 +113,7 @@ elif is_generate_embeddingFile:
     embeddings = []
     for text in texts:
         embeddings.append(get_embedding(text))
-
+        # np.savez("embeddingTry.npz", embeddings=embeddings, texts=texts)
     # save
     np.savez(embeddings_fname, embeddings=embeddings, texts=texts)
     # embeddings_data = np.load(embeddings_fname)
@@ -152,20 +154,22 @@ if if_usingLLMChain:
 ######## end of VECTORE STORAGE SECTION ###########
 
 
+# prompt = """
+# I will give you a piece of text from electrical/electronic module's datashet delimted by ---
+# Your task is to give a detailed answer to the question that follows the text based on the provided text.
+# If the text does not contain sufficient information to answer, just say I do not know.
+
+# Here is the text:
+# ---
+# {context}
+# ---
+# Question: {question}
+# Answer:
+# """
+
 
 if True:
-    prompt = """
-    I will give you a piece of text from electrical/electronic module's datashet delimted by ---
-    Your task is to give a detailed answer to the question that follows the text based on the provided text.
-    If the text does not contain sufficient information to answer, just say I do not know.
 
-    Here is the text:
-    ---
-    {context}
-    ---
-    Question: {question}
-    Answer:
-    """
     if if_usingLLMChain:
         answers_with_retrieval = {}
         with get_openai_callback() as cb:
@@ -176,16 +180,38 @@ if True:
             print(cb)
     else: 
         gpt3p5_answers = {}
-        max_retries = 3 #was 3
+        max_retries = 1 #was 3
         total_num_tokens = 0
         get_completion_count = 0
         for q_id, qa_dict in (pbar := tqdm(qas_dict.items())):
             
-            context = contexts_dict[q_id]
+            context = contexts_dict[q_id][0]
             question = qa_dict["question"]
+            # for idx, text in enumerate(contexts_dict[q_id]):
+            #     if text.rfind(question)> -1:
+            #         print(idx)
+
+
+            prompt = """    
+            You are presented with a text excerpt extracted from a datasheet related to electrical or electronic components. The provided text is enclosed within the following delimiters:
+            ---
+            {context}
+            ---
+
+            Your task is to respond to the question using the information from the text. If the text lacks sufficient details for an answer, please indicate "I do not know" and tell why. Approach your response as an engineer addressing a query based on the content of a datasheet. Your answer should be concise and not exceed 2000 characters in length. Additionally, whenever you come across instances of double line breaks ("\n\n") in the text, replace them with a single space in your answer.
+
+            Question: {question}
+            Answer:
+            """
+            if False: 
+                encoding = tiktoken.encoding_for_model("gpt-3.5-turbo")
+                prompt_tokens = encoding.encode(prompt)
+                prompt_tokens_length = len(prompt_tokens)
+            # print(prompt)
             
-            # question_embedding = get_embedding(question)
-            context_embeddings = np.array(embeddings_data['embeddings'])
+            
+            context_embeddings = np.array(embeddings_data['embeddings']) 
+            
             # for idx, text in enumerate(embeddings_data['texts']):
             #     if text.rfind('C1 value')> -1:
             #         print(idx)
@@ -201,9 +227,11 @@ if True:
                 try:
                     pbar.set_description(f"Answering question {q_id}, Retry: {num_retries}")
                     # for _ in range(len(relatedness_score)):
-                    for _ in range(10): #top 11 highest related when range is 10
+                    for _ in range(1): #top 11 highest related when range is 10
                         time.sleep(0.2)
-                        gpt3p5_answers[q_id], num_tokens = misc_get_completion(prompt.format(context=embeddings_data['texts'][top_idxs[_]], question=question), is_return_total_tokens=True)
+                        # gpt3p5_answers[q_id], num_tokens = misc_get_completion(prompt.format(context=get_embedding(context), question=question), is_return_total_tokens=True)
+                        gpt3p5_answers[q_id], num_tokens = misc_get_completion(prompt.format(context=embeddings_data['texts'][top_idxs[_]].replace("\n"," ").replace("\n\n"," "), question=question), is_return_total_tokens=True)
+                        # gpt3p5_answers[q_id], num_tokens = misc_get_completion(prompt.format(context=OpenAIEmbeddings(), question=question), is_return_total_tokens=True)
                         time.sleep(0.2)
                         total_num_tokens += num_tokens
                         get_completion_count +=1
@@ -215,18 +243,16 @@ if True:
                             break
                         else:
                             print("I don not know. Retrieved text does not contain sufficient information.")
+                            num_retries +=1
                             continue
                         # print('Answer: ', answer)
                     break
                 except Exception as e:
                     num_retries +=1
                     gpt3p5_answers[q_id] = f"I do not know, I have error {e}"
-        
-
-
     
-        print(f"The total number of token was: ${total_num_tokens} \n")
+        print(f"The total number of token was: {total_num_tokens} \n")
         print(f"Finished answering questions using (USD) ${total_cost_fn(total_num_tokens):.5f} \n")
         print(f"for number of get_completions: {get_completion_count}")
-        write_dict_to_json(f"QOET_{dset}.json", gpt3p5_answers)
+        write_dict_to_json(f"Solving_I_do_not_know_problems.json", gpt3p5_answers)
 
